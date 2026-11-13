@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "temanparenting-prototipe",
     "public": ".",
     "ignore": [
       "firebase.json",
