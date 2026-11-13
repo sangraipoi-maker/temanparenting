@@ -15,4 +15,5 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: temanparenting-1e6ca
+          site: temanparenting-prototipe
           channelId: live
