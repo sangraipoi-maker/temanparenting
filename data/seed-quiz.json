@@ -1,0 +1,110 @@
+{
+  "id": "refleksi",
+  "questions": [
+    {
+      "q": "Anak Anda (4 tahun) menangis keras di toko karena permen yang ia minta tidak dibelikan. Respons yang paling sering Anda lakukan?",
+      "opts": [
+        {
+          "t": "Membentak agar ia diam, atau mengancam meninggalkannya di toko.",
+          "s": 0
+        },
+        {
+          "t": "Akhirnya membelikan permen itu agar tangisnya berhenti dan tidak malu.",
+          "s": 1
+        },
+        {
+          "t": "Berjongkok, mengakui keinginannya, tetap pada keputusan, dan menemaninya sampai reda.",
+          "s": 2
+        }
+      ]
+    },
+    {
+      "q": "Anak usia sekolah memecahkan gelas karena terburu-buru. Respons Anda?",
+      "opts": [
+        {
+          "t": "Memarahinya — ia harusnya lebih hati-hati.",
+          "s": 0
+        },
+        {
+          "t": "Membersihkannya sendiri sambil menggerutu agar kejadian itu cepat berlalu.",
+          "s": 1
+        },
+        {
+          "t": "Memastikan ia tidak terluka, lalu mengajaknya membersihkan bersama dan membicarakan cara mencegahnya.",
+          "s": 2
+        }
+      ]
+    },
+    {
+      "q": "Remaja Anda pulang melewati jam yang disepakati tanpa kabar. Respons Anda?",
+      "opts": [
+        {
+          "t": "Langsung menghukum berat malam itu juga, saat emosi masih tinggi.",
+          "s": 0
+        },
+        {
+          "t": "Membiarkannya — menegur hanya akan memicu pertengkaran.",
+          "s": 1
+        },
+        {
+          "t": "Menyampaikan kekhawatiran dan konsekuensi yang sudah disepakati, lalu mendengar penjelasannya.",
+          "s": 2
+        }
+      ]
+    },
+    {
+      "q": "Anak mendapat nilai jauh di bawah harapan pada mata pelajaran favoritnya. Respons Anda?",
+      "opts": [
+        {
+          "t": "Membandingkannya dengan teman atau kakaknya yang nilainya lebih baik.",
+          "s": 0
+        },
+        {
+          "t": "Segera mendaftarkannya les tambahan tanpa membicarakannya dulu.",
+          "s": 1
+        },
+        {
+          "t": "Bertanya bagian mana yang terasa sulit dan apa yang menurutnya bisa dibantu.",
+          "s": 2
+        }
+      ]
+    },
+    {
+      "q": "Anda baru saja membentak anak dan menyadari respons Anda berlebihan. Yang Anda lakukan?",
+      "opts": [
+        {
+          "t": "Berpura-pura tidak terjadi apa-apa; meminta maaf akan menurunkan wibawa orang tua.",
+          "s": 0
+        },
+        {
+          "t": "Memberinya hadiah atau jajanan sebagai ganti, tanpa membicarakan kejadian itu.",
+          "s": 1
+        },
+        {
+          "t": "Mengakui kesalahan, meminta maaf, dan menjelaskan apa yang akan Anda lakukan berbeda lain kali.",
+          "s": 2
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "min": 0,
+      "max": 4,
+      "judul": "Pola respons cenderung reaktif",
+      "teks": "Dalam situasi menekan, respons yang muncul lebih sering berupa bentakan, hukuman spontan, atau membiarkan tanpa batas. Ini sangat manusiawi — terutama saat lelah — dan kabar baiknya, pola respons adalah keterampilan yang dapat dilatih. Mulailah dari materi pola asuh otoritatif (Bab 14) dan satu langkah kecil: berhenti sejenak sebelum merespons."
+    },
+    {
+      "min": 5,
+      "max": 7,
+      "judul": "Pola respons campuran — hangat, tetapi belum konsisten",
+      "teks": "Anda sudah sering merespons dengan hangat dan berbatas jelas, namun konsistensinya naik-turun mengikuti situasi. Langkah berikutnya adalah membuat respons baik itu menjadi kebiasaan: sepakati aturan dan konsekuensi di depan, dan perbaiki hubungan setiap kali respons Anda meleset."
+    },
+    {
+      "min": 8,
+      "max": 10,
+      "judul": "Pola respons reflektif dan otoritatif",
+      "teks": "Respons Anda umumnya mencerminkan pola otoritatif dalam Santrock (2018, Bab 14): mengakui emosi anak, memegang batas dengan tenang, dan berani memperbaiki ketika keliru. Pertahankan — dan ingat bahwa anak tetap akan menguji batas itu di setiap tahap usia barunya."
+    }
+  ]
+}

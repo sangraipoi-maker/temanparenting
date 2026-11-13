@@ -1,0 +1,22 @@
+rules_version = '2';
+// Aturan Firestore TemanParenting:
+// - Semua orang boleh MEMBACA (situs ini publik, tanpa login).
+// - TIDAK ADA yang boleh menulis dari klien — penulisan data hanya lewat
+//   tools/seed.mjs (lihat README.md bagian "Seed pertama" untuk cara
+//   melonggarkan aturan ini SEMENTARA saat seed, lalu mengembalikannya).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /materials/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /articles/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quiz/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

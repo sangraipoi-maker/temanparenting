@@ -1,0 +1,542 @@
+[
+  {
+    "id": "m9",
+    "order": 0,
+    "usia": "13-18",
+    "domain": "Fisik",
+    "bab": "Bab 3 · Perkembangan Fisik",
+    "judul": "Pubertas & Otak Remaja: Fisik yang Berubah Cepat",
+    "tahap": "Masa remaja (adolescence)",
+    "img": "assets/img/ayah-remaja-luar-ruangan.jpg",
+    "alt": "Ayah berbincang dengan anak remaja laki-lakinya di luar ruangan",
+    "ringkas": "Perubahan hormonal, lonjakan pertumbuhan, dan otak yang matang tidak serentak — kunci memahami perilaku remaja yang tampak 'berlebihan'.",
+    "durasi": "9 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan perubahan utama pubertas menurut Santrock (2018, Bab 3)",
+      "Memahami mengapa remaja cenderung mencari sensasi dan sulit mengendalikan impuls",
+      "Menerapkan respons yang mendukung kesehatan fisik remaja: tidur, gerak, dan citra tubuh"
+    ],
+    "isi": [
+      "Menurut Santrock (2018, Bab 3), pubertas adalah masa perubahan fisik yang cepat yang dipicu hormon: lonjakan pertumbuhan tinggi dan berat badan, kematangan organ reproduksi, serta perubahan suara dan kulit. Urutan perubahannya dapat diramalkan, tetapi waktu mulainya sangat bervariasi antarindividu — dan perbedaan waktu ini (lebih cepat atau lebih lambat dari teman sebaya) berpengaruh pada bagaimana remaja memandang dirinya.",
+      "Otak remaja berkembang tidak serentak. Sistem limbik — termasuk amigdala yang peka terhadap emosi dan ganjaran — matang lebih dulu, sementara korteks prefrontal yang bertugas menimbang konsekuensi dan mengendalikan impuls terus berkembang hingga awal usia 20-an. Ketidakseimbangan ini membantu menjelaskan pencarian sensasi dan pengambilan risiko pada remaja. Pada masa ini pula jam biologis tidur bergeser lebih malam, padahal remaja tetap membutuhkan tidur 8–10 jam."
+    ],
+    "praktik": [
+      "<strong>Jaga ritme tidur.</strong> Sepakati jam malam yang realistis dan kurangi layar menjelang tidur, karena jam biologis remaja memang bergeser lebih malam — bukan semata-mata malas.",
+      "<strong>Normalisasi perubahan tubuh.</strong> Sampaikan dalam obrolan singkat dan wajar bahwa perubahan pubertas dialami semua orang dengan waktu yang berbeda-beda.",
+      "<strong>Salurkan kebutuhan bergerak.</strong> Fasilitasi olahraga atau aktivitas fisik yang ia sukai; tubuh remaja dirancang untuk aktif.",
+      "<strong>Jaga komentar tentang tubuh.</strong> Hindari komentar soal berat atau bentuk badan; remaja sangat peka terhadap citra tubuhnya pada masa ini."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Badanmu sedang berubah cepat, itu normal dan dialami semua orang — hanya waktunya yang beda-beda. Kalau ada yang mengganjal, cerita saja ke Ayah/Ibu.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Badanmu kok jadi begitu? Makanya jangan makan terus.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah saya berkomentar negatif tentang tubuh anak saya?",
+      "Apakah jam tidur anak saya masih tercukupi untuk usianya?",
+      "Sudahkah saya membicarakan pubertas dengan bahasa yang wajar, bukan menakutkan?"
+    ],
+    "fakta": "Santrock (2018, Bab 3) menekankan bahwa bukan pubertas itu sendiri yang menentukan penyesuaian remaja, melainkan bagaimana perubahan itu dimaknai oleh remaja dan lingkungan sosialnya."
+  },
+  {
+    "id": "m1",
+    "order": 1,
+    "usia": "0-5",
+    "domain": "Sosioemosional",
+    "bab": "Bab 9 · Perkembangan Emosional",
+    "judul": "Emosi Pertama & Tantrum: Memahami Dunia Sosioemosional Balita",
+    "tahap": "Masa bayi & anak usia dini (infancy & early childhood)",
+    "img": "assets/img/ibu-bacakan-cerita-tidur.jpg",
+    "alt": "Ibu membacakan cerita untuk anaknya yang berbaring di tempat tidur",
+    "ringkas": "Tantrum bukan tanda anak nakal — menurut Santrock, itu cerminan emosi yang berkembang lebih cepat daripada kemampuan anak mengaturnya.",
+    "durasi": "8 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan perkembangan emosi anak usia dini menurut Santrock (2018, Bab 9)",
+      "Mengenali peran temperamen dalam intensitas reaksi anak",
+      "Mempraktikkan ko-regulasi: menenangkan anak sambil tetap memegang batas"
+    ],
+    "isi": [
+      "Santrock (2018, Bab 9) menjelaskan bahwa emosi anak berkembang dari emosi dasar — senang, marah, takut, sedih — menuju emosi sadar-diri seperti malu, bangga, dan rasa bersalah yang muncul setelah anak mengenali dirinya sebagai pribadi. Balita merasakan emosi dengan intensitas penuh, tetapi bagian otak yang mengatur impuls dan kosakata untuk menamai perasaan belum berkembang. Tantrum adalah luapan frustrasi yang normal secara perkembangan pada fase ini.",
+      "Anak juga berbeda sejak lahir dalam temperamen: tingkat reaktivitas dan kemampuan menenangkan diri yang bersifat bawaan. Sebagian anak mudah terguncang dan lama reda, sebagian lain sebaliknya. Pada kerangka Erikson yang dibahas Santrock, anak usia 1–3 tahun sedang menapaki tahap otonomi versus malu dan keraguan, lalu usia 3–5 tahun inisiatif versus rasa bersalah. Respons orang tua yang menenangkan namun tetap berbatas membantu anak melewati kedua tahap ini dengan rasa percaya pada dirinya."
+    ],
+    "praktik": [
+      "<strong>Tenangkan diri dulu, lalu dekati.</strong> Turun hingga sejajar mata anak; kehadiran yang tenang adalah alat regulasi pertama bagi anak.",
+      "<strong>Namai emosinya.</strong> Membantu anak mengenali perasaan ('Kamu marah karena…') adalah awal dari kemampuan regulasi emosi.",
+      "<strong>Pegang batasnya, singkat saja.</strong> Perasaan boleh, perilaku merusak tidak. Ucapkan batas dengan tenang tanpa ceramah panjang.",
+      "<strong>Perbaiki setelah reda.</strong> Saat anak tenang, ajak ia kembali ke aktivitasnya dan tunjukkan bahwa hubungan kalian baik-baik saja."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kamu marah karena baloknya roboh. Marah itu boleh. Ibu di sini — kita bangun lagi sama-sama, ya.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Sudah besar kok menangis begitu saja. Berhenti, malu dilihat orang.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah saya menenangkan diri sebelum menenangkan anak?",
+      "Apakah saya membedakan antara perasaan anak (boleh) dan perilakunya (dibimbing)?",
+      "Apakah respons saya selama ini konsisten, atau berubah-ubah mengikuti lelah saya?"
+    ],
+    "fakta": "Santrock (2018, Bab 9) merangkum bahwa kelekatan yang aman pada tahun-tahun pertama berkaitan dengan kompetensi sosial dan emosional anak pada tahun-tahun berikutnya."
+  },
+  {
+    "id": "m6",
+    "order": 2,
+    "usia": "6-12",
+    "domain": "Kognitif",
+    "bab": "Bab 6 · Pendekatan Perkembangan Kognitif",
+    "judul": "Berpikir Konkret & Belajar di Sekolah: Kognitif Anak 6–12 Tahun",
+    "tahap": "Masa anak usia tengah & akhir (middle & late childhood)",
+    "img": "assets/img/ibu-dampingi-tugas.jpg",
+    "alt": "Ibu mendampingi anak usia sekolah mengerjakan tugas di meja belajar",
+    "ringkas": "Anak mulai berpikir logis terhadap hal yang konkret. Memahami tahap operasional konkret Piaget mengubah cara orang tua mendampingi belajar.",
+    "durasi": "9 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan ciri tahap operasional konkret menurut Piaget dalam Santrock (2018, Bab 6)",
+      "Mengenali perkembangan pemrosesan informasi: memori dan metakognisi (Bab 5)",
+      "Mendampingi belajar dengan cara yang menumbuhkan kemandirian berpikir anak"
+    ],
+    "isi": [
+      "Dalam tahap operasional konkret Piaget (sekitar 7–11 tahun) yang diuraikan Santrock (2018, Bab 6), anak mulai mampu melakukan operasi mental yang logis — tetapi baru terhadap objek dan peristiwa yang konkret. Anak memahami konservasi (jumlah tetap sama meski wadah berubah bentuk), mampu mengelompokkan objek dalam beberapa kategori sekaligus, dan mengurutkan benda menurut ukuran. Penalaran abstrak yang sepenuhnya verbal masih sulit baginya, sehingga contoh nyata jauh lebih membantu daripada penjelasan panjang.",
+      "Dari sisi pemrosesan informasi (Bab 5), memori kerja anak bertambah kapasitasnya dan anak mulai menggunakan strategi mengingat — mengulang, mengelompokkan, menghubungkan dengan yang sudah diketahui. Metakognisi, kesadaran anak tentang cara berpikirnya sendiri, juga berkembang: anak mulai bisa menilai soal mana yang sulit dan bagian mana yang belum ia pahami. Orang tua mendukung proses ini bukan dengan memberi jawaban, melainkan dengan pertanyaan yang memancing anak memeriksa pikirannya sendiri."
+    ],
+    "praktik": [
+      "<strong>Tanya prosesnya, bukan hanya hasilnya.</strong> 'Bagaimana kamu mendapatkan jawaban itu?' melatih metakognisi anak.",
+      "<strong>Pakai benda nyata.</strong> Untuk konsep yang abstrak bagi anak, gunakan koin, balok, atau gambar — sesuai cara berpikir konkretnya.",
+      "<strong>Pecah tugas besar.</strong> Bantu anak membagi pekerjaan rumah menjadi langkah-langkah kecil yang bisa ia pantau sendiri.",
+      "<strong>Hargai strategi, bukan sekadar nilai.</strong> Perhatikan cara anak berusaha mengingat dan menyelesaikan soal, lalu sebutkan secara spesifik."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Bagian mana yang terasa paling sulit? Coba jelaskan dulu dengan bahasamu sendiri, baru kita lihat contohnya.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Kok soal segampang ini tidak bisa? Sudah, Ibu kerjakan, kamu salin saja.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah saya lebih sering memberi jawaban daripada memancing anak berpikir?",
+      "Apakah saya membandingkan kemampuan anak saya dengan anak lain?",
+      "Sudahkah anak saya punya rutinitas belajar yang dapat ia kelola sendiri?"
+    ],
+    "fakta": "Menurut Piaget dalam Santrock (2018, Bab 6), anak pada tahap operasional konkret dapat melakukan operasi logis yang dapat dibalik (reversibel) — kemampuan yang belum dimiliki anak usia dini."
+  },
+  {
+    "id": "m3",
+    "order": 3,
+    "usia": "0-5",
+    "domain": "Kognitif",
+    "bab": "Bab 7 · Perkembangan Bahasa",
+    "judul": "Ledakan Bahasa: Perkembangan Kognitif & Bahasa Anak Usia Dini",
+    "tahap": "Masa anak usia dini (early childhood)",
+    "img": "assets/img/ibu-membaca-buku-sofa.jpg",
+    "alt": "Ibu membacakan buku bergambar untuk anak balitanya di sofa ruang keluarga",
+    "ringkas": "Antara usia 2–5 tahun kosakata anak meledak dan pikirannya bekerja prakoperasional. Santrock menunjukkan peran besar percakapan orang tua di fase ini.",
+    "durasi": "8 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan ciri berpikir prakoperasional Piaget pada anak usia dini (Santrock, 2018, Bab 6)",
+      "Memahami pandangan Vygotsky: bahasa, bicara pribadi, dan zona perkembangan proksimal",
+      "Menerapkan cara berbincang dan membacakan buku yang menstimulasi bahasa anak"
+    ],
+    "isi": [
+      "Piaget menyebut cara berpikir anak usia 2–7 tahun sebagai prakoperasional (Santrock, 2018, Bab 6): anak mulai menggunakan kata dan gambar untuk mewakili benda, tetapi penalarannya masih egosentris — sulit melihat dari sudut pandang orang lain — dan belum memahami konservasi. Ini sebabnya anak bisa sangat yakin gelas tinggi berisi 'lebih banyak' air. Pada saat yang sama, perkembangan bahasanya melesat: anak melewati fase dua kata menuju kalimat lengkap, dan kosakatanya berkembang ribuan kata dalam beberapa tahun (Bab 7).",
+      "Vygotsky menambahkan bahwa bahasa adalah alat berpikir. Anak usia dini sering berbicara sendiri saat bermain atau memecahkan masalah — bicara pribadi (private speech) yang justru sehat dan membantu anak mengatur perilakunya. Belajar terjadi paling baik dalam zona perkembangan proksimal: tugas yang belum bisa dilakukan anak sendirian, tetapi bisa dengan bantuan orang dewasa atau teman yang lebih mampu. Bantuan yang pas — tidak terlalu sedikit, tidak mengambil alih — disebut scaffolding."
+    ],
+    "praktik": [
+      "<strong>Bacakan buku secara dialogis.</strong> Jangan hanya membaca teks: tanyakan isi gambar, minta anak menebak kelanjutannya, hubungkan cerita dengan pengalamannya.",
+      "<strong>Perluas kalimat anak.</strong> Saat anak berkata 'mobil besar', balas dengan kalimat utuh: 'Iya, mobil besar berwarna merah sedang lewat.'",
+      "<strong>Biarkan anak berbicara sendiri saat bermain.</strong> Itu cara anak melatih pengendalian dirinya — bukan kebiasaan yang perlu dihentikan.",
+      "<strong>Beri bantuan secukupnya.</strong> Saat anak kesulitan menyusun balok atau membuka tutup botol, beri petunjuk kecil dan biarkan ia menyelesaikan langkah terakhirnya sendiri."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Menurutmu, kenapa kelinci di gambar ini bersembunyi? Coba tebak, nanti kita lihat halaman berikutnya.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Diam dulu, Ibu sedang membacakan. Kamu dengarkan saja sampai selesai.”"
+      }
+    ],
+    "refleksi": [
+      "Berapa lama saya bercakap-cakap dua arah dengan anak saya setiap hari?",
+      "Apakah pertanyaan anak yang beruntun saya jawab atau saya potong?",
+      "Apakah layar lebih banyak 'berbicara' kepada anak saya daripada orang di rumah?"
+    ],
+    "fakta": "Santrock (2018, Bab 7) mencatat anak usia dini mengalami perkembangan kosakata yang sangat pesat — dari sekitar dua ratus kata pada usia 2 tahun menjadi lebih dari sepuluh ribu kata yang dipahami menjelang usia 6 tahun."
+  },
+  {
+    "id": "m10",
+    "order": 4,
+    "usia": "13-18",
+    "domain": "Kognitif",
+    "bab": "Bab 6 · Pendekatan Perkembangan Kognitif",
+    "judul": "Berpikir Abstrak & Merasa Diawasi: Kognitif Remaja",
+    "tahap": "Masa remaja (adolescence)",
+    "img": "assets/img/keluarga-dapur-bersama.jpg",
+    "alt": "Keluarga berbincang sambil menyiapkan makanan bersama di dapur",
+    "ringkas": "Operasional formal membuka kemampuan berargumen tentang hal abstrak — sekaligus egosentrisme remaja yang membuat mereka merasa selalu diperhatikan.",
+    "durasi": "9 menit",
+    "level": "Menengah",
+    "tujuan": [
+      "Menjelaskan tahap operasional formal Piaget dan penalaran hipotetis-deduktif (Santrock, 2018, Bab 6)",
+      "Memahami egosentrisme remaja Elkind: audiens imajiner dan fabel personal",
+      "Berkomunikasi dengan remaja sebagai mitra berpikir, bukan lawan debat"
+    ],
+    "isi": [
+      "Pada masa remaja, sebagian anak mulai memasuki tahap operasional formal Piaget (Santrock, 2018, Bab 6): mereka dapat berpikir abstrak dan idealistis, menyusun kemungkinan secara sistematis, dan bernalar hipotetis-deduktif — menguji dugaan layaknya ilmuwan kecil. Kemampuan baru ini membuat remaja gemar mendebat aturan yang dianggapnya tidak logis dan memimpikan dunia yang 'seharusnya'. Perdebatan itu bukan pembangkangan semata; itu latihan berpikir yang baru dikuasainya.",
+      "Sisi lain pertumbuhan kognitif remaja adalah egosentrisme remaja yang diuraikan Elkind. Ada dua wujudnya: audiens imajiner — keyakinan bahwa semua orang memperhatikan dirinya, yang membuat noda kecil di wajah terasa seperti bencana — dan fabel personal — perasaan bahwa pengalaman dan perasaannya unik dan tak dipahami siapa pun, kadang disertai rasa kebal terhadap risiko. Memahami dua hal ini membantu orang tua menanggapi drama remaja dengan empati, bukan ejekan."
+    ],
+    "praktik": [
+      "<strong>Ajak berdiskusi, bukan berceramah.</strong> Remaja berlatih bernalar lewat argumen. Dengarkan alur pikirnya sebelum menyampaikan pendapat Anda.",
+      "<strong>Latih menimbang konsekuensi.</strong> Tanyakan 'menurutmu apa yang terjadi jika…' untuk melatih penalaran hipotetisnya pada keputusan nyata.",
+      "<strong>Jangan remehkan rasa malunya.</strong> Bagi audiens imajinernya, rasa diperhatikan itu nyata. Validasi dulu, baru beri perspektif.",
+      "<strong>Berikan ruang berpendapat dalam aturan keluarga.</strong> Remaja yang didengar pertimbangannya lebih mudah menerima batas yang tetap diputuskan orang tua."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kamu tidak setuju dengan aturan jam malam ini. Coba sampaikan alasannya — Ibu dengarkan, lalu kita timbang sama-sama.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Baru sebesar itu sudah berani mendebat orang tua. Pokoknya tidak boleh, titik.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah saya memberi ruang bagi anak saya untuk tidak setuju dengan sopan?",
+      "Apakah saya mengejek kekhawatiran remaja saya tentang penampilannya?",
+      "Keputusan apa yang sudah bisa mulai melibatkan pertimbangan anak saya?"
+    ],
+    "fakta": "Santrock (2018, Bab 6) mencatat tidak semua remaja — bahkan tidak semua orang dewasa — mencapai penalaran operasional formal sepenuhnya; kemampuan ini dipengaruhi pendidikan dan pengalaman."
+  },
+  {
+    "id": "m5",
+    "order": 5,
+    "usia": "6-12",
+    "domain": "Fisik",
+    "bab": "Bab 3 · Perkembangan Fisik & Bab 4 · Kesehatan",
+    "judul": "Anak Sekolah yang Aktif: Perkembangan Fisik, Gizi & Kesehatan",
+    "tahap": "Masa anak usia tengah & akhir (middle & late childhood)",
+    "img": "assets/img/keluarga-salad-dapur.jpg",
+    "alt": "Keluarga menyiapkan salad bersama di dapur yang terang",
+    "ringkas": "Pertumbuhan melambat tetapi mantap; keterampilan motorik makin halus. Tantangan fisik terbesar usia ini justru gaya hidup: kurang gerak dan pola makan.",
+    "durasi": "8 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan pola pertumbuhan fisik anak usia sekolah menurut Santrock (2018, Bab 3)",
+      "Mengenali perkembangan keterampilan motorik kasar dan halus pada usia 6–12 tahun",
+      "Membangun kebiasaan gerak, makan, dan tidur yang mendukung kesehatan anak (Bab 4)"
+    ],
+    "isi": [
+      "Berbeda dengan ledakan pertumbuhan masa balita, pertumbuhan fisik pada masa anak usia tengah dan akhir berjalan lebih lambat dan mantap (Santrock, 2018, Bab 3). Yang berkembang pesat adalah keterampilan motorik: gerakan kasar menjadi lebih terkoordinasi — anak berlari lebih cepat, bersepeda, berenang — dan motorik halus makin terampil, terlihat dari tulisan tangan yang membaik dan kemampuan memainkan alat musik atau membuat kerajinan. Perbedaan kemampuan antar anak pada usia ini sangat terasa dan mulai memengaruhi rasa percaya diri mereka.",
+      "Santrock (Bab 4) menyoroti persoalan kesehatan khas masa ini: meningkatnya angka kelebihan berat badan pada anak seiring gaya hidup kurang gerak dan konsumsi makanan tinggi gula dan lemak, serta kurang tidur yang mengganggu konsentrasi belajar. Karena itu pengasuhan fisik pada usia sekolah kurang soal 'mengejar tinggi badan' dan lebih soal membangun kebiasaan: bergerak setiap hari, makan teratur, dan tidur cukup."
+    ],
+    "praktik": [
+      "<strong>Gerak setiap hari.</strong> Sediakan kesempatan bermain aktif dan berolahraga yang anak sukai — bukan yang dipaksakan — agar kebiasaan ini melekat.",
+      "<strong>Libatkan anak di dapur.</strong> Anak yang ikut menyiapkan makanan lebih terbuka mencoba sayur dan memahami makanan yang ia konsumsi.",
+      "<strong>Atur pola tidur.</strong> Anak usia sekolah membutuhkan tidur sekitar 9–11 jam; jam tidur yang teratur membantu konsentrasi dan suasana hatinya.",
+      "<strong>Batasi waktu layar rekreasional.</strong> Ganti sebagian waktu layar dengan aktivitas fisik dan bermain di luar rumah."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Sore ini kita bersepeda ke taman, yuk. Kamu pilih rutenya — lewat gang kecil atau jalan besar?”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Kamu gendut karena malas bergerak. Sudah, tidak usah jajan sekalian biar kurus.”"
+      }
+    ],
+    "refleksi": [
+      "Berapa jam anak saya bergerak aktif setiap hari dibanding duduk di depan layar?",
+      "Apakah komentar saya tentang tubuh anak bersifat menyemangati atau mempermalukan?",
+      "Apakah jam tidur anak saya konsisten antara hari sekolah dan akhir pekan?"
+    ],
+    "fakta": "Santrock (2018, Bab 3) mencatat pertumbuhan tinggi anak usia sekolah rata-rata bertambah sekitar 5–7 cm per tahun — jauh lebih lambat daripada masa balita, tetapi disertai peningkatan kekuatan dan koordinasi yang besar."
+  },
+  {
+    "id": "m12",
+    "order": 6,
+    "usia": "13-18",
+    "domain": "Keluarga & Pengasuhan",
+    "bab": "Bab 14 · Keluarga",
+    "judul": "Otonomi tanpa Putus Koneksi: Hubungan Orang Tua–Remaja",
+    "tahap": "Masa remaja (adolescence)",
+    "img": "assets/img/keluarga-taman-rindang.jpg",
+    "alt": "Keluarga berjalan bersama di taman yang rindang",
+    "ringkas": "Bab 14 Santrock: konflik orang tua–remaja umumnya soal hal sehari-hari, dan remaja yang diberi otonomi bertahap justru berkembang paling sehat.",
+    "durasi": "10 menit",
+    "level": "Menengah",
+    "tujuan": [
+      "Menjelaskan dinamika hubungan orang tua–remaja menurut Santrock (2018, Bab 14)",
+      "Membedakan pemberian otonomi, pemantauan, dan kontrol yang berlebihan",
+      "Menerapkan cara melonggarkan aturan secara bertahap tanpa kehilangan koneksi"
+    ],
+    "isi": [
+      "Santrock (2018, Bab 14) meluruskan gambaran populer tentang masa remaja yang penuh pemberontakan: sebagian besar remaja tetap menyayangi dan menghormati orang tuanya. Konflik memang meningkat pada awal masa remaja, tetapi isinya umumnya hal sehari-hari — jam pulang, kebersihan kamar, pakaian, tugas rumah — dan berfungsi sebagai arena negosiasi ulang hubungan: remaja meminta otonomi yang lebih besar, orang tua menyesuaikan pengawasan secara bertahap.",
+      "Dua hal berjalan beriringan dalam temuan yang dirangkum Santrock. Pertama, kelekatan yang aman dan kedekatan emosional dengan orang tua tetap menjadi faktor pelindung bagi remaja. Kedua, pemberian otonomi secara bertahap berkaitan dengan penyesuaian yang lebih sehat — berbeda dengan kontrol psikologis yang berlebihan, seperti mengatur perasaan dan pikiran anak, yang berkaitan dengan kecemasan dan harga diri rendah. Peran orang tua bergeser menjadi manajer kehidupan remaja: mengetahui aktivitas dan pergaulannya (pemantauan), tanpa mengendalikan batinnya."
+    ],
+    "praktik": [
+      "<strong>Longgarkan aturan secara bertahap dan eksplisit.</strong> Sampaikan aturan mana yang bisa berubah seiring anak menunjukkan tanggung jawab, dan tinjau bersama berkala.",
+      "<strong>Pantau, jangan menginterogasi batin.</strong> Ketahui anak pergi ke mana, dengan siapa, dan pulang jam berapa — tanpa memaksanya membuka seluruh isi hati dan ponselnya.",
+      "<strong>Pilih waktu bicara yang tepat.</strong> Konflik yang dibahas saat kedua pihak tenang lebih sering berakhir pada kesepakatan daripada ceramah.",
+      "<strong>Jadwalkan waktu berdua tanpa agenda menegur.</strong> Koneksi yang terjaga membuat remaja tetap datang kepada orang tua saat menghadapi masalah besar."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Semester ini kamu sudah membuktikan bisa pulang tepat waktu. Kita longgarkan jam malammu 30 menit, dan kita tinjau lagi bulan depan.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Selama tinggal di rumah ini, semua keputusan Ibu yang pegang. Tidak ada tawar-menawar.”"
+      }
+    ],
+    "refleksi": [
+      "Aturan apa yang masih saya pegang karena kebiasaan, bukan karena kebutuhan anak saat ini?",
+      "Apakah saya membedakan mengetahui aktivitas anak dengan mengontrol perasaannya?",
+      "Kapan terakhir kali saya mengobrol dengan anak saya tanpa membahas kewajiban atau kesalahannya?"
+    ],
+    "fakta": "Santrock (2018, Bab 14) merangkum bahwa orang tua dari remaja yang menyesuaikan diri dengan baik umumnya adalah orang tua yang otoritatif: hangat dan terlibat, tetapi memberi ruang otonomi yang terus bertambah."
+  },
+  {
+    "id": "m2",
+    "order": 7,
+    "usia": "0-5",
+    "domain": "Fisik",
+    "bab": "Bab 3 · Perkembangan Fisik",
+    "judul": "Tubuh Kecil yang Tumbuh Pesat: Perkembangan Fisik & Motorik Balita",
+    "tahap": "Masa bayi & anak usia dini (infancy & early childhood)",
+    "img": "assets/img/anak-bermain-taman.jpg",
+    "alt": "Anak-anak bermain dan berlari di taman yang hijau",
+    "ringkas": "Otak mencapai sekitar 90% ukuran dewasa pada usia 5 tahun. Santrock menjelaskan mengapa gerak, gizi, dan tidur adalah 'kurikulum' utama balita.",
+    "durasi": "8 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan pertumbuhan otak dan tubuh pada masa bayi dan anak usia dini (Santrock, 2018, Bab 3)",
+      "Mengenali tonggak keterampilan motorik kasar dan halus anak 0–5 tahun",
+      "Menyediakan lingkungan yang mendukung perkembangan fisik: gerak bebas, gizi, dan tidur"
+    ],
+    "isi": [
+      "Tidak ada masa lain ketika otak tumbuh secepat tahun-tahun pertama kehidupan. Santrock (2018, Bab 3) menjelaskan bahwa pada usia 5 tahun otak anak telah mencapai sekitar 90% ukuran otak dewasa; proses mielinisasi dan pembentukan sinaps berlangsung masif, dipengaruhi pengalaman yang dialami anak setiap hari. Pertumbuhan tubuh pun cepat: berat badan bayi berlipat pada tahun pertama, dan proporsi tubuh berangsur berubah dari kepala yang dominan menjadi lebih seimbang.",
+      "Keterampilan motorik berkembang mengikuti prinsip sefalokaudal (dari kepala ke kaki) dan proksimodistal (dari tengah tubuh ke tepi). Motorik kasar — merangkak, berjalan, berlari, melompat, memanjat — berkembang lewat latihan dan kesempatan bergerak, bukan diajarkan secara formal. Motorik halus, seperti memegang sendok, menyusun balok, dan mencoret, turut melatih koordinasi mata-tangan yang kelak menjadi dasar menulis. Tidur yang cukup dan gizi seimbang adalah penopang langsung seluruh proses ini."
+    ],
+    "praktik": [
+      "<strong>Sediakan waktu bergerak bebas setiap hari.</strong> Lantai yang aman dan ruang luar memberi latihan motorik yang tidak bisa digantikan alat apa pun.",
+      "<strong>Tawarkan aktivitas motorik halus.</strong> Menyendok, menuang air, meronce, dan mencoret dengan krayon besar melatih jari-jari anak.",
+      "<strong>Jaga rutinitas tidur.</strong> Balita membutuhkan tidur 10–13 jam termasuk tidur siang; pola yang teratur membantu pertumbuhan dan suasana hati.",
+      "<strong>Beri kesempatan, bukan bantuan berlebih.</strong> Biarkan anak mencoba memanjat, memakai sepatu, atau membuka wadah sendiri dengan pengawasan — keberhasilan kecil membangun rasa mampu."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kamu berhasil naik sendiri! Sekarang coba turun pelan-pelan, Ayah jaga di sini.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Awas jatuh! Sudah, jangan manjat-manjat, nanti kotor dan sakit.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah anak saya cukup banyak bergerak bebas dibandingkan duduk dan menonton?",
+      "Kesempatan mencoba sendiri apa yang masih sering saya ambil alih?",
+      "Apakah pola tidur dan makan anak saya cukup teratur minggu ini?"
+    ],
+    "fakta": "Menurut Santrock (2018, Bab 3), pengalaman awal berperan dalam 'memangkas' sinaps otak: hubungan saraf yang sering digunakan menguat, yang jarang digunakan melemah — alasan pentingnya lingkungan yang kaya stimulasi wajar."
+  },
+  {
+    "id": "m4",
+    "order": 8,
+    "usia": "0-5",
+    "domain": "Keluarga & Pengasuhan",
+    "bab": "Bab 14 · Keluarga",
+    "judul": "Pola Asuh Otoritatif sejak Dini: Hangat Sekaligus Tegas",
+    "tahap": "Masa bayi & anak usia dini (infancy & early childhood)",
+    "img": "assets/img/ayah-balok-kayu.jpg",
+    "alt": "Ayah bermain balok kayu bersama anak balitanya di lantai ruang keluarga",
+    "ringkas": "Dari empat pola asuh yang dibahas Santrock (Bab 14), pola otoritatif — hangat sekaligus berbatas jelas — paling konsisten berkaitan dengan perkembangan anak yang sehat.",
+    "durasi": "9 menit",
+    "level": "Dasar",
+    "tujuan": [
+      "Menjelaskan empat pola asuh menurut Baumrind serta Maccoby & Martin dalam Santrock (2018, Bab 14)",
+      "Membedakan disiplin otoritatif dari hukuman dan kelonggaran tanpa batas",
+      "Mulai menerapkan aturan rumah yang sedikit, jelas, dan konsisten untuk balita"
+    ],
+    "isi": [
+      "Santrock (2018, Bab 14) memaparkan klasifikasi pola asuh yang berawal dari Diana Baumrind, lalu dikembangkan Maccoby dan Martin menjadi empat pola berdasarkan dua dimensi: tuntutan/kendali dan kehangatan/responsivitas. Pola otoriter tinggi tuntutan tetapi rendah kehangatan; pola permisif hangat tetapi tanpa batas; pola mengabaikan rendah pada keduanya; dan pola otoritatif tinggi pada keduanya — orang tua menetapkan batas yang jelas sambil menjelaskan alasan dan tetap responsif terhadap anak.",
+      "Rangkuman penelitian yang dibahas Santrock menunjukkan pola otoritatif paling konsisten berkaitan dengan anak yang mandiri, kompeten secara sosial, dan mampu mengendalikan diri. Mekanismenya bukan keajaiban: anak memahami alasan di balik aturan (disiplin induktif), merasa didengar, dan mengalami batas yang dapat diramalkan. Untuk balita, wujudnya sederhana: sedikit aturan yang menyangkut keselamatan dan kebiasaan dasar, disampaikan singkat, dan dipegang konsisten oleh semua pengasuh."
+    ],
+    "praktik": [
+      "<strong>Sedikit aturan, alasan jelas.</strong> Untuk balita cukup 3–5 aturan inti, misalnya soal keselamatan dan jam tidur, masing-masing dengan alasan satu kalimat.",
+      "<strong>Konsisten antar pengasuh.</strong> Sepakati aturan yang sama dengan pasangan dan pengasuh lain; ketidakkonsistenan adalah pelajaran bahwa batas bisa dinegosiasikan lewat tangisan.",
+      "<strong>Tegas tanpa bentakan.</strong> Sampaikan batas dengan nada tenang dan tindakan yang mengikuti, bukan ancaman yang tidak dijalankan.",
+      "<strong>Hangat setelah konflik.</strong> Setelah batas ditegakkan dan emosi reda, kembalilah bersikap hangat — batas berlaku pada perilaku, bukan pada hubungan."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kita tidak memukul. Kalau kesal, bilang ke Ibu atau pukul bantal ini. Ibu bantu kamu tenang.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Kalau nakal lagi, Ibu tinggal kamu di sini sendirian!”"
+      }
+    ],
+    "refleksi": [
+      "Pola mana yang paling menggambarkan respons saya saat lelah: otoritatif, otoriter, permisif, atau mengabaikan?",
+      "Apakah aturan di rumah saya sedikit dan jelas, atau banyak tetapi sering dilanggar tanpa tindak lanjut?",
+      "Apakah saya dan pasangan/pengasuh lain sudah sepakat soal aturan inti?"
+    ],
+    "fakta": "Santrock (2018, Bab 14) mencatat pola asuh bukanlah sifat tetap: orang tua dapat bergeser antar pola tergantung situasi dan kelelahan — kesadaran akan pola dominan adalah langkah pertama memperbaikinya."
+  },
+  {
+    "id": "m7",
+    "order": 9,
+    "usia": "6-12",
+    "domain": "Sosioemosional",
+    "bab": "Bab 10 · Diri, Identitas & Kepribadian; Bab 13 · Teman Sebaya",
+    "judul": "Harga Diri, Rasa Mampu & Dunia Teman Sebaya",
+    "tahap": "Masa anak usia tengah & akhir (middle & late childhood)",
+    "img": "assets/img/anak-bermain-taman.jpg",
+    "alt": "Anak-anak bermain dan berlari di taman yang hijau",
+    "ringkas": "Krisis Erikson di usia sekolah adalah industri versus inferioritas. Santrock menunjukkan bagaimana rasa mampu, harga diri, dan penerimaan teman saling berkaitan.",
+    "durasi": "9 menit",
+    "level": "Menengah",
+    "tujuan": [
+      "Menjelaskan tahap industri versus inferioritas Erikson pada anak usia sekolah (Santrock, 2018, Bab 10)",
+      "Memahami perkembangan konsep diri, harga diri, dan perbandingan sosial pada usia 6–12 tahun",
+      "Mendukung persahabatan anak dan mengenali tanda penolakan teman sebaya (Bab 13)"
+    ],
+    "isi": [
+      "Erikson menyebut krisis psikososial masa anak usia tengah dan akhir sebagai industri versus inferioritas (Santrock, 2018, Bab 10). Anak terdorong menguasai pengetahuan dan keterampilan — merasa 'aku bisa' — dan berbahaya baginya jika yang tumbuh justru rasa tidak mampu. Pada masa ini konsep diri anak berubah: ia mendeskripsikan dirinya dengan ciri psikologis ('aku baik dalam matematika', 'aku mudah berteman') dan mulai membandingkan dirinya dengan teman sebaya. Harga diri pun menjadi lebih terdiferensiasi dan, pada sebagian anak, menurun di awal masa sekolah.",
+      "Dunia sosial anak meluas ke teman sebaya (Bab 13). Santrock membedakan anak yang diterima dengan baik oleh kelompoknya — umumnya terampil membaca situasi sosial dan bersikap hangat — dari anak yang ditolak, yang berisiko mengalami kesulitan penyesuaian di kemudian hari. Persahabatan pada usia ini ditandai kesetiaan dan saling berbagi secara psikologis. Orang tua tidak dapat memilihkan teman bagi anak, tetapi dapat melatih keterampilan sosialnya dan membuka kesempatan pergaulan yang sehat."
+    ],
+    "praktik": [
+      "<strong>Beri tugas nyata yang bisa diselesaikan.</strong> Tanggung jawab rumah tangga yang tuntas menumbuhkan rasa industri — perasaan mampu yang dicari anak di tahap ini.",
+      "<strong>Kenali, jangan atur, pergaulannya.</strong> Ketahui siapa teman dekat anak dan bagaimana ia diperlakukan, tanpa melarang pertemanan hanya berdasarkan kesan sepintas.",
+      "<strong>Latih keterampilan sosial lewat situasi nyata.</strong> Bantu anak memikirkan cara bergabung dengan kelompok yang sedang bermain dan cara memperbaiki hubungan setelah bertengkar.",
+      "<strong>Hindari perbandingan.</strong> Membandingkan anak dengan kakak atau temannya menekan harga diri tepat pada masa ia sendiri mulai gemar membandingkan diri."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kamu yang menyiram tanaman minggu ini dan tidak ada yang layu. Kamu teliti — tanggung jawab itu cocok untukmu.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Lihat kakakmu, nilainya bagus semua. Kamu kapan seperti dia?”"
+      }
+    ],
+    "refleksi": [
+      "Apakah anak saya punya cukup kesempatan merasa mampu lewat tugas dan kegiatan nyata?",
+      "Seberapa jauh saya mengenal teman-teman dekat anak saya?",
+      "Apakah saya tanpa sadar sering membandingkan anak saya dengan orang lain?"
+    ],
+    "fakta": "Santrock (2018, Bab 10) menekankan harga diri anak paling tepat ditumbuhkan lewat kompetensi nyata pada bidang yang dihargai anak — bukan lewat pujian kosong yang tidak berdasar."
+  },
+  {
+    "id": "m11",
+    "order": 10,
+    "usia": "13-18",
+    "domain": "Sosioemosional",
+    "bab": "Bab 10 · Diri, Identitas & Kepribadian",
+    "judul": "Siapa Aku? Pencarian Identitas di Masa Remaja",
+    "tahap": "Masa remaja (adolescence)",
+    "img": "assets/img/keluarga-salad-dapur.jpg",
+    "alt": "Keluarga menyiapkan makanan bersama di dapur",
+    "ringkas": "Identitas versus kebingungan identitas: tugas perkembangan utama remaja menurut Erikson, dan empat status identitas Marcia yang membantu orang tua membaca prosesnya.",
+    "durasi": "10 menit",
+    "level": "Menengah",
+    "tujuan": [
+      "Menjelaskan tahap identitas versus kebingungan identitas Erikson (Santrock, 2018, Bab 10)",
+      "Membedakan empat status identitas Marcia: difusi, penyitaan, moratorium, dan pencapaian",
+      "Mendampingi eksplorasi remaja tanpa memaksakan jawaban tentang masa depannya"
+    ],
+    "isi": [
+      "Menurut Erikson dalam Santrock (2018, Bab 10), tugas psikososial utama masa remaja adalah identitas versus kebingungan identitas. Remaja bertanya 'siapa aku, apa yang kuinginkan, dan ke mana hidupku menuju' — mencakup pilihan minat, nilai, keyakinan, dan cita-cita. Remaja yang berhasil keluar dari tahap ini dengan identitas yang koheren akan membawa kesetiaan (fidelity) pada nilai dan pilihannya; yang gagal berisiko mengalami kebingungan peran berkepanjangan.",
+      "James Marcia merinci proses itu menjadi empat status berdasarkan ada tidaknya krisis (eksplorasi) dan komitmen. Difusi identitas: belum bereksplorasi dan belum berkomitmen. Penyitaan (foreclosure): berkomitmen tanpa bereksplorasi, biasanya mengikuti keinginan orang tua. Moratorium: sedang aktif bereksplorasi, belum berkomitmen — tampak sebagai 'bingung' dan berganti-ganti minat. Pencapaian identitas: telah bereksplorasi dan mengambil komitmen. Moratorium, yang sering membuat orang tua cemas, sesungguhnya adalah jalan yang sehat menuju pencapaian identitas."
+    ],
+    "praktik": [
+      "<strong>Dukung eksplorasi yang wajar.</strong> Berganti ekstrakurikuler dan minat pada masa remaja sering kali adalah moratorium yang sehat, bukan ketidakkonsistenan.",
+      "<strong>Bedakan nilai inti dan pilihan hidup.</strong> Pegang nilai keluarga yang fundamental, tetapi beri ruang pada pilihan minat, gaya, dan cita-cita anak.",
+      "<strong>Ajak berdialog tentang nilai, bukan menceramahi.</strong> Remaja membentuk identitas juga lewat menguji gagasan — termasuk gagasan orang tuanya.",
+      "<strong>Hargai privasinya.</strong> Kamar, jurnal, dan percakapan dengan teman adalah laboratorium identitas; pengawasan tetap perlu, tetapi dengan batas yang disepakati."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Kamu sedang mencoba banyak hal tahun ini. Ibu senang kamu berani mencoba — bagian mana yang paling terasa 'kamu banget'?”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Keluarga kita semua jadi dokter. Tidak usah pusing memikirkan yang lain-lain.”"
+      }
+    ],
+    "refleksi": [
+      "Apakah saya memberi ruang bagi anak saya untuk berbeda pilihan dari saya?",
+      "Apakah kegelisahan saya tentang masa depan anak lebih besar daripada kebutuhannya untuk bereksplorasi?",
+      "Nilai keluarga apa yang benar-benar inti, dan mana yang sebenarnya selera saya pribadi?"
+    ],
+    "fakta": "Santrock (2018, Bab 10) mencatat banyak remaja baru mencapai identitas pada masa dewasa awal; identitas juga terus direvisi sepanjang rentang kehidupan, bukan diputuskan sekali untuk selamanya."
+  },
+  {
+    "id": "m8",
+    "order": 11,
+    "usia": "6-12",
+    "domain": "Keluarga & Pengasuhan",
+    "bab": "Bab 14 · Keluarga",
+    "judul": "Dari Mengatur Menuju Mengelola Bersama: Pengasuhan Anak Usia Sekolah",
+    "tahap": "Masa anak usia tengah & akhir (middle & late childhood)",
+    "img": "assets/img/keluarga-dapur-bersama.jpg",
+    "alt": "Keluarga berbincang sambil menyiapkan makanan bersama di dapur",
+    "ringkas": "Santrock (Bab 14) mencatat pergeseran besar di usia sekolah: kendali langsung orang tua berubah menjadi pengelolaan bersama (ko-regulasi) dengan anak.",
+    "durasi": "9 menit",
+    "level": "Menengah",
+    "tujuan": [
+      "Menjelaskan pergeseran pola pengasuhan dari kendali langsung ke ko-regulasi pada anak usia sekolah (Santrock, 2018, Bab 14)",
+      "Memahami pentingnya pengasuhan bersama (coparenting) yang saling mendukung",
+      "Melibatkan anak menyusun aturan dan konsekuensi keluarga secara bertahap"
+    ],
+    "isi": [
+      "Ketika anak memasuki usia sekolah, ia menghabiskan lebih banyak waktu di luar pengawasan langsung orang tua. Santrock (2018, Bab 14) menggambarkan pergeseran yang menyertainya: orang tua tidak lagi mengatur setiap perilaku secara langsung, melainkan beralih ke pengelolaan bersama (ko-regulasi) — orang tua tetap memegang kerangka dan pengawasan umum, sementara anak diberi kendali yang lebih besar atas perilaku sehari-harinya, langkah demi langkah sesuai kematangannya.",
+      "Bab yang sama menekankan mutu hubungan antarorang tua sebagai fondasi: pengasuhan bersama (coparenting) yang saling mendukung — tidak saling melemahkan di depan anak — berkaitan dengan pengasuhan yang lebih kompeten. Pada masa ini pula anak semakin peka terhadap keadilan perlakuan, terutama dalam keluarga dengan lebih dari satu anak. Aturan yang disusun dengan melibatkan anak, beserta konsekuensi yang disepakati sebelumnya, lebih mudah diterima karena anak memahami alasan dan merasa diperlakukan adil."
+    ],
+    "praktik": [
+      "<strong>Libatkan anak menyusun aturan.</strong> Adakan obrolan keluarga singkat untuk meninjau aturan: mana yang masih perlu, mana yang bisa dilonggarkan seiring anak bertumbuh.",
+      "<strong>Sepakati konsekuensi yang logis di depan.</strong> Konsekuensi yang berhubungan dengan perbuatannya dan diketahui sejak awal terasa adil bagi anak usia sekolah.",
+      "<strong>Satu suara antar pengasuh.</strong> Jika tidak sepakat dengan pasangan, bahas berdua — bukan di depan anak — agar anak tidak belajar memanfaatkan perbedaan.",
+      "<strong>Naikkan tanggung jawab bertahap.</strong> Beri satu kebebasan baru setiap kali anak menunjukkan kesiapan, bukan semuanya sekaligus dan bukan tanpa batas waktu."
+    ],
+    "kalimat": [
+      {
+        "tipe": "good",
+        "teks": "“Menurutmu, aturan main di luar rumah yang adil itu seperti apa? Ibu sampaikan versi Ibu, lalu kita sepakati bersama.”"
+      },
+      {
+        "tipe": "bad",
+        "teks": "“Kata Ibu boleh, kata Ayah tidak boleh? Ya sudah, ikut yang paling enak saja.”"
+      }
+    ],
+    "refleksi": [
+      "Aturan apa yang masih saya kendalikan penuh padahal anak saya sudah mampu mengelolanya?",
+      "Apakah saya dan pasangan tampil satu suara di depan anak?",
+      "Kapan terakhir kali aturan keluarga ditinjau ulang bersama anak?"
+    ],
+    "fakta": "Santrock (2018, Bab 14) merangkum bahwa anak dari orang tua yang bekerja sama dengan baik dalam pengasuhan (coparenting yang suportif) cenderung menunjukkan penyesuaian sosial yang lebih baik."
+  }
+]

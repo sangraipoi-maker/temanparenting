@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="TemanParenting: prototipe website edukasi positive parenting untuk orang tua anak usia 0–18 tahun. Materi per kelompok usia, artikel, dan tips praktis." />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<title>TemanParenting — Edukasi Positive Parenting untuk Orang Tua</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- TODO(Arkasha): strip prototipe di atas + bagian "Batasan prototipe" di tentang.html + kalimat footer "Prototipe rancangan" masih menyebut situs ini mockup tanpa basis data. Sekarang situs membaca data dari Firestore, jadi kalimat-kalimat itu sudah tidak akurat — sunting/hapus saat siap. Isinya dipertahankan apa adanya dari prototipe sampai lo memutuskan. -->
+<div class="proto-strip">Prototipe rancangan konseptual untuk <strong>Karya Tulis Ilmiah (KTI)</strong> — seluruh materi di halaman ini adalah <strong>konten contoh</strong> untuk keperluan Bab IV.</div>
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="TemanParenting — Beranda">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">Teman<em>Parenting</em></span><br />
+        <span class="brand-sub">Edukasi Positive Parenting</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="Navigasi utama">
+      <button data-nav="beranda" class="active" onclick="location.href='index.html'">Beranda</button>
+      <button data-nav="materi" onclick="location.href='materi.html'">Materi</button>
+      <button data-nav="artikel" onclick="location.href='artikel.html'">Artikel & Tips</button>
+      <button data-nav="tentang" onclick="location.href='tentang.html'">Tentang</button>
+    </nav>
+  </div>
+</header>
+<main>
+<!-- ================= BERANDA ================= -->
+<div class="view active" id="view-beranda">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Mengasuh dengan hangat, membimbing <span class="hl">tanpa menghakimi.</span></h1>
+        <p class="lead">TemanParenting menemani ayah dan ibu belajar <em>positive parenting</em> — pendekatan pengasuhan yang tegas sekaligus hangat — lewat materi singkat yang disusun mengikuti tahap perkembangan anak usia 0–18 tahun.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="materi.html">Jelajahi Materi</a>
+          <a class="btn btn-ghost" href="artikel.html">Baca Artikel &amp; Tips</a>
+        </div>
+        <div class="hero-ages">
+          <span class="lbl">Pilih usia anak:</span>
+          <button class="chip" onclick="location.href='materi.html?usia=0-5'">Balita · 0–5 tahun</button>
+          <button class="chip" onclick="location.href='materi.html?usia=6-12'">Anak · 6–12 tahun</button>
+          <button class="chip" onclick="location.href='materi.html?usia=13-18'">Remaja · 13–18 tahun</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12</strong><span>Materi contoh</span></div>
+          <div><strong>3</strong><span>Kelompok usia</span></div>
+          <div><strong>6</strong><span>Artikel &amp; tips</span></div>
+          <div><strong>0–18</strong><span>Tahun rentang usia</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/img/ibu-membaca-buku-sofa.jpg" alt="Ibu membacakan buku bergambar untuk anak balitanya di sofa ruang keluarga" />
+        <div class="hero-card">
+          <strong>Mulai dari 10 menit sehari</strong>
+          <small>Membaca bersama, bermain, dan mengobrol — koneksi kecil yang konsisten adalah fondasi disiplin yang positif.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Materi per Usia</span>
+        <h2>Kebutuhan anak berubah, cara mengasuh ikut menyesuaikan</h2>
+        <p>Setiap kelompok usia punya tugas perkembangan yang berbeda. Materi TemanParenting dikelompokkan agar orang tua membaca yang paling relevan dengan fase anaknya saat ini — dengan prioritas pada usia balita (0–5 tahun).</p>
+      </div>
+      <div class="age-grid">
+        <button class="age-card a05" onclick="location.href='materi.html?usia=0-5'">
+          <img src="assets/img/ayah-balok-kayu.jpg" alt="Ayah bermain balok kayu bersama anak balitanya di lantai ruang keluarga" />
+          <span class="body">
+            <span class="ages">Balita · 0–5 Tahun</span>
+            <h3>Fondasi Emosi &amp; Rasa Aman</h3>
+            <p>Masa keemasan perkembangan otak. Fokusnya: kelekatan yang aman, bahasa emosi pertama, dan rutinitas yang menenangkan.</p>
+            <ul>
+              <li>Emosi pertama &amp; tantrum</li>
+              <li>Ledakan bahasa usia dini</li>
+              <li>Pola asuh otoritatif sejak dini</li>
+            </ul>
+            <span class="go">Lihat 4 materi →</span>
+          </span>
+        </button>
+        <button class="age-card a612" onclick="location.href='materi.html?usia=6-12'">
+          <img src="assets/img/ibu-dampingi-tugas.jpg" alt="Ibu mendampingi anak usia sekolah mengerjakan tugas di meja belajar" />
+          <span class="body">
+            <span class="ages">Anak · 6–12 Tahun</span>
+            <h3>Kemandirian &amp; Kebiasaan Baik</h3>
+            <p>Anak mulai masuk sekolah dan dunia sosial yang lebih luas. Fokusnya: berpikir konkret, rasa mampu, dan pergaulan teman sebaya.</p>
+            <ul>
+              <li>Berpikir konkret &amp; belajar di sekolah</li>
+              <li>Harga diri &amp; dunia teman sebaya</li>
+              <li>Dari mengatur ke mengelola bersama</li>
+            </ul>
+            <span class="go">Lihat 4 materi →</span>
+          </span>
+        </button>
+        <button class="age-card a1318" onclick="location.href='materi.html?usia=13-18'">
+          <img src="assets/img/ibu-berbincang-remaja.jpg" alt="Ibu berbincang hangat dengan anak remajanya di ruang keluarga" />
+          <span class="body">
+            <span class="ages">Remaja · 13–18 Tahun</span>
+            <h3>Kepercayaan &amp; Ruang Tumbuh</h3>
+            <p>Remaja mencari identitas dan otonomi. Fokusnya bergeser dari mengatur menjadi mendampingi: mendengar, bernegosiasi, percaya.</p>
+            <ul>
+              <li>Pubertas &amp; otak remaja</li>
+              <li>Pencarian identitas diri</li>
+              <li>Otonomi tanpa putus koneksi</li>
+            </ul>
+            <span class="go">Lihat 4 materi →</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="principles">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Landasan</span>
+        <h2>Empat prinsip positive parenting</h2>
+        <p>Seluruh materi di TemanParenting berdiri di atas empat prinsip ini — bukan sekadar teknik, melainkan cara memandang anak.</p>
+      </div>
+      <div class="pr-row">
+        <div class="pr-item">
+          <span class="pr-num">01</span>
+          <div>
+            <h3>Koneksi sebelum koreksi</h3>
+            <p>Anak yang merasa terhubung lebih mudah menerima arahan. Dekati dan tenangkan dulu, baru bahas perilakunya — bukan sebaliknya.</p>
+          </div>
+        </div>
+        <div class="pr-item">
+          <span class="pr-num">02</span>
+          <div>
+            <h3>Tegas sekaligus hangat</h3>
+            <p>Batas yang jelas bukan musuh kelembutan. Aturan disampaikan dengan nada tenang, alasan yang masuk akal, dan konsistensi.</p>
+          </div>
+        </div>
+        <div class="pr-item">
+          <span class="pr-num">03</span>
+          <div>
+            <h3>Emosi diakui, perilaku dibimbing</h3>
+            <p>Marah, sedih, dan kecewa boleh dirasakan; memukul atau merusak yang tidak boleh. Memisahkan keduanya membuat anak tidak merasa ditolak sebagai pribadi.</p>
+          </div>
+        </div>
+        <div class="pr-item">
+          <span class="pr-num">04</span>
+          <div>
+            <h3>Teladan lebih keras dari nasihat</h3>
+            <p>Anak meniru cara orang tuanya mengelola emosi, meminta maaf, dan menyelesaikan konflik. Mengasuh dimulai dari mengatur diri sendiri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Materi Pilihan</span>
+        <h2>Mulai dari yang paling sering dicari orang tua</h2>
+      </div>
+      <div class="card-grid" id="featured-materi"></div>
+      <p style="margin-top:26px"><a class="btn btn-ghost" href="materi.html">Lihat Semua Materi</a></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="quiz-band">
+        <div>
+          <h2>Kenali pola respons Anda dalam 5 situasi sehari-hari</h2>
+          <p>Kuis singkat ini membantu orang tua merefleksikan respons yang biasa muncul saat menghadapi perilaku anak — tanpa nilai benar-salah dan tanpa menghakimi. Hasilnya berupa gambaran umum untuk bahan refleksi, bukan diagnosis.</p>
+        </div>
+        <div class="quiz-box" id="quiz-box"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Artikel &amp; Tips</span>
+        <h2>Bacaan ringan untuk sela-sela hari</h2>
+      </div>
+      <div class="card-grid" id="featured-artikel"></div>
+      <p style="margin-top:26px"><a class="btn btn-ghost" href="artikel.html">Lihat Semua Artikel</a></p>
+    </div>
+  </section>
+
+  <section class="quote-sec" style="padding-top:0">
+    <div class="wrap">
+      <blockquote>&ldquo;Anak tidak membutuhkan orang tua yang sempurna. Anak membutuhkan orang tua yang hadir, mau mendengar, dan berani memperbaiki ketika keliru.&rdquo;</blockquote>
+      <cite>— Prinsip pengasuhan yang dipegang TemanParenting</cite>
+    </div>
+  </section>
+</div>
+
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-in">
+      <div>
+        <h4>TemanParenting</h4>
+        <p>Website edukasi positive parenting untuk orang tua anak usia 0–18 tahun. Mengasuh dengan hangat, membimbing tanpa menghakimi.</p>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="materi.html">Materi per Usia</a></li>
+          <li><a href="artikel.html">Artikel &amp; Tips</a></li>
+          <li><a href="tentang.html">Tentang Rancangan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kelompok Usia</h4>
+        <ul>
+          <li><a href="materi.html?usia=0-5">Balita · 0–5 tahun</a></li>
+          <li><a href="materi.html?usia=6-12">Anak · 6–12 tahun</a></li>
+          <li><a href="materi.html?usia=13-18">Remaja · 13–18 tahun</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TemanParenting — Prototipe rancangan untuk Karya Tulis Ilmiah.</span>
+      <span>Foto: dokumentasi stok dari berbagai sumber daring, dipakai sebagai ilustrasi prototipe.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="bottom-nav" aria-label="Navigasi bawah">
+  <button data-nav="beranda" class="active" onclick="location.href='index.html'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+    Beranda
+  </button>
+  <button data-nav="materi" onclick="location.href='materi.html'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+    Materi
+  </button>
+  <button data-nav="artikel" onclick="location.href='artikel.html'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16"/><path d="M4 18h10"/><path d="M18.4 2.6a2.4 2.4 0 0 1 3.4 3.4L8.5 19.3 3 21l1.7-5.5Z"/></svg>
+    Artikel & Tips
+  </button>
+  <button data-nav="tentang" onclick="location.href='tentang.html'">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    Tentang
+  </button>
+</nav>
+
+<script type="module">
+import { initBeranda } from "./app.js";
+initBeranda();
+</script>
+</body>
+</html>

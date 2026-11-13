@@ -1,0 +1,146 @@
+[
+  {
+    "id": "a1",
+    "order": 0,
+    "bab": "Bab 14 · Keluarga",
+    "judul": "Tegas tapi Hangat: Mengenal Pola Asuh Otoritatif",
+    "kategori": "Pola Asuh",
+    "usia": "Semua usia",
+    "menit": "5 menit",
+    "img": "assets/img/keluarga-salad-dapur.jpg",
+    "alt": "Keluarga menyiapkan salad bersama di dapur yang terang",
+    "excerpt": "Dari empat pola asuh yang dipetakan Santrock (2018), satu pola paling konsisten menghasilkan anak yang mandiri dan percaya diri. Apa bedanya dari pola otoriter yang sekilas mirip?",
+    "body": [
+      "Dalam Bab 14, Santrock (2018) memaparkan empat pola asuh berdasarkan dua dimensi: seberapa besar tuntutan dan kendali orang tua, serta seberapa besar kehangatan dan responsivitasnya. Pola otoriter menuntut banyak tetapi dingin dan satu arah. Pola permisif sebaliknya: hangat, tetapi hampir tanpa batas. Pola mengabaikan rendah pada kedua dimensi. Pola otoritatif berada di titik yang khas — tuntutan tinggi sekaligus kehangatan tinggi.",
+      "Orang tua otoritatif menetapkan aturan dan standar yang jelas, tetapi menyampaikannya lewat dialog: anak diberi tahu alasan di balik aturan, boleh menyampaikan keberatan, dan keputusan akhir tetap dipegang orang tua dengan penjelasan. Santrock merangkum bahwa anak dari pola asuh ini cenderung paling kompeten secara sosial, energik, berprestasi, dan bertanggung jawab dibanding anak dari pola lainnya.",
+      "Yang sering disalahpahami: otoritatif bukan berarti semua hal dinegosiasikan. Batas tetap batas — bedanya, anak memahami mengapa batas itu ada. Penelitian yang dirangkum Santrock juga mengingatkan bahwa pola asuh bukanlah label permanen; orang tua yang sama bisa tergelincir menjadi otoriter saat lelah atau permisif saat merasa bersalah. Yang menentukan adalah pola dominan dalam keseharian, bukan satu-dua episode.",
+      "Memulainya tidak memerlukan perubahan besar. Pilih satu aturan yang paling sering dilanggar di rumah, lalu sampaikan kembali dengan tiga unsur otoritatif: batas yang jelas, alasan singkat yang masuk akal bagi anak, dan kesediaan mendengar tanggapannya — sambil keputusan tetap konsisten dijalankan."
+    ],
+    "tips": [
+      "Sampaikan aturan bersama alasannya, dalam satu-dua kalimat yang dipahami anak",
+      "Dengarkan keberatan anak sampai selesai sebelum menjawab",
+      "Jalankan konsekuensi yang sudah disepakati, tanpa menambah hukuman saat marah",
+      "Tinjau pola dominan Anda sebulan sekali: lebih sering hangat-tegas, atau hangat tanpa batas?"
+    ]
+  },
+  {
+    "id": "a2",
+    "order": 1,
+    "bab": "Bab 9 · Perkembangan Emosional",
+    "judul": "Koneksi Sebelum Koreksi: Pelajaran dari Ilmu Kelekatan",
+    "kategori": "Emosi & Kelekatan",
+    "usia": "0–5 tahun",
+    "menit": "5 menit",
+    "img": "assets/img/ibu-membaca-buku-sofa.jpg",
+    "alt": "Ibu membacakan buku bergambar untuk anak balitanya di sofa ruang keluarga",
+    "excerpt": "Santrock (2018) merangkum riset kelekatan selama puluhan tahun: anak yang merasa aman secara emosional justru lebih mudah dibimbing perilakunya. Ini alasannya.",
+    "body": [
+      "Kelekatan (attachment) adalah ikatan emosional yang erat antara bayi dan pengasuhnya. Santrock (2018, Bab 9) menjelaskan pola-pola kelekatan yang ditemukan riset Ainsworth: anak dengan kelekatan aman menggunakan pengasuhnya sebagai pangkalan yang aman untuk menjelajah, dan kembali kepadanya untuk mendapatkan kenyamanan saat tertekan. Kelekatan aman terbentuk dari pengasuhan yang responsif dan sensitif — pengasuh yang peka membaca sinyal anak dan meresponsnya secara konsisten.",
+      "Mengapa ini penting untuk disiplin? Anak yang kelekatannya aman memiliki 'tangki emosional' yang terisi: ia percaya orang tuanya hadir untuknya, sehingga koreksi perilaku tidak terasa sebagai penolakan. Sebaliknya, anak yang cemas akan kelekatan bisa membaca setiap teguran sebagai ancaman hubungan — dan justru semakin sulit diatur. Inilah dasar ilmiah dari prinsip populer 'koneksi sebelum koreksi'.",
+      "Santrock juga mencatat kelekatan tidak berhenti di masa bayi. Pada setiap tahap usia, anak dan remaja tetap membutuhkan rasa bahwa orang tuanya adalah tempat pulang yang aman — bentuknya berubah dari digendong menjadi didengarkan tanpa langsung dihakimi. Hubungan yang aman di masa remaja berkaitan dengan keberanian anak bercerita ketika menghadapi masalah, bukan menyembunyikannya.",
+      "Kabar baiknya, kelekatan dibangun dari interaksi biasa yang berulang — menanggapi tangisan, bermain bersama, membacakan cerita, memperbaiki hubungan setelah bertengkar — bukan dari gestur besar sesekali. Konsistensi kecil setiap hari jauh lebih menentukan daripada kesempurnaan."
+    ],
+    "tips": [
+      "Respons sinyal anak secara konsisten, terutama di tahun-tahun pertama",
+      "Luangkan waktu bermain mengikuti arah anak tanpa mengarahkan",
+      "Setelah konflik, lakukan reparasi: dekati anak dan pulihkan hubungan lebih dulu",
+      "Untuk remaja: dengarkan cerita sampai selesai sebelum memberi penilaian"
+    ]
+  },
+  {
+    "id": "a3",
+    "order": 2,
+    "bab": "Bab 7 · Bahasa & Bab 9 · Emosi",
+    "judul": "Menamai Perasaan: Langkah Kecil dengan Dampak Besar",
+    "kategori": "Komunikasi",
+    "usia": "0–12 tahun",
+    "menit": "4 menit",
+    "img": "assets/img/ibu-bacakan-cerita-tidur.jpg",
+    "alt": "Ibu membacakan cerita untuk anaknya yang berbaring di tempat tidur",
+    "excerpt": "Anak tidak bisa mengatur emosi yang tidak bisa ia kenali. Santrock menunjukkan perkembangan emosi dan bahasa berjalan beriringan — dan orang tua adalah guru pertamanya.",
+    "body": [
+      "Dalam perkembangan emosi (Santrock, 2018, Bab 9), salah satu tonggak penting anak usia dini adalah kemampuan mengenali dan menamai perasaannya sendiri. Emosi yang sudah bernama menjadi lebih mudah diatur: anak yang dapat berkata 'aku kesal' tidak perlu menunjukkan kekesalannya dengan melempar mainan. Kemampuan ini tidak muncul sendiri — ia dipelajari dari orang dewasa yang menamai emosi anak dalam keseharian.",
+      "Perkembangan bahasa (Bab 7) berjalan seiring. Pada anak usia dini, kosakata emosi tumbuh seiring percakapan dengan orang tua dan cerita yang dibacakan untuknya. Orang tua yang membicarakan perasaan tokoh dalam buku cerita — 'kelinci itu takut karena…' — sedang membangun kamus emosi anaknya tanpa terasa seperti pelajaran.",
+      "Tekniknya sederhana dan bisa dilakukan dalam hitungan detik. Pertama, deskripsikan yang terlihat: 'Wajahmu cemberut, tanganmu mengepal.' Kedua, tawarkan namanya: 'Sepertinya kamu marah karena mainanmu diambil.' Ketiga, akui perasaan itu sah, sambil tetap membimbing perilaku: 'Marah boleh, memukul tidak.' Urutan ini — mengakui dulu, membimbing kemudian — adalah wujud penerapan prinsip bahwa emosi dan perilaku adalah dua hal berbeda.",
+      "Pada anak yang lebih besar dan remaja, menamai perasaan bergeser menjadi percakapan: orang tua menjadi teman memeriksa pengalaman ('kedengarannya kamu kecewa karena tidak dipilih masuk tim'). Santrock mencatat bahwa keluarga yang membicarakan emosi secara terbuka membantu anak mengembangkan pemahaman sosial yang lebih baik."
+    ],
+    "tips": [
+      "Namai emosi anak dengan kalimat pendek saat kejadian berlangsung",
+      "Gunakan buku cerita untuk membicarakan perasaan tokoh-tokohnya",
+      "Pisahkan pengakuan perasaan dari pembimbingan perilaku",
+      "Perluas kosakata emosi anak seiring usia: kesal, kecewa, cemas, lega, bangga"
+    ]
+  },
+  {
+    "id": "a4",
+    "order": 3,
+    "bab": "Bab 14 · Keluarga",
+    "judul": "Ayah dalam Pengasuhan: Peran yang Tak Tergantikan",
+    "kategori": "Keluarga",
+    "usia": "Semua usia",
+    "menit": "5 menit",
+    "img": "assets/img/ayah-balok-kayu.jpg",
+    "alt": "Ayah bermain balok kayu bersama anak balitanya di lantai ruang keluarga",
+    "excerpt": "Bab 14 Santrock (2018) memberi ruang khusus bagi ayah: keterlibatan ayah berkaitan dengan berbagai hasil positif pada anak — dan gaya bermain ayah yang khas justru melengkapinya.",
+    "body": [
+      "Santrock (2018, Bab 14) mencatat perubahan besar dalam peran ayah lintas generasi: ayah masa kini menghabiskan waktu jauh lebih banyak dengan anak dibanding generasi sebelumnya. Riset yang dirangkumnya menunjukkan keterlibatan ayah — dalam pengasuhan langsung, bermain, maupun tanggung jawab mengelola kebutuhan anak — berkaitan dengan kompetensi sosial, penyesuaian emosi, dan prestasi anak yang lebih baik.",
+      "Gaya interaksi ayah pun punya kekhasan. Dalam banyak keluarga, ayah cenderung lebih banyak bermain fisik dan eksploratif — menggelitik, mengayun, bermain kasar yang aman — sementara ibu lebih sering terlibat dalam pengasuhan dan permainan yang menenangkan. Santrock menekankan perbedaan ini bukan soal siapa lebih baik; keduanya memberi pengalaman sosial yang berbeda dan saling melengkapi bagi anak.",
+      "Faktor lain yang dibahas Bab 14 adalah pengasuhan bersama (coparenting): cara ayah dan ibu saling mendukung atau saling melemahkan dalam pengasuhan. Anak membaca kerja sama orang tuanya. Pasangan yang menyepakati aturan inti, tidak saling menyalahkan di depan anak, dan berbagi beban pengasuhan memberi anak lingkungan yang lebih dapat diramalkan — dan rasa aman.",
+      "Keterlibatan ayah tidak diukur dari durasi semata. Kehadiran yang penuh perhatian dalam waktu yang tersedia — bermain tanpa gawai, menghadiri acara anak, mengetahui nama guru dan teman dekatnya — adalah bentuk keterlibatan yang dirasakan anak sebagai 'ayahku mengenalku'."
+    ],
+    "tips": [
+      "Ambil satu rutinitas khusus ayah-anak, misalnya membacakan cerita atau jalan pagi akhir pekan",
+      "Hadir penuh saat bersama anak: gawai disimpan selama waktu khusus itu",
+      "Sepakati aturan inti bersama pasangan dan tampilkan satu suara di depan anak",
+      "Kenali dunia anak: nama teman, guru, dan hal yang sedang ia sukai"
+    ]
+  },
+  {
+    "id": "a5",
+    "order": 4,
+    "bab": "Bab 5 · Pemrosesan Informasi",
+    "judul": "Anak Sulit Fokus Belajar? Kenali Cara Kerja Memorinya",
+    "kategori": "Belajar",
+    "usia": "6–12 tahun",
+    "menit": "6 menit",
+    "img": "assets/img/ibu-dampingi-tugas.jpg",
+    "alt": "Ibu mendampingi anak usia sekolah mengerjakan tugas di meja belajar",
+    "excerpt": "Pendekatan pemrosesan informasi dalam Santrock (2018) memandang anak sebagai pemikir aktif dengan memori yang terbatas. Memahami batas itu mengubah cara kita mendampingi belajar.",
+    "body": [
+      "Pendekatan pemrosesan informasi (Santrock, 2018, Bab 5) membandingkan pikiran anak dengan sistem yang menerima, menyimpan, dan menggunakan informasi — dengan kapasitas yang terbatas dan berkembang seiring usia. Memori kerja anak usia sekolah masih jauh lebih kecil daripada orang dewasa: instruksi panjang yang diberikan sekaligus akan meluap dan hilang, bukan karena anak tidak memperhatikan.",
+      "Yang juga berkembang pada masa ini adalah strategi memori. Anak mulai belajar mengulang-ulang informasi, mengelompokkannya, dan menghubungkannya dengan pengetahuan yang sudah dimiliki agar lebih mudah diingat. Strategi-strategi ini jarang muncul optimal tanpa contoh: anak belajar dari melihat orang dewasa dan guru memodelkannya, lalu berlatih dengan bimbingan yang makin dikurangi.",
+      "Di atas semuanya ada metakognisi — pengetahuan anak tentang cara berpikirnya sendiri. Anak dengan metakognisi baik tahu kapan ia belum paham dan strategi apa yang bisa ia coba. Santrock mencatat metakognisi berkembang nyata sepanjang masa anak usia tengah dan remaja, dan dapat dilatih lewat pertanyaan sederhana: 'Bagian mana yang paling sulit? Bagaimana kamu tahu jawabanmu benar?'",
+      "Bagi orang tua, pelajarannya praktis: berikan instruksi satu-dua langkah, pecah sesi belajar menjadi bagian pendek, dan fokuslah pada proses berpikir anak, bukan hanya jawaban akhirnya. Mendampingi belajar berarti menjaga beban memori anak tetap masuk akal sambil melatih kemandiriannya memeriksa diri."
+    ],
+    "tips": [
+      "Berikan instruksi selangkah demi selangkah, bukan lima perintah sekaligus",
+      "Ajarkan strategi mengingat: mengulang, mengelompokkan, menghubungkan dengan yang sudah dikenal",
+      "Akhiri sesi belajar dengan pertanyaan 'bagian apa yang tadi paling sulit?'",
+      "Beri jeda gerak di antara sesi belajar pendek"
+    ]
+  },
+  {
+    "id": "a6",
+    "order": 5,
+    "bab": "Bab 10 · Diri, Identitas & Kepribadian",
+    "judul": "Remaja Sering Menyendiri? Memahami Pencarian Identitasnya",
+    "kategori": "Remaja",
+    "usia": "13–18 tahun",
+    "menit": "6 menit",
+    "img": "assets/img/ibu-berbincang-remaja.jpg",
+    "alt": "Ibu berbincang hangat dengan anak remajanya di ruang keluarga",
+    "excerpt": "Kamar tertutup dan jawaban seperlunya sering membuat orang tua cemas. Menurut Erikson dan Marcia dalam Santrock (2018), di balik itu ada tugas perkembangan terpenting masa remaja.",
+    "body": [
+      "Erikson menempatkan identitas versus kebingungan identitas sebagai krisis utama masa remaja (Santrock, 2018, Bab 10). Remaja sedang menyusun jawaban atas pertanyaan 'siapa aku' dari banyak bahan: minat, nilai keluarga, pandangan teman, pengalaman berhasil dan gagal. Kebutuhan menyendiri, mencoba gaya baru, dan berganti minat adalah bagian wajar dari proses penyusunan itu — bukan otomatis tanda menjauh dari keluarga.",
+      "Marcia merinci prosesnya dalam empat status identitas. Remaja dalam moratorium sedang aktif bereksplorasi: tampak galau, banyak bertanya, dan belum mau memutuskan. Status ini sering disalahartikan orang tua sebagai masalah, padahal moratorium adalah jalur yang sehat menuju pencapaian identitas — komitmen yang diambil setelah benar-benar mempertimbangkan pilihan. Yang perlu diwaspadai adalah difusi berkepanjangan: remaja yang menghindari eksplorasi maupun komitmen dan tampak tidak peduli pada arah hidupnya.",
+      "Keluarga tetap berperan besar. Santrock merangkum bahwa remaja yang identitasnya berkembang sehat umumnya memiliki kelekatan yang aman dengan orang tua sekaligus diberi ruang otonomi yang bertambah — individuasi yang seimbang. Orang tua menjadi basis aman untuk kembali, bukan kurator yang menentukan seluruh pilihan identitas anak.",
+      "Yang bisa dilakukan orang tua adalah tetap terhubung tanpa memaksa masuk: hormati privasi yang wajar, tunjukkan minat pada dunia anak tanpa menghakimi, dan jaga pintu percakapan tetap terbuka. Remaja yang tahu orang tuanya mau mendengar akan lebih mungkin datang ketika benar-benar membutuhkan pertolongan."
+    ],
+    "tips": [
+      "Bedakan menyendiri yang wajar dari menarik diri total disertai perubahan fungsi sehari-hari",
+      "Tanyakan minat anak dengan rasa ingin tahu, bukan interogasi",
+      "Pegang nilai inti keluarga; beri ruang untuk pilihan gaya dan minat",
+      "Jaga ritual koneksi kecil: makan bersama, antar-jemput, atau obrolan sebelum tidur"
+    ]
+  }
+]
