@@ -199,19 +199,70 @@ export function renderMateri() {
 
 /* ---------------- diskusi & tanya jawab di akhir materi (3.1.2) ---------------- */
 // Contoh diskusi (dummy) per materi, hanya ahli yang dapat merespon.
+// Contoh diskusi (dummy) per materi: 3 pertanyaan per materi, hanya ahli
+// yang dapat merespon. Nama penanya adalah nama buatan, ditandai
+// "(Nama buatan)" di tampilan.
 const DISKUSI = {
-  m1: { q: "Anak saya tantrum di tempat umum, apa yang sebaiknya saya lakukan pertama kali?", a: "Tetap tenang, dekati anak, dan akui emosinya terlebih dahulu sebelum membahas perilakunya. Setelah anak tenang, barulah bicarakan batasannya dengan nada yang lembut dan jelas.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
-  m2: { q: "Apakah wajar jika anak usia 2 tahun belum bisa melompat dengan dua kaki?", a: "Setiap anak berkembang dengan kecepatannya sendiri, tetapi bila sampai usia 2 tahun belum ada kemajuan motorik kasar sama sekali, sebaiknya konsultasikan ke ahli tumbuh kembang untuk skrining lebih lanjut.", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog" },
-  m3: { q: "Anak saya usia 3 tahun masih sulit merangkai dua kata, apakah perlu khawatir?", a: "Ajak anak berbicara setiap hari, bacakan buku bergambar, dan beri waktu ia merespons. Bila dalam beberapa bulan tidak ada tambahan kosakata, bawa ke ahli untuk penilaian bahasa.", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog" },
-  m4: { q: "Bagaimana membedakan sikap tegas dengan sikap keras saat menerapkan aturan?", a: "Tegas berarti aturan jelas dan konsisten, disampaikan dengan nada tenang dan alasan yang masuk akal. Keras berarti memakai bentakan atau hukuman yang membuat anak takut, bukan paham.", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog" },
-  m5: { q: "Berapa lama waktu layar yang wajar untuk anak usia sekolah?", a: "Batasi waktu layar rekreasional sekitar satu jam per hari, seimbangkan dengan gerak, tidur cukup, dan makan bergizi. Yang lebih penting dari durasi adalah isi dan pendampingan orang tua.", ahli: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog" },
-  m6: { q: "Anak saya sulit fokus saat belajar, bagaimana cara melatihnya?", a: "Bagi tugas belajar menjadi potongan singkat sekitar 15 sampai 20 menit, selingi dengan gerak, dan kurangi gangguan di sekitarnya. Konsistensi rutinitas lebih membantu daripada sesi belajar yang panjang.", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog" },
-  m7: { q: "Anak saya sering berkata \"aku tidak bisa\", bagaimana membangun rasa mampunya?", a: "Berikan tugas yang sesuai kemampuan, rayakan usaha bukan hanya hasil, dan hindari membandingkan dengan anak lain. Rasa mampu tumbuh dari pengalaman berhasil, sekecil apa pun.", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog" },
-  m8: { q: "Kapan anak boleh mulai dilibatkan membuat aturan di rumah?", a: "Sejak usia sekolah, anak sudah bisa diajak berdiskusi tentang aturan sederhana dan konsekuensinya. Libatkan mereka menyusun aturan agar mereka merasa memiliki dan lebih mudah mematuhinya.", ahli: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog" },
-  m9: { q: "Remaja saya jadi mudah tersinggung sejak pubertas, apakah ini normal?", a: "Ya, perubahan hormon dan perkembangan otak remaja membuat emosi lebih reaktif. Yang dibutuhkan adalah orang tua yang tetap tenang, mendengarkan dulu, dan menasihati setelah emosi mereda.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
-  m10: { q: "Remaja saya merasa semua orang memperhatikan penampilannya, bagaimana menanggapinya?", a: "Itu bagian dari cara berpikir remaja yang merasa menjadi pusat perhatian. Akui perasaannya tanpa mengejek, lalu bantu ia melihat bukti nyata bahwa orang lain tidak sefokus itu padanya.", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog" },
-  m11: { q: "Remaja saya sering berganti minat dan gaya, apakah ini bagian dari pencarian identitas?", a: "Ya, mencoba berbagai peran adalah cara remaja menemukan jati dirinya. Dukung eksplorasinya selama aman, dan jadilah tempat pulang yang tidak menghakimi.", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog" },
-  m12: { q: "Bagaimana memberi kebebasan pada remaja tanpa kehilangan koneksi dengannya?", a: "Beri kebebasan bertahap sesuai tanggung jawab yang ia tunjukkan, dan jaga koneksi lewat obrolan rutin tanpa agenda. Otonomi dan kedekatan bisa berjalan bersama.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
+  m1: { ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Dewi", q: "Anak saya tantrum di tempat umum, apa yang sebaiknya saya lakukan pertama kali?", a: "Tetap tenang, dekati anak, dan akui emosinya terlebih dahulu sebelum membahas perilakunya. Setelah anak tenang, barulah bicarakan batasannya dengan nada yang lembut dan jelas." },
+    { penanya: "Bapak Agus", q: "Anak saya tantrum hampir setiap hari, apakah itu masih wajar?", a: "Tantrum harian pada usia 2-3 tahun masih dalam rentang wajar, selama mereda dalam beberapa menit dan anak kembali tenang. Perlu diperhatikan bila tantrum berlangsung lebih dari 15 menit, disertai anak melukai diri, atau tidak berkurang seiring bertambahnya usia." },
+    { penanya: "Sinta", q: "Apakah boleh memberi hadiah agar anak berhenti tantrum?", a: "Memberi hadiah saat tantrum justru mengajarkan anak bahwa tantrum adalah cara mendapat yang diinginkan. Lebih baik beri penghargaan saat anak berhasil menenangkan diri atau menyampaikan keinginannya dengan kata-kata." },
+  ] },
+  m2: { ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Rina", q: "Apakah wajar jika anak usia 2 tahun belum bisa melompat dengan dua kaki?", a: "Setiap anak berkembang dengan kecepatannya sendiri, tetapi bila sampai usia 2 tahun belum ada kemajuan motorik kasar sama sekali, sebaiknya konsultasikan ke ahli tumbuh kembang untuk skrining lebih lanjut." },
+    { penanya: "Bapak Bambang", q: "Anak saya usia 18 bulan belum berjalan, kapan harus ke dokter?", a: "Sebagian besar anak berjalan pada usia 12-15 bulan, dan hingga 18 bulan masih dalam rentang variasi normal. Bila sampai 18 bulan belum ada tanda-tanda berdiri sendiri atau melangkah, sebaiknya konsultasikan ke dokter anak untuk skrining." },
+    { penanya: "Lestari", q: "Apakah waktu layar memengaruhi perkembangan motorik anak?", a: "Waktu layar yang lama mengurangi kesempatan anak bergerak bebas, dan gerak bebas adalah latihan motorik utama balita. Batasi waktu layar dan beri ruang aman untuk merangkak, berjalan, dan memanjat." },
+  ] },
+  m3: { ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Fitri", q: "Anak saya usia 3 tahun masih sulit merangkai dua kata, apakah perlu khawatir?", a: "Ajak anak berbicara setiap hari, bacakan buku bergambar, dan beri waktu ia merespons. Bila dalam beberapa bulan tidak ada tambahan kosakata, bawa ke ahli untuk penilaian bahasa." },
+    { penanya: "Bapak Eko", q: "Apakah anak yang terlambat bicara pasti ada masalah?", a: "Tidak selalu. Sebagian anak memang lebih lambat bicara tetapi memahami banyak kata dan berkomunikasi lewat gestur. Yang perlu diwaspadai adalah bila anak tidak merespons suara, tidak menunjuk, atau tidak ada tambahan kosakata selama berbulan-bulan." },
+    { penanya: "Hadi", q: "Apakah membaca buku setiap hari benar-benar membantu bahasa anak?", a: "Ya, membacakan buku secara dialogis, dengan bertanya dan membiarkan anak menebak cerita, adalah salah satu stimulasi bahasa yang paling kuat. Yang penting bukan jumlah bukunya, melainkan interaksi selama membacakan." },
+  ] },
+  m4: { ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Nur", q: "Bagaimana membedakan sikap tegas dengan sikap keras saat menerapkan aturan?", a: "Tegas berarti aturan jelas dan konsisten, disampaikan dengan nada tenang dan alasan yang masuk akal. Keras berarti memakai bentakan atau hukuman yang membuat anak takut, bukan paham." },
+    { penanya: "Bapak Yanto", q: "Pasangan saya lebih permisif, bagaimana menyamakan pola asuh?", a: "Beda pola asuh antar orang tua adalah hal yang umum. Sepakati 3-5 aturan inti bersama, dan bahas perbedaan berdua, bukan di depan anak, agar anak tidak belajar memanfaatkan perbedaan." },
+    { penanya: "Wulan", q: "Apakah pola asuh otoritatif berarti tidak boleh marah pada anak?", a: "Tidak. Otoritatif bukan berarti orang tua tidak pernah marah, melainkan marah yang disampaikan dengan tenang dan tetap memegang batas. Yang dihindari adalah bentakan dan hukuman yang membuat anak takut, bukan paham." },
+  ] },
+  m5: { ahli: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Indah", q: "Berapa lama waktu layar yang wajar untuk anak usia sekolah?", a: "Batasi waktu layar rekreasional sekitar satu jam per hari, seimbangkan dengan gerak, tidur cukup, dan makan bergizi. Yang lebih penting dari durasi adalah isi dan pendampingan orang tua." },
+    { penanya: "Bapak Fajar", q: "Anak saya susah makan sayur, bagaimana mengatasinya?", a: "Libatkan anak menyiapkan makanan dan beri contoh makan sayur di meja yang sama. Anak yang ikut menyiapkan makanan lebih terbuka mencoba sayur, dan jangan jadikan sayur sebagai syarat mendapat makanan kesukaan." },
+    { penanya: "Rizki", q: "Apakah anak usia sekolah masih butuh tidur siang?", a: "Sebagian besar anak usia sekolah tidak lagi butuh tidur siang, tetapi tetap membutuhkan tidur malam 9-11 jam. Yang lebih penting adalah jam tidur yang teratur dan cukup, karena kurang tidur mengganggu konsentrasi belajar." },
+  ] },
+  m6: { ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Putri", q: "Anak saya sulit fokus saat belajar, bagaimana cara melatihnya?", a: "Bagi tugas belajar menjadi potongan singkat sekitar 15 sampai 20 menit, selingi dengan gerak, dan kurangi gangguan di sekitarnya. Konsistensi rutinitas lebih membantu daripada sesi belajar yang panjang." },
+    { penanya: "Bapak Anton", q: "Anak saya selalu lupa mengerjakan PR, apakah ini soal memori?", a: "Bisa jadi soal memori kerja, tetapi lebih sering soal rutinitas. Bantu anak dengan jadwal tetap, tempat belajar yang sama, dan daftar tugas yang ia centang sendiri, agar beban ingatannya berkurang." },
+    { penanya: "Dina", q: "Apakah les tambahan membantu anak yang kesulitan di sekolah?", a: "Les membantu bila targetnya spesifik dan anak punya waktu istirahat yang cukup. Yang lebih penting adalah memahami di mana letak kesulitannya, karena anak yang tidak paham konsep dasar tidak akan terbantu hanya dengan mengulang soal." },
+  ] },
+  m7: { ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Ani", q: "Anak saya sering berkata \"aku tidak bisa\", bagaimana membangun rasa mampunya?", a: "Berikan tugas yang sesuai kemampuan, rayakan usaha bukan hanya hasil, dan hindari membandingkan dengan anak lain. Rasa mampu tumbuh dari pengalaman berhasil, sekecil apa pun." },
+    { penanya: "Bapak Slamet", q: "Anak saya tidak punya teman dekat di sekolah, apakah perlu khawatir?", a: "Sebagian anak memang lebih nyaman dengan satu dua teman dekat daripada kelompok besar, dan itu wajar. Yang perlu diperhatikan adalah bila anak ditolak atau dijauhi terus-menerus, atau tidak punya satu pun teman untuk berbagi." },
+    { penanya: "Mega", q: "Apakah membandingkan anak dengan kakaknya berbahaya?", a: "Ya, membandingkan anak dengan saudara atau temannya menekan harga diri, terutama pada masa anak mulai gemar membandingkan diri. Bandingkan anak dengan dirinya sendiri di waktu lalu, bukan dengan orang lain." },
+  ] },
+  m8: { ahli: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Bapak Yusuf", q: "Kapan anak boleh mulai dilibatkan membuat aturan di rumah?", a: "Sejak usia sekolah, anak sudah bisa diajak berdiskusi tentang aturan sederhana dan konsekuensinya. Libatkan mereka menyusun aturan agar mereka merasa memiliki dan lebih mudah mematuhinya." },
+    { penanya: "Ibu Wati", q: "Anak saya sering berbohong soal PR, bagaimana menyikapinya?", a: "Anak berbohong biasanya karena takut dimarahi, bukan karena nakal. Tanyakan dengan tenang apa yang membuatnya sulit, dan beri konsekuensi yang berhubungan dengan perbuatan, bukan hukuman yang membuatnya makin takut jujur." },
+    { penanya: "Gunawan", q: "Apakah anak usia sekolah boleh pegang HP sendiri?", a: "Boleh, dengan aturan yang disepakati bersama dan pengawasan yang wajar. Yang penting bukan larangan total, melainkan kesepakatan soal waktu, isi, dan tempat, serta contoh dari orang tua sendiri." },
+  ] },
+  m9: { ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Bapak Joko", q: "Remaja saya jadi mudah tersinggung sejak pubertas, apakah ini normal?", a: "Ya, perubahan hormon dan perkembangan otak remaja membuat emosi lebih reaktif. Yang dibutuhkan adalah orang tua yang tetap tenang, mendengarkan dulu, dan menasihati setelah emosi mereda." },
+    { penanya: "Ibu Lestari", q: "Remaja saya tidur larut setiap malam, apakah harus dipaksa tidur lebih awal?", a: "Jam biologis remaja memang bergeser lebih malam, jadi memaksa tidur pukul sembilan sering berakhir dengan anak berbaring tanpa tidur. Lebih efektif menyepakati jam malam yang realistis dan mengurangi layar satu jam sebelum tidur." },
+    { penanya: "Fajar", q: "Apakah perubahan suasana hati remaja perlu dikonsultasikan ke psikolog?", a: "Perubahan suasana hati yang naik turun masih wajar pada masa pubertas. Konsultasi diperlukan bila perubahan menetap berminggu-minggu, disertai menarik diri dari teman dan keluarga, atau penurunan prestasi yang tajam." },
+  ] },
+  m10: { ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Wulan", q: "Remaja saya merasa semua orang memperhatikan penampilannya, bagaimana menanggapinya?", a: "Itu bagian dari cara berpikir remaja yang merasa menjadi pusat perhatian. Akui perasaannya tanpa mengejek, lalu bantu ia melihat bukti nyata bahwa orang lain tidak sefokus itu padanya." },
+    { penanya: "Bapak Hadi", q: "Remaja saya sering berdebat dan merasa selalu benar, bagaimana menyikapinya?", a: "Berdebat adalah cara remaja berlatih bernalar, bukan tanda tidak hormat. Dengarkan alur pikirnya dulu sebelum menyampaikan pendapat, dan beri ruang berpendapat dalam aturan keluarga, remaja yang didengar lebih mudah menerima batas." },
+    { penanya: "Putri", q: "Apakah remaja yang idealistis dan kritis itu wajar?", a: "Ya, berpikir abstrak dan idealistis adalah ciri tahap operasional formal. Remaja yang kritis sedang menguji gagasan, termasuk gagasan orang tuanya, dan itu bagian dari pembentukan identitas, bukan pemberontakan." },
+  ] },
+  m11: { ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Bapak Anton", q: "Remaja saya sering berganti minat dan gaya, apakah ini bagian dari pencarian identitas?", a: "Ya, mencoba berbagai peran adalah cara remaja menemukan jati dirinya. Dukung eksplorasinya selama aman, dan jadilah tempat pulang yang tidak menghakimi." },
+    { penanya: "Ibu Dina", q: "Remaja saya menutup diri dan tidak mau cerita, bagaimana membuka percakapan?", a: "Remaja membutuhkan privasi, dan memaksa bercerita justru membuatnya makin menutup diri. Jaga koneksi lewat ritual kecil seperti makan bersama atau obrolan sebelum tidur, tanpa agenda menegur, agar ia datang sendiri saat butuh bicara." },
+    { penanya: "Slamet", q: "Apakah remaja yang belum tahu cita-citanya perlu dikhawatirkan?", a: "Tidak. Banyak remaja baru mencapai identitas pada masa dewasa awal, dan mencoba berbagai peran adalah cara mereka menemukan jati diri. Dukung eksplorasi yang aman dan beri waktu, selama ia tetap menjalani tanggung jawab sehari-harinya." },
+  ] },
+  m12: { ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", items: [
+    { penanya: "Ibu Mega", q: "Bagaimana memberi kebebasan pada remaja tanpa kehilangan koneksi dengannya?", a: "Beri kebebasan bertahap sesuai tanggung jawab yang ia tunjukkan, dan jaga koneksi lewat obrolan rutin tanpa agenda. Otonomi dan kedekatan bisa berjalan bersama." },
+    { penanya: "Bapak Tono", q: "Remaja saya minta pulang lebih malam, bagaimana menentukan batasnya?", a: "Batas pulang sebaiknya disepakati bersama, bukan diputuskan sepihak. Beri kebebasan bertahap sesuai tanggung jawab yang ia tunjukkan, dan jelaskan alasan di balik batasnya, agar ia memahami bukan sekadar menuruti." },
+    { penanya: "Ani", q: "Apakah mengawasi HP remaja melanggar privasinya?", a: "Pengawasan tetap perlu, tetapi dengan batas yang disepakati. Bicarakan sejak awal apa yang boleh dicek dan mengapa, dan hindari membaca seluruh isi ponselnya tanpa alasan, karena itu merusak kepercayaan yang sedang dibangun." },
+  ] },
 };
 
 export async function initMateriDetail() {
@@ -244,17 +295,21 @@ export async function initMateriDetail() {
       + '<span class="format-chip ada">Tanya jawab ahli · Bertanya Parenting</span>'
       + '</div>';
     const d = DISKUSI[m.id];
+    const diskusiItems = (d && d.items ? d.items : []).map(function (it) {
+      return '<div class="diskusi-item"><p class="diskusi-penanya">' + esc(it.penanya) + ' (Nama buatan)</p><p class="diskusi-q">' + esc(it.q) + '</p><p class="diskusi-a"><span class="diskusi-ahli">' + esc(d.ahli) + ' · Ahli</span>' + esc(it.a) + '</p></div>';
+    }).join("");
     const diskusiHTML = '<h2>Diskusi &amp; Tanya Jawab</h2>'
       + '<p class="diskusi-intro">Punya pertanyaan tentang materi ini? Hanya ahli yang dapat merespon, dan diskusi dapat dilihat oleh orang lain.</p>'
-      + (d ? '<div class="diskusi-item"><p class="diskusi-q">' + esc(d.q) + '</p><p class="diskusi-a"><span class="diskusi-ahli">' + esc(d.ahli) + ' · Ahli</span>' + esc(d.a) + '</p></div>' : '')
+      + diskusiItems
       + '<p class="dummy-note">Diskusi di atas adalah contoh (dummy) untuk prototipe.</p>'
       + '<button type="button" class="btn btn-amber" data-ask-open>Ajukan Pertanyaan</button>';
+    const refleksiHTML = '<h2>Refleksi untuk orang tua</h2><ul class="refleksi">' + refl + '</ul>';
     const relHTML = related.length
       ? '<h2>Materi lain untuk usia ini</h2><div class="card-grid" style="grid-template-columns:1fr 1fr">' + related.map(materiCard).join("") + "</div>"
       : "";
     const ahliEntry = d ? AHLI_LIST.find(function (a) { return a.nama === d.ahli; }) : null;
     const ahliHTML = ahliEntry
-      ? '<div class="detail-ahli"><span class="ahli-avatar">' + esc(ahliEntry.inisial) + '</span><span>Dikurasi oleh <strong>' + esc(ahliEntry.nama) + '</strong> · ' + esc(ahliEntry.bidang) + '</span></div>'
+      ? '<div class="detail-ahli"><span class="ahli-avatar">' + esc(ahliEntry.inisial) + '</span><span class="ahli-teks"><span class="ahli-nama">Ditinjau oleh <strong>' + esc(ahliEntry.nama) + '</strong></span><span class="detail-ahli-bidang">' + esc(ahliEntry.bidang) + '</span></span></div>'
       : "";
     wrap.innerHTML =
       '<div class="detail-head">'
@@ -271,10 +326,10 @@ export async function initMateriDetail() {
       + "<h2>Isi materi</h2>" + isi
       + '<h2>Coba praktikkan</h2><ol class="steps">' + steps + '</ol>'
       + '<h2>Contoh kalimat</h2><div class="say-box">' + say + '</div>'
-      + formatHTML + diskusiHTML
+      + formatHTML + refleksiHTML + diskusiHTML
       + relHTML
       + "</div>"
-      + '<aside><div class="side-card"><h3>Refleksi untuk orang tua</h3><ul>' + refl + "</ul>"
+      + '<aside><div class="side-card">'
       + '<div class="fact"><strong>Catatan penting</strong>' + esc(m.fakta) + "</div>"
       + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + ", " + esc(m.bab) + ".</div>"
       + "</div></aside></div>";

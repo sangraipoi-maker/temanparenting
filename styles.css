@@ -368,6 +368,8 @@ button.chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
 .detail-title{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:800;letter-spacing:-.02em;margin:12px 0 12px;max-width:22em}
 .detail-ahli{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--muted);font-size:.95rem}
 .detail-ahli strong{color:var(--ink);font-weight:700}
+.ahli-teks{display:flex;flex-direction:column;line-height:1.35}
+.detail-ahli-bidang{font-size:.85rem;color:var(--muted)}
 .ahli-avatar{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex:none}
 .detail-lead{color:var(--ink-soft);font-size:1.05rem;max-width:66ch;margin-bottom:8px}
 .detail-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:40px;align-items:start;padding-bottom:64px}
@@ -586,9 +588,14 @@ ol.steps li strong{color:var(--ink)}
 .format-chip.ada{background:#e2f2e7;color:#1e7b34}
 .diskusi-intro{color:var(--ink-soft)}
 .diskusi-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:12px}
+.diskusi-penanya{margin:0 0 6px;font-size:.85rem;font-weight:700;color:var(--ink-soft)}
 .diskusi-q{margin:0;font-weight:600}
 .diskusi-a{margin:10px 0 0;color:var(--ink-soft)}
 .diskusi-ahli{display:block;font-size:.85rem;font-weight:800;color:var(--amber);margin-bottom:4px}
+.detail-body ul.refleksi{list-style:none;padding:0;margin:0 0 6px}
+.detail-body ul.refleksi li{padding:8px 0 8px 28px;position:relative;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+.detail-body ul.refleksi li:last-child{border-bottom:0}
+.detail-body ul.refleksi li::before{content:"";position:absolute;left:0;top:10px;width:17px;height:17px;border-radius:5px;border:2px solid var(--green);background:transparent}
 
 /* ---------- komunitas & konsultasi dengan ahli ---------- */
 .kota-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
