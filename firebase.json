@@ -19,6 +19,24 @@
             "value": "no-cache, max-age=0"
           }
         ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0"
+          }
+        ]
+      },
+      {
+        "source": "/@(materi|materi-detail|artikel|artikel-detail|tentang|kuis|komunitas|konsultasi)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, max-age=0"
+          }
+        ]
       }
     ]
   },
