@@ -1,4 +1,4 @@
-// app.js — logika sisi klien TemanParenting.
+// app.js, logika sisi klien TemanParenting.
 // Data (materi, artikel, kuis) dibaca dari Firestore. Tanpa login,
 // tanpa pengumpulan data pengguna.
 // Firebase JS SDK v10 (modular) dimuat dari CDN; tidak ada build step,
@@ -86,7 +86,7 @@ function materiCard(m) {
     + '<span class="meta-row">' + badgeHTML(m.usia) + '<span class="badge-tema">' + esc(m.domain) + "</span></span>"
     + "<h3>" + esc(m.judul) + "</h3>"
     + "<p>" + esc(m.ringkas) + "</p>"
-    + '<span class="meta-foot"><span>' + esc(m.durasi) + ' baca</span><span>Level ' + esc(m.level) + '</span><span class="read">Pelajari \u2192</span></span>'
+    + '<span class="meta-foot"><span>' + esc(m.durasi) + ' baca</span><span class="read">Pelajari \u2192</span></span>'
     + "</span></button>";
 }
 
@@ -191,14 +191,14 @@ export function renderMateri() {
   document.getElementById("materi-grid").innerHTML = list.map(materiCard).join("");
   document.getElementById("materi-empty").style.display = list.length ? "none" : "block";
   document.getElementById("materi-info").textContent =
-    "Menampilkan " + list.length + " dari " + materiData.length + " materi · Seluruh materi bersumber dari Santrock (2018), A Topical Approach to Life-Span Development (9th ed.).";
+    "Menampilkan " + list.length + " dari " + materiData.length + " materi.";
   refreshReveals();
 }
 
 /* ---------------- detail materi ---------------- */
 
 /* ---------------- diskusi & tanya jawab di akhir materi (3.1.2) ---------------- */
-// Contoh diskusi (dummy) per materi — hanya ahli yang dapat merespon.
+// Contoh diskusi (dummy) per materi, hanya ahli yang dapat merespon.
 const DISKUSI = {
   m1: { q: "Anak saya tantrum di tempat umum, apa yang sebaiknya saya lakukan pertama kali?", a: "Tetap tenang, dekati anak, dan akui emosinya terlebih dahulu sebelum membahas perilakunya. Setelah anak tenang, barulah bicarakan batasannya dengan nada yang lembut dan jelas.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
   m2: { q: "Apakah wajar jika anak usia 2 tahun belum bisa melompat dengan dua kaki?", a: "Setiap anak berkembang dengan kecepatannya sendiri, tetapi bila sampai usia 2 tahun belum ada kemajuan motorik kasar sama sekali, sebaiknya konsultasikan ke ahli tumbuh kembang untuk skrining lebih lanjut.", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog" },
@@ -227,7 +227,7 @@ export async function initMateriDetail() {
     }
     const goals = m.tujuan.map((t) => "<li>" + esc(t) + "</li>").join("");
     const isi = m.isi.map((p) => "<p>" + esc(p) + "</p>").join("");
-    // Langkah praktik mengandung <strong> dari data seed — ditampilkan apa adanya.
+    // Langkah praktik mengandung <strong> dari data seed, ditampilkan apa adanya.
     const steps = m.praktik.map((s) => "<li>" + s + "</li>").join("");
     const say = m.kalimat.map((k) =>
       '<div class="say-row ' + k.tipe + '"><span class="tag">' + (k.tipe === "good" ? "Katakan" : "Hindari") + '</span><span class="txt">' + esc(k.teks) + "</span></div>"
@@ -235,7 +235,7 @@ export async function initMateriDetail() {
     const refl = m.refleksi.map((r) => "<li>" + esc(r) + "</li>").join("");
     const related = all.filter((x) => x.usia === m.usia && x.id !== m.id).slice(0, 2);
     const formatHTML = '<h2>Format materi ini</h2>'
-      + '<p>Satu materi, beberapa format — sesuai hasil survei, format yang paling disetujui adalah video pendek, tanya jawab ahli, audio/podcast, infografik, dan teks.</p>'
+      + '<p>Satu materi, beberapa format. Sesuai hasil survei, format yang paling disetujui adalah video pendek, tanya jawab ahli, audio/podcast, infografik, dan teks.</p>'
       + '<div class="format-row">'
       + '<span class="format-chip ada">Teks · Tersedia</span>'
       + '<span class="format-chip">Video pendek · Segera</span>'
@@ -252,13 +252,18 @@ export async function initMateriDetail() {
     const relHTML = related.length
       ? '<h2>Materi lain untuk usia ini</h2><div class="card-grid" style="grid-template-columns:1fr 1fr">' + related.map(materiCard).join("") + "</div>"
       : "";
+    const ahliEntry = d ? AHLI_LIST.find(function (a) { return a.nama === d.ahli; }) : null;
+    const ahliHTML = ahliEntry
+      ? '<div class="detail-ahli"><span class="ahli-avatar">' + esc(ahliEntry.inisial) + '</span><span>Dikurasi oleh <strong>' + esc(ahliEntry.nama) + '</strong> · ' + esc(ahliEntry.bidang) + '</span></div>'
+      : "";
     wrap.innerHTML =
       '<div class="detail-head">'
       + '<button class="back-btn" onclick="location.href=\'materi.html\'">\u2190 Kembali ke Daftar Materi</button>'
       + '<div class="meta-row">' + badgeHTML(m.usia) + '<span class="badge-tema">' + esc(m.domain) + " · " + esc(m.tahap) + "</span></div>"
       + '<h1 class="detail-title">' + esc(m.judul) + "</h1>"
+      + ahliHTML
       + '<p class="detail-lead">' + esc(m.ringkas) + "</p>"
-      + '<div class="meta-row" style="margin-top:10px"><span class="badge-tema">' + esc(m.durasi) + " baca · Level " + esc(m.level) + " · Sumber: " + esc(m.bab) + "</span></div>"
+      + '<div class="meta-row" style="margin-top:10px"><span class="badge-tema">' + esc(m.durasi) + " baca · Sumber: " + esc(m.bab) + "</span></div>"
       + '<div class="detail-hero"><img src="' + esc(m.img) + '" alt="' + esc(m.alt) + '" /></div>'
       + "</div>"
       + '<div class="detail-grid"><div class="detail-body">'
@@ -270,9 +275,8 @@ export async function initMateriDetail() {
       + relHTML
       + "</div>"
       + '<aside><div class="side-card"><h3>Refleksi untuk orang tua</h3><ul>' + refl + "</ul>"
-      + '<div class="fact"><strong>Catatan Santrock</strong>' + esc(m.fakta) + "</div>"
-      + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + " — " + esc(m.bab) + ".</div>"
-      + '<div class="fact" style="margin-top:10px"><strong>Kurasi ahli</strong>Materi ini disusun berdasarkan Santrock (2018) dan dikurasi oleh ahli sebelum diterbitkan.</div>'
+      + '<div class="fact"><strong>Catatan penting</strong>' + esc(m.fakta) + "</div>"
+      + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + ", " + esc(m.bab) + ".</div>"
       + "</div></aside></div>";
     refreshReveals();
   } catch (e) {
@@ -323,7 +327,7 @@ export async function initArtikelDetail() {
       + others.map((o) =>
         '<p style="margin-bottom:12px"><a href="artikel-detail.html?id=' + o.id + '" style="font-weight:700;text-decoration:none">' + esc(o.judul) + '</a><br /><small style="color:var(--muted)">' + esc(o.menit) + " baca · " + esc(o.bab) + "</small></p>"
       ).join("")
-      + '<div class="fact"><strong>Sumber artikel</strong>' + esc(SUMBER_SITASI) + " — " + esc(a.bab) + ".</div>"
+      + '<div class="fact"><strong>Sumber artikel</strong>' + esc(SUMBER_SITASI) + ", " + esc(a.bab) + ".</div>"
       + "</div></aside></div>";
     refreshReveals();
   } catch (e) {
@@ -390,7 +394,7 @@ function renderQuizResult(box) {
     + '<p class="q-count">Hasil refleksi · Skor ' + score + " dari 10</p>"
     + "<h3>" + esc(res.judul) + "</h3>"
     + "<p>" + esc(res.teks) + "</p>"
-    + '<p style="font-size:.85rem;color:var(--muted)">Hasil ini adalah bahan refleksi umum, bukan penilaian atau diagnosis. Kerangka pola respons mengikuti pembahasan pola asuh dalam Santrock (2018, Bab 14).</p>'
+    + '<p style="font-size:.85rem;color:var(--muted)">Hasil ini adalah bahan refleksi umum, bukan penilaian atau diagnosis. Kerangka pola respons mengikuti pembahasan pola asuh otoritatif.</p>'
     + '<button class="btn btn-ghost" onclick="restartQuiz()">Ulangi Kuis</button> '
     + '<button class="btn btn-primary" onclick="location.href=\'materi.html\'">Pelajari Materinya</button>'
     + "</div>";
@@ -542,21 +546,21 @@ export function initHeroTabs() {
   const slides = [
     { kicker: "Website Edukasi Pengasuhan",
       title: "Menemukan arah pengasuhan, satu tahap tumbuh kembang dalam satu waktu",
-      sub: "TemanParenting merangkum ilmu perkembangan anak menjadi materi singkat yang bisa dibaca di sela kesibukan — dengan prioritas pada masa balita.",
+      sub: "TemanParenting merangkum ilmu perkembangan anak menjadi materi singkat yang bisa dibaca di sela kesibukan, dengan prioritas pada masa balita.",
       img: "assets/img/hero-reading.jpg",
       alt: "Seorang ibu membacakan buku cerita kepada balitanya di sofa rumah",
-      badge: "12 materi siap dibaca", badgeSub: "Disusun dari Santrock (2018) & hasil survei kebutuhan",
+      badge: "12 materi siap dibaca", badgeSub: "Berdasarkan hasil survei kebutuhan",
       tab: "Materi Parenting", cta: "Jelajahi Materi", href: "materi.html" },
     { kicker: "Berita Parenting",
       title: "Aktivitas seru bersama si kecil, dibagikan antar orang tua",
-      sub: "Kumpulan aktivitas bersama anak — memasak, membaca, dan bermain — yang dibagikan sesama orang tua sebagai inspirasi untuk dicoba di rumah.",
+      sub: "Kumpulan aktivitas bersama anak, memasak, membaca, dan bermain, yang dibagikan sesama orang tua sebagai inspirasi untuk dicoba di rumah.",
       img: "assets/img/family-cooking.jpg",
       alt: "Keluarga menyiapkan makanan bersama di dapur",
       badge: "Cerita & aktivitas", badgeSub: "Dibagikan oleh sesama orang tua",
       tab: "Berita Parenting", cta: "Lihat Berita", href: "artikel.html" },
     { kicker: "Kegiatan Komunitas",
       title: "Komunitas yang belajar dan tumbuh bersama",
-      sub: "Laporan dan dokumentasi kegiatan komunitas TemanParenting di berbagai wilayah — seminar, temu komunitas, dan cerita dari lapangan.",
+      sub: "Laporan dan dokumentasi kegiatan komunitas TemanParenting di berbagai wilayah, seminar, temu komunitas, dan cerita dari lapangan.",
       img: "assets/img/family-park.jpg",
       alt: "Ayah dan ibu menggandeng tangan anak mereka berjalan di taman",
       badge: "5 kota di Indonesia", badgeSub: "Seminar & temu komunitas",
@@ -592,12 +596,12 @@ export function initHeroTabs() {
   });
 }
 
-/* ---------------- Bertanya Parenting — menjawab dari materi di Firestore ---------------- */
+/* ---------------- Bertanya Parenting, menjawab dari materi di Firestore ---------------- */
 const ASK_STOP = ["yang", "dan", "di", "ke", "dari", "untuk", "apa", "bagaimana", "cara",
   "anak", "saya", "itu", "ini", "dengan", "pada", "adalah", "agar", "bisa", "harus",
   "kenapa", "mengapa", "kapan", "apakah", "tolong", "tentang", "atau", "tidak",
   "secara", "dalam", "usia", "tahun", "nya", "sejak", "mulai"];
-// Kata/frasa kunci per materi — diambil dari judul + ringkasan tiap materi di
+// Kata/frasa kunci per materi, diambil dari judul + ringkasan tiap materi di
 // Firestore. Dipakai sebagai dorongan skor agar jawaban Bertanya Parenting jatuh ke materi
 // yang topiknya paling dekat (bukan sekadar yang paling banyak mengandung kata).
 const ASK_HINTS = {
@@ -685,7 +689,7 @@ function askPointsList(m) {
 }
 
 function askSourceNote() {
-  return "Dirangkum dari materi TemanParenting berdasarkan Santrock (2018). "
+  return "Dirangkum dari materi TemanParenting. "
     + "Untuk kondisi medis atau perkembangan yang mengkhawatirkan, konsultasikan ke dokter anak atau psikolog.";
 }
 
@@ -695,7 +699,7 @@ function fillAnswerBox(box, m) {
     const h = document.createElement("h3");
     h.textContent = "Saya belum menemukan materi yang pas untuk pertanyaan itu";
     const p = document.createElement("p");
-    p.textContent = "Coba sebutkan usia anak dan hal spesifiknya — misalnya \u201ctantrum usia 2 tahun\u201d, \u201cstimulasi bahasa bayi\u201d, atau \u201cdisiplin tanpa teriakan\u201d. Atau jelajahi langsung daftar materi yang tersedia.";
+    p.textContent = "Coba sebutkan usia anak dan hal spesifiknya, misalnya \u201ctantrum usia 2 tahun\u201d, \u201cstimulasi bahasa bayi\u201d, atau \u201cdisiplin tanpa teriakan\u201d. Atau jelajahi langsung daftar materi yang tersedia.";
     const a = document.createElement("a");
     a.className = "aa-link";
     a.href = "materi.html";
@@ -791,7 +795,7 @@ export function initAskAI() {
       if (m === "error") {
         ai.innerHTML = "<h4>Bertanya Parenting belum bisa memuat materi</h4>Periksa koneksi internet Anda, lalu coba lagi. Anda tetap bisa menjelajah <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
       } else if (!m) {
-        ai.innerHTML = "<h4>Belum ketemu materi yang pas</h4>Coba sebutkan usia anak dan hal spesifiknya — misalnya \u201ctantrum usia 2 tahun\u201d, \u201cstimulasi bahasa bayi\u201d, atau \u201cdisiplin tanpa teriakan\u201d. Anda juga bisa melihat <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
+        ai.innerHTML = "<h4>Belum ketemu materi yang pas</h4>Coba sebutkan usia anak dan hal spesifiknya, misalnya \u201ctantrum usia 2 tahun\u201d, \u201cstimulasi bahasa bayi\u201d, atau \u201cdisiplin tanpa teriakan\u201d. Anda juga bisa melihat <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
       } else {
         const h = document.createElement("h4");
         const link = document.createElement("a");
@@ -806,7 +810,7 @@ export function initAskAI() {
         ai.appendChild(askPointsList(m));
         const src = document.createElement("p");
         src.className = "aa-src";
-        src.textContent = "Sumber: materi TemanParenting (Santrock, 2018). Bukan pengganti konsultasi profesional.";
+        src.textContent = "Sumber: materi TemanParenting. Bukan pengganti konsultasi profesional.";
         ai.appendChild(src);
       }
       askBody.insertBefore(ai, askTyping);
@@ -887,7 +891,7 @@ const KOTA_LIST = [
 const ACARA_LIST = [
   { jenis: "Seminar", segmen: "Balita", judul: "Menangani Anak Tantrum: Tenang di Tengah Badai Emosi", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Mengapa tantrum terjadi, apa yang sebenarnya dibutuhkan anak saat tantrum, dan langkah tenang yang bisa dilakukan orang tua." },
   { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
-  { jenis: "Seminar", segmen: "Balita", judul: "Disiplin Positif Tanpa Teriakan", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal — tanpa bentakan." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Disiplin Positif Tanpa Teriakan", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal, tanpa bentakan." },
   { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", tgl: "Minggu, 29 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
   { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
 ];
@@ -957,7 +961,7 @@ export function initKomunitas() {
   if (!kotaStep || !acaraStep || !grid) return;
   initKotaPicker("kotaGrid", function (kota) {
     title.textContent = "Acara di " + kota.nama;
-    sub.textContent = "Seminar dan temu komunitas di " + kota.nama + " — setiap acara dipandu oleh ahli di bidangnya.";
+    sub.textContent = "Seminar dan temu komunitas di " + kota.nama + ", setiap acara dipandu oleh ahli di bidangnya.";
     grid.innerHTML = ACARA_LIST.map(function (a) {
       const tempat = a.jenis === "Seminar" ? kota.seminar : kota.temu;
       return '<article class="acara-card">'
@@ -1001,7 +1005,7 @@ export function initKonsultasi() {
     });
     if (step) step.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-  // Langkah 1: pilih cara konsultasi — online (gratis) atau offline (berbayar).
+  // Langkah 1: pilih cara konsultasi, online (gratis) atau offline (berbayar).
   document.querySelectorAll("[data-cara]").forEach(function (b) {
     b.addEventListener("click", function () {
       tampil(b.dataset.cara === "offline" ? kotaStep : onlineStep);
@@ -1016,7 +1020,7 @@ export function initKonsultasi() {
     const idx = KOTA_LIST.indexOf(kota);
     const ahli = [0, 2, 4, 6].map(function (o) { return AHLI_LIST[(idx + o) % AHLI_LIST.length]; });
     title.textContent = "Ahli di " + kota.nama;
-    sub.textContent = "Psikolog dan konselor yang praktik di " + kota.nama + " — pilih salah satu untuk melihat detailnya.";
+    sub.textContent = "Psikolog dan konselor yang praktik di " + kota.nama + ", pilih salah satu untuk melihat detailnya.";
     bar.hidden = true;
     grid.innerHTML = ahli.map(function (a) {
       return '<article class="ahli-card">'
@@ -1035,7 +1039,7 @@ export function initKonsultasi() {
         b.closest(".ahli-card").classList.add("selected");
         b.textContent = "Ahli Dipilih ✓";
         grid.querySelectorAll(".ahli-pilih").forEach(function (x) { if (x !== b) x.textContent = "Pilih Ahli"; });
-        barText.textContent = "Anda memilih " + a.nama + " (" + a.bidang + ") — " + a.praktik + ", " + kota.nama + ".";
+        barText.textContent = "Anda memilih " + a.nama + " (" + a.bidang + "), " + a.praktik + ", " + kota.nama + ".";
         bar.hidden = false;
         bar.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
@@ -1052,7 +1056,7 @@ export function initKonsultasi() {
   const jadwalTanggal = document.getElementById("jadwalTanggal");
   if (jadwalAhli) {
     jadwalAhli.innerHTML = '<option value="">Pilih ahli…</option>' + AHLI_LIST.map(function (a) {
-      return '<option value="' + a.singkat + '">' + a.nama + ' — ' + a.bidang + '</option>';
+      return '<option value="' + a.singkat + '">' + a.nama + ', ' + a.bidang + '</option>';
     }).join("");
   }
   if (jadwalTanggal) jadwalTanggal.min = new Date().toISOString().slice(0, 10);
@@ -1083,13 +1087,13 @@ export function initKonsultasi() {
 
 /* ---------------- garis waktu tahap tumbuh kembang (beranda) ---------------- */
 // Fase mengikuti pengelompokan laporan: pertanyaan F1 (usia krusial:
-// Kehamilan, 1–2, 3–5, 6–7, 13–18 — rentang 8–12 tidak tersedia di
+// Kehamilan, 1–2, 3–5, 6–7, 13–18, rentang 8–12 tidak tersedia di
 // formulir) dan butir 4A (Masih dalam kandungan, 0–1, 3–5, 6–12, 13–18).
 // Rentang 6–12 mencakup 6–7 (F1) sekaligus 8–12 yang hilang di F1.
 // Tautan tiap fase memakai filter usia materi yang sudah ada (?usia=).
 const TAHAP_LIST = [
   { slug: "hamil", nama: "Hamil", rentang: "Kehamilan & persiapan", usia: "0-5",
-    desk: "1000 hari pertama kehidupan dimulai sejak dalam kandungan — gizi ibu, kesehatan kehamilan, dan persiapan menyambut bayi.",
+    desk: "1000 hari pertama kehidupan dimulai sejak dalam kandungan, gizi ibu, kesehatan kehamilan, dan persiapan menyambut bayi.",
     isu: ["Gizi ibu hamil", "Persiapan menyambut bayi", "1000 hari pertama"] },
   { slug: "bayi", nama: "Bayi", rentang: "0–1 tahun", usia: "0-5",
     desk: "Bayi belajar lewat indra dan gerakan; kelekatan yang aman dengan pengasuh menjadi fondasi perkembangan selanjutnya.",
@@ -1098,7 +1102,7 @@ const TAHAP_LIST = [
     desk: "Anak mulai berjalan dan mengucapkan kata pertama; rasa ingin tahu dan kemandirian awal mulai tumbuh.",
     isu: ["Kata pertama", "Tantrum pertama", "Kemandirian awal"] },
   { slug: "balita", nama: "Balita", rentang: "3–5 tahun", usia: "0-5",
-    desk: "Bahasa meledak, imajinasi berkembang, dan anak belajar aturan lewat bermain — masa emas stimulasi.",
+    desk: "Bahasa meledak, imajinasi berkembang, dan anak belajar aturan lewat bermain, masa emas stimulasi.",
     isu: ["Tantrum & emosi", "Ledakan bahasa", "Disiplin positif"] },
   { slug: "anak", nama: "Anak", rentang: "6–12 tahun", usia: "6-12",
     desk: "Anak sekolah: berpikir konkret, belajar membaca-menulis-berhitung, serta harga diri dan dunia teman sebaya mulai terbentuk.",

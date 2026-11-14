@@ -1,4 +1,4 @@
-/* styles.css — TemanParenting.
+/* styles.css, TemanParenting.
    Sistem desain hasil migrasi dari preview ala iMotions:
    palet navy/amber, container lebar 1440px (landscape-first),
    hero navy dua kolom + tab sorotan, animasi scroll (reveal,
@@ -366,6 +366,9 @@ button.chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
 .detail-hero{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);margin:14px 0 30px}
 .detail-hero img{width:100%;height:min(420px,52vw);object-fit:cover}
 .detail-title{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:800;letter-spacing:-.02em;margin:12px 0 12px;max-width:22em}
+.detail-ahli{display:flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.detail-ahli strong{color:var(--ink);font-weight:700}
+.ahli-avatar{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex:none}
 .detail-lead{color:var(--ink-soft);font-size:1.05rem;max-width:66ch;margin-bottom:8px}
 .detail-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:40px;align-items:start;padding-bottom:64px}
 .detail-body h2{font-size:1.3rem;font-weight:800;margin:34px 0 12px}

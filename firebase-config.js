@@ -1,8 +1,8 @@
-// firebase-config.js — konfigurasi web Firebase untuk TemanParenting.
+// firebase-config.js, konfigurasi web Firebase untuk TemanParenting.
 // Diisi 13 Nov 2026 dari Firebase Console (Project settings > Your apps >
 // Web app). Config web ini memang ditujukan untuk dipakai di sisi klien,
 // jadi aman ada di repo. Yang TIDAK BOLEH masuk repo: service-account key
-// (file JSON dari Project settings > Service accounts) — itu rahasia.
+// (file JSON dari Project settings > Service accounts), itu rahasia.
 export const firebaseConfig = {
   apiKey: "AIzaSyAxGb-uP9TFKHNwfs8-EkzvcIPN22nQP24",
   authDomain: "temanparenting-1e6ca.firebaseapp.com",
