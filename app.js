@@ -277,7 +277,8 @@ export async function initMateriDetail() {
       return;
     }
     const goals = m.tujuan.map((t) => "<li>" + esc(t) + "</li>").join("");
-    const isi = m.isi.map((p) => "<p>" + esc(p) + "</p>").join("");
+    const midIsi = Math.floor(m.isi.length / 2);
+    const isi = m.isi.map((p, i) => "<p>" + esc(p) + "</p>" + (i === midIsi ? '<figure class="infografik-dummy"><img src="assets/img/infografik-placeholder.svg" alt="Infografik materi (prototipe)" loading="lazy" /><figcaption>Infografik untuk materi ini masih disiapkan (prototipe).</figcaption></figure>' : "")).join("");
     // Langkah praktik mengandung <strong> dari data seed, ditampilkan apa adanya.
     const steps = m.praktik.map((s) => "<li>" + s + "</li>").join("");
     const say = m.kalimat.map((k) =>
@@ -304,6 +305,16 @@ export async function initMateriDetail() {
       + '<p class="dummy-note">Diskusi di atas adalah contoh (dummy) untuk prototipe.</p>'
       + '<button type="button" class="btn btn-amber" data-ask-open>Ajukan Pertanyaan</button>';
     const refleksiHTML = '<h2>Refleksi untuk orang tua</h2><ul class="refleksi">' + refl + '</ul>';
+    // Video pendek masih disiapkan: pemutar tiruan (dummy), bukan tombol,
+    // jadi tidak bisa diklik.
+    const videoHTML = '<h2>Video pendek</h2>'
+      + '<div class="video-dummy" role="img" aria-label="Video pendek materi ini (prototipe, belum tersedia)">'
+      + '<span class="video-badge">Prototipe</span>'
+      + '<span class="video-play"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span>'
+      + '<span class="video-bar"><span class="video-progress"></span></span>'
+      + '<span class="video-time">00:00 / 05:00</span>'
+      + '</div>'
+      + '<p class="dummy-note">Video pendek untuk materi ini masih disiapkan dan belum bisa diputar (prototipe).</p>';
     const relHTML = related.length
       ? '<h2>Materi lain untuk usia ini</h2><div class="card-grid" style="grid-template-columns:1fr 1fr">' + related.map(materiCard).join("") + "</div>"
       : "";
@@ -321,18 +332,16 @@ export async function initMateriDetail() {
       + '<div class="meta-row" style="margin-top:10px"><span class="badge-tema">' + esc(m.durasi) + " baca</span></div>"
       + '<div class="detail-hero"><img src="' + esc(m.img) + '" alt="' + esc(m.alt) + '" /></div>'
       + "</div>"
-      + '<div class="detail-grid"><div class="detail-body">'
+      + '<div class="detail-grid single"><div class="detail-body">'
       + '<h2>Tujuan pembelajaran</h2><ul class="goals">' + goals + '</ul>'
       + "<h2>Isi materi</h2>" + isi
       + '<h2>Coba praktikkan</h2><ol class="steps">' + steps + '</ol>'
       + '<h2>Contoh kalimat</h2><div class="say-box">' + say + '</div>'
-      + formatHTML + refleksiHTML + diskusiHTML
+      + videoHTML + formatHTML + refleksiHTML + diskusiHTML
       + relHTML
-      + "</div>"
-      + '<aside><div class="side-card">'
       + '<div class="fact"><strong>Catatan penting</strong>' + esc(m.fakta) + "</div>"
       + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + ".</div>"
-      + "</div></aside></div>";
+      + "</div></div>";
     refreshReveals();
   } catch (e) {
     wrap.innerHTML = errorHTML(e.message);
