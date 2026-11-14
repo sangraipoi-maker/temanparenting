@@ -72,15 +72,8 @@ h1,h2,h3{line-height:1.25;margin:0;color:var(--ink)}
 p{margin:0}
 .wrap{max-width:1440px;margin:0 auto;padding:0 32px;min-width:0}
 
-/* ---------- progress bar scroll + petunjuk landscape ---------- */
+/* ---------- progress bar scroll ---------- */
 .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--amber-2),var(--amber));z-index:80;transition:width .08s linear;box-shadow:0 0 12px rgba(255,138,0,.45)}
-.rotate-hint{
-  display:none;background:var(--amber);color:#261500;text-align:center;
-  font-weight:700;font-size:.9rem;padding:10px 16px;line-height:1.4;
-}
-@media (orientation:portrait) and (max-width:640px){
-  .rotate-hint{display:block}
-}
 
 /* ---------- header (nav putih + logo teks) ---------- */
 header.site{
@@ -489,7 +482,7 @@ ol.steps li strong{color:var(--ink)}
 .ask-answer .aa-link:hover{color:#c96a00}
 .ask-note{margin-top:18px;font-size:.85rem;color:#9db6d0}
 .ask-fab{
-  position:fixed;right:22px;bottom:22px;z-index:75;display:inline-flex;align-items:center;gap:9px;
+  position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:75;display:inline-flex;align-items:center;gap:9px;
   min-height:52px;padding:12px 22px;border:0;border-radius:999px;background:var(--navy);color:#fff;
   font-weight:800;font-size:1rem;box-shadow:0 16px 34px rgba(8,31,61,.38);
 }
@@ -534,7 +527,7 @@ ol.steps li strong{color:var(--ink)}
 .ask-panel-suggest{flex:none;padding:12px 18px 4px;display:flex;flex-wrap:wrap;gap:8px;background:var(--bg)}
 .ask-panel-suggest .ask-chip{border-color:var(--line);background:var(--surface);color:var(--ink);font-size:.85rem;min-height:38px;padding:6px 13px}
 .ask-panel-suggest .ask-chip:hover{border-color:var(--amber)}
-.ask-panel-form{flex:none;display:flex;gap:8px;padding:12px 14px 16px;background:var(--surface);border-top:1px solid var(--line)}
+.ask-panel-form{flex:none;display:flex;gap:8px;padding:12px 14px calc(16px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line)}
 .ask-panel-form input{
   flex:1 1 auto;min-width:0;min-height:50px;border:1px solid var(--line);border-radius:999px;padding:10px 18px;
   font:inherit;background:var(--bg);color:var(--ink);outline:none;
@@ -544,6 +537,15 @@ ol.steps li strong{color:var(--ink)}
   background:linear-gradient(90deg,var(--amber-2),var(--amber));color:#261500;
 }
 .ask-panel-form button svg{width:21px;height:21px}
+
+/* ---------- konsultasi dengan ahli ---------- */
+.konsultasi{padding-top:0}
+.konsul-box{
+  background:var(--navy);color:#fff;border-radius:22px;padding:28px 30px;
+  display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+}
+.konsul-box p{flex:1 1 320px;font-size:.98rem;line-height:1.6;color:#dce8f5}
+.konsul-box .btn{flex:none}
 
 /* ---------- newsletter ---------- */
 .newsletter{background:var(--surface-2);border-top:1px solid var(--line)}
@@ -640,6 +642,9 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .sec-head{margin-bottom:20px}
 }
 @media (max-width:700px){
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:1.75rem}
+  .hero p.lead{font-size:.95rem}
   .quiz-band{grid-template-columns:1fr}
   .detail-grid,.about-grid{grid-template-columns:1fr}
   .side-card{position:static}
@@ -652,20 +657,20 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
 }
 @media (max-width:560px){
   section{padding:42px 0}
-  .age-grid,.card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .age-grid,.card-grid{grid-template-columns:minmax(0,1fr);gap:12px}
   .insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .insight-card:last-child{grid-column:span 2}
   .aud-grid{grid-template-columns:minmax(0,1fr)}
-  .aud-findings{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .aud-findings{grid-template-columns:minmax(0,1fr)}
   .news-grid{grid-template-columns:minmax(0,1fr)}
   .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
-  .hero h1{font-size:1.25rem}
-  .hero p.lead{font-size:.84rem}
+  .hero h1{font-size:1.75rem}
+  .hero p.lead{font-size:.95rem}
+  .hero-cta .btn{flex:1 1 100%;justify-content:center}
   .hero-badge,.hero-card{font-size:.72rem;padding:7px 10px;left:8px;bottom:8px}
-  .hero-tabs ul{gap:8px}
+  .hero-tabs ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .hero-tab{font-size:.68rem}
-  .ask-fab{right:14px;bottom:14px;min-height:48px;padding:10px 18px;font-size:.92rem}
+  .ask-fab{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));min-height:48px;padding:10px 18px;font-size:.92rem}
   .ask-bar{padding-left:16px}
   .ask-bar button{padding:10px 16px;font-size:.92rem}
   .ask-ai-btn .ask-label{display:none}

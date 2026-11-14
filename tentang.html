@@ -15,7 +15,6 @@
 <body>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<div class="rotate-hint" role="note">Putar HP Anda ke posisi landscape untuk tampilan terbaik ↻</div>
 
 
 <header class="site">
@@ -27,14 +26,13 @@
     <nav class="main" aria-label="Navigasi utama">
       <button data-nav="beranda" onclick="location.href='index.html'">Beranda</button>
       <button data-nav="materi" onclick="location.href='materi.html'">Materi</button>
-      <button data-nav="artikel" onclick="location.href='artikel.html'">Artikel &amp; Tips</button>
       <button data-nav="tentang" class="active" onclick="location.href='tentang.html'">Tentang</button>
     </nav>
     <div class="header-actions">
-      <button type="button" class="ask-ai-btn" data-ask-open aria-label="Buka Ask AI — tanya tentang pengasuhan">
+      <button type="button" class="ask-ai-btn" data-ask-open aria-label="Buka Bertanya Parenting — tanya tentang pengasuhan">
         <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
-        <span class="ask-label">Ask AI</span>
+        <span class="ask-label">Bertanya Parenting</span>
       </button>
       <a class="header-cta" href="kuis.html">Ikuti Kuis Refleksi</a>
     </div>
@@ -45,9 +43,9 @@
   <nav class="mobile-menu" id="mobileMenu" aria-label="Menu seluler">
     <a href="index.html">Beranda</a>
     <a href="materi.html">Materi</a>
-    <a href="artikel.html">Artikel &amp; Tips</a>
     <a href="tentang.html">Tentang</a>
-    <button type="button" class="mm-link" data-ask-open>Ask AI — Tanya Pengasuhan</button>
+    <a href="index.html#konsultasi-ahli">Konsultasi dengan Ahli</a>
+    <button type="button" class="mm-link" data-ask-open>Bertanya Parenting — Tanya Pengasuhan</button>
     <a class="mm-cta" href="kuis.html">Ikuti Kuis Refleksi</a>
   </nav>
 </header>
@@ -133,17 +131,8 @@
       <nav aria-label="Tautan materi">
         <h4>Materi</h4>
         <ul>
-          <li><a href="materi.html">Materi per Usia</a></li>
+          <li><a href="materi.html">Materi</a></li>
           <li><a href="kuis.html">Kuis Refleksi</a></li>
-          <li><a href="artikel.html">Artikel &amp; Tips</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Tautan jelajah">
-        <h4>Jelajahi</h4>
-        <ul>
-          <li><a href="materi.html?usia=0-5">Balita · 0–5 tahun</a></li>
-          <li><a href="materi.html?usia=6-12">Anak · 6–12 tahun</a></li>
-          <li><a href="materi.html?usia=13-18">Remaja · 13–18 tahun</a></li>
         </ul>
       </nav>
       <nav aria-label="Tautan tentang">
@@ -162,25 +151,25 @@
   </div>
 </footer>
 
-<!-- Ask AI: tombol melayang + panel -->
+<!-- Bertanya Parenting: tombol melayang + panel -->
 <button type="button" class="ask-fab" data-ask-open aria-haspopup="dialog" aria-controls="askPanel">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.6-.3-3.7-.8L3 20l.9-4.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
-  Ask TemanParenting
+  Bertanya Parenting
 </button>
 <div class="ask-overlay" id="askOverlay"></div>
 <aside class="ask-panel" id="askPanel" role="dialog" aria-modal="true" aria-labelledby="askPanelTitle" aria-hidden="true">
   <div class="ask-panel-head">
     <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
     <div>
-      <b id="askPanelTitle">Ask TemanParenting</b>
+      <b id="askPanelTitle">Bertanya Parenting</b>
       <span>Jawaban dari materi TemanParenting · Santrock (2018)</span>
     </div>
-    <button type="button" class="ask-close" id="askClose" aria-label="Tutup Ask AI">✕</button>
+    <button type="button" class="ask-close" id="askClose" aria-label="Tutup Bertanya Parenting">✕</button>
   </div>
   <div class="ask-body" id="askBody">
     <div class="ask-msg ai">
       <h4>Halo, saya asisten TemanParenting.</h4>
-      Tanyakan apa saja seputar tumbuh kembang dan pengasuhan anak 0–18 tahun. Saya menjawab dari 12 materi yang ada di website ini — coba salah satu contoh di bawah, atau tulis pertanyaan Anda sendiri.
+      Tanyakan apa saja seputar tumbuh kembang dan pengasuhan anak. Saya menjawab dari 12 materi yang ada di website ini — coba salah satu contoh di bawah, atau tulis pertanyaan Anda sendiri.
     </div>
     <div class="ask-typing" id="askTyping" aria-hidden="true"><i></i><i></i><i></i></div>
   </div>

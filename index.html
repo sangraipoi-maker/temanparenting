@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="TemanParenting: website edukasi positive parenting untuk orang tua anak usia 0–18 tahun. Materi per kelompok usia, artikel, dan tips praktis." />
+<meta name="description" content="TemanParenting: website edukasi positive parenting untuk orang tua dan calon orang tua — materi singkat, kuis refleksi, dan ruang bertanya." />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <title>TemanParenting — Edukasi Positive Parenting untuk Orang Tua</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +15,6 @@
 <body>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<div class="rotate-hint" role="note">Putar HP Anda ke posisi landscape untuk tampilan terbaik ↻</div>
 
 
 <header class="site">
@@ -27,14 +26,13 @@
     <nav class="main" aria-label="Navigasi utama">
       <button data-nav="beranda" class="active" onclick="location.href='index.html'">Beranda</button>
       <button data-nav="materi" onclick="location.href='materi.html'">Materi</button>
-      <button data-nav="artikel" onclick="location.href='artikel.html'">Artikel &amp; Tips</button>
       <button data-nav="tentang" onclick="location.href='tentang.html'">Tentang</button>
     </nav>
     <div class="header-actions">
-      <button type="button" class="ask-ai-btn" data-ask-open aria-label="Buka Ask AI — tanya tentang pengasuhan">
+      <button type="button" class="ask-ai-btn" data-ask-open aria-label="Buka Bertanya Parenting — tanya tentang pengasuhan">
         <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
-        <span class="ask-label">Ask AI</span>
+        <span class="ask-label">Bertanya Parenting</span>
       </button>
       <a class="header-cta" href="kuis.html">Ikuti Kuis Refleksi</a>
     </div>
@@ -45,9 +43,9 @@
   <nav class="mobile-menu" id="mobileMenu" aria-label="Menu seluler">
     <a href="index.html">Beranda</a>
     <a href="materi.html">Materi</a>
-    <a href="artikel.html">Artikel &amp; Tips</a>
     <a href="tentang.html">Tentang</a>
-    <button type="button" class="mm-link" data-ask-open>Ask AI — Tanya Pengasuhan</button>
+    <a href="index.html#konsultasi-ahli">Konsultasi dengan Ahli</a>
+    <button type="button" class="mm-link" data-ask-open>Bertanya Parenting — Tanya Pengasuhan</button>
     <a class="mm-cta" href="kuis.html">Ikuti Kuis Refleksi</a>
   </nav>
 </header>
@@ -60,22 +58,10 @@
         <div>
           <span class="kicker" id="heroKicker">Website Edukasi Pengasuhan</span>
           <h1 id="heroTitle">Menemukan arah pengasuhan, satu tahap tumbuh kembang dalam satu waktu</h1>
-          <p class="lead" id="heroSub">TemanParenting merangkum ilmu perkembangan anak usia 0–18 tahun menjadi materi singkat yang bisa dibaca di sela kesibukan — dengan prioritas pada masa balita 0–5 tahun.</p>
+          <p class="lead" id="heroSub">TemanParenting merangkum ilmu perkembangan anak menjadi materi singkat yang bisa dibaca di sela kesibukan — dengan prioritas pada masa balita.</p>
           <div class="hero-cta">
             <a class="btn btn-amber" href="materi.html" id="heroCta">Jelajahi Materi</a>
             <a class="btn btn-ghost" href="tentang.html">Tentang TemanParenting</a>
-          </div>
-          <div class="hero-ages">
-            <span class="lbl">Pilih usia anak:</span>
-            <button class="chip" onclick="location.href='materi.html?usia=0-5'">Balita · 0–5 tahun</button>
-            <button class="chip" onclick="location.href='materi.html?usia=6-12'">Anak · 6–12 tahun</button>
-            <button class="chip" onclick="location.href='materi.html?usia=13-18'">Remaja · 13–18 tahun</button>
-          </div>
-          <div class="hero-stats">
-            <div><strong data-count="12">12</strong><span>Materi per tahap usia</span></div>
-            <div><strong data-count="3">3</strong><span>Kelompok usia</span></div>
-            <div><strong data-count="6">6</strong><span>Artikel &amp; tips</span></div>
-            <div><strong>0–18</strong><span>Tahun rentang usia</span></div>
           </div>
         </div>
         <figure class="hero-media">
@@ -89,59 +75,6 @@
     </div>
   </div>
 
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="kicker">Materi per Usia</span>
-        <h2>Kebutuhan anak berubah, cara mengasuh ikut menyesuaikan</h2>
-        <p>Setiap kelompok usia punya tugas perkembangan yang berbeda. Materi TemanParenting dikelompokkan agar orang tua membaca yang paling relevan dengan fase anaknya saat ini — dengan prioritas pada usia balita (0–5 tahun).</p>
-      </div>
-      <div class="age-grid">
-        <button class="age-card a05" onclick="location.href='materi.html?usia=0-5'">
-          <img src="assets/img/ayah-balok-kayu.jpg" alt="Ayah bermain balok kayu bersama anak balitanya di lantai ruang keluarga" />
-          <span class="body">
-            <span class="ages">Balita · 0–5 Tahun</span>
-            <h3>Fondasi Emosi &amp; Rasa Aman</h3>
-            <p>Masa keemasan perkembangan otak. Fokusnya: kelekatan yang aman, bahasa emosi pertama, dan rutinitas yang menenangkan.</p>
-            <ul>
-              <li>Emosi pertama &amp; tantrum</li>
-              <li>Ledakan bahasa usia dini</li>
-              <li>Pola asuh otoritatif sejak dini</li>
-            </ul>
-            <span class="go">Lihat 4 materi →</span>
-          </span>
-        </button>
-        <button class="age-card a612" onclick="location.href='materi.html?usia=6-12'">
-          <img src="assets/img/ibu-dampingi-tugas.jpg" alt="Ibu mendampingi anak usia sekolah mengerjakan tugas di meja belajar" />
-          <span class="body">
-            <span class="ages">Anak · 6–12 Tahun</span>
-            <h3>Kemandirian &amp; Kebiasaan Baik</h3>
-            <p>Anak mulai masuk sekolah dan dunia sosial yang lebih luas. Fokusnya: berpikir konkret, rasa mampu, dan pergaulan teman sebaya.</p>
-            <ul>
-              <li>Berpikir konkret &amp; belajar di sekolah</li>
-              <li>Harga diri &amp; dunia teman sebaya</li>
-              <li>Dari mengatur ke mengelola bersama</li>
-            </ul>
-            <span class="go">Lihat 4 materi →</span>
-          </span>
-        </button>
-        <button class="age-card a1318" onclick="location.href='materi.html?usia=13-18'">
-          <img src="assets/img/ibu-berbincang-remaja.jpg" alt="Ibu berbincang hangat dengan anak remajanya di ruang keluarga" />
-          <span class="body">
-            <span class="ages">Remaja · 13–18 Tahun</span>
-            <h3>Kepercayaan &amp; Ruang Tumbuh</h3>
-            <p>Remaja mencari identitas dan otonomi. Fokusnya bergeser dari mengatur menjadi mendampingi: mendengar, bernegosiasi, percaya.</p>
-            <ul>
-              <li>Pubertas &amp; otak remaja</li>
-              <li>Pencarian identitas diri</li>
-              <li>Otonomi tanpa putus koneksi</li>
-            </ul>
-            <span class="go">Lihat 4 materi →</span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </section>
 
   <section class="insights" aria-labelledby="insightTitle">
     <div class="wrap">
@@ -250,7 +183,7 @@
           <h3>Untuk Calon Orang Tua</h3>
           <p>Sedang mempersiapkan diri — merencanakan, menanti, atau baru akan memulai perjalanan menjadi orang tua.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>Peta besar tahap perkembangan anak 0–18 tahun</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>Peta besar tahap perkembangan anak</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>Materi kehamilan dan perawatan bayi sejak dalam kandungan</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>Gambaran realistis tentang tantangan tiap tahap usia</li>
           </ul>
@@ -279,7 +212,7 @@
   <section class="ask-section" id="tanya-ai" aria-labelledby="askTitle">
     <div class="wrap">
       <div class="ask-wrap">
-        <span class="kicker">Ask AI</span>
+        <span class="kicker">Bertanya Parenting</span>
         <h2 id="askTitle">Tanya apa saja tentang pengasuhan anak</h2>
         <p class="ask-sub">Tulis pertanyaan Anda — jawabannya dirangkum langsung dari 12 materi TemanParenting berdasarkan Santrock (2018), lengkap dengan poin praktik yang bisa dicoba di rumah.</p>
         <form class="ask-bar" id="askSectionForm" role="search">
@@ -295,19 +228,23 @@
           <button type="button" class="ask-chip" data-ask-q="Bagaimana mendampingi anak remaja yang butuh ruang pribadi?">Mendampingi remaja</button>
         </div>
         <div class="ask-answer" id="askSectionAnswer" role="status" aria-live="polite"></div>
-        <p class="ask-note">Ask AI di halaman ini menjawab dari isi materi TemanParenting saja dan bukan pengganti konsultasi dengan dokter anak atau psikolog.</p>
+        <p class="ask-note">Bertanya Parenting di halaman ini menjawab dari isi materi TemanParenting saja dan bukan pengganti konsultasi dengan dokter anak atau psikolog.</p>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0">
+
+  <section class="konsultasi" id="konsultasi-ahli" aria-labelledby="konsulTitle">
     <div class="wrap">
       <div class="sec-head">
-        <span class="kicker">Artikel &amp; Tips</span>
-        <h2>Bacaan ringan untuk sela-sela hari</h2>
+        <span class="kicker">Konsultasi dengan Ahli</span>
+        <h2 id="konsulTitle">Butuh jawaban yang lebih personal?</h2>
+        <p>Dalam rancangan TemanParenting, ruang tanya jawab disiapkan dalam dua bentuk: konsultasi langsung dengan tenaga profesional, dan diskusi di akhir setiap materi yang dijawab oleh ahli. Pada prototipe ini, pertanyaan dapat diajukan lewat Bertanya Parenting — jawabannya dirangkum dari 12 materi yang sudah dikurasi dari Santrock (2018).</p>
       </div>
-      <div class="card-grid" id="featured-artikel"></div>
-      <p style="margin-top:26px"><a class="btn btn-ghost" href="artikel.html">Lihat Semua Artikel</a></p>
+      <div class="konsul-box">
+        <p>Bertanya Parenting bukan pengganti konsultasi dengan dokter anak atau psikolog. Untuk kondisi medis atau perkembangan yang mengkhawatirkan, konsultasikan langsung ke dokter anak atau psikolog.</p>
+        <button type="button" class="btn btn-amber" data-ask-open>Ajukan Pertanyaan</button>
+      </div>
     </div>
   </section>
 
@@ -351,17 +288,8 @@
       <nav aria-label="Tautan materi">
         <h4>Materi</h4>
         <ul>
-          <li><a href="materi.html">Materi per Usia</a></li>
+          <li><a href="materi.html">Materi</a></li>
           <li><a href="kuis.html">Kuis Refleksi</a></li>
-          <li><a href="artikel.html">Artikel &amp; Tips</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Tautan jelajah">
-        <h4>Jelajahi</h4>
-        <ul>
-          <li><a href="materi.html?usia=0-5">Balita · 0–5 tahun</a></li>
-          <li><a href="materi.html?usia=6-12">Anak · 6–12 tahun</a></li>
-          <li><a href="materi.html?usia=13-18">Remaja · 13–18 tahun</a></li>
         </ul>
       </nav>
       <nav aria-label="Tautan tentang">
@@ -380,25 +308,25 @@
   </div>
 </footer>
 
-<!-- Ask AI: tombol melayang + panel -->
+<!-- Bertanya Parenting: tombol melayang + panel -->
 <button type="button" class="ask-fab" data-ask-open aria-haspopup="dialog" aria-controls="askPanel">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.6-.3-3.7-.8L3 20l.9-4.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
-  Ask TemanParenting
+  Bertanya Parenting
 </button>
 <div class="ask-overlay" id="askOverlay"></div>
 <aside class="ask-panel" id="askPanel" role="dialog" aria-modal="true" aria-labelledby="askPanelTitle" aria-hidden="true">
   <div class="ask-panel-head">
     <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
     <div>
-      <b id="askPanelTitle">Ask TemanParenting</b>
+      <b id="askPanelTitle">Bertanya Parenting</b>
       <span>Jawaban dari materi TemanParenting · Santrock (2018)</span>
     </div>
-    <button type="button" class="ask-close" id="askClose" aria-label="Tutup Ask AI">✕</button>
+    <button type="button" class="ask-close" id="askClose" aria-label="Tutup Bertanya Parenting">✕</button>
   </div>
   <div class="ask-body" id="askBody">
     <div class="ask-msg ai">
       <h4>Halo, saya asisten TemanParenting.</h4>
-      Tanyakan apa saja seputar tumbuh kembang dan pengasuhan anak 0–18 tahun. Saya menjawab dari 12 materi yang ada di website ini — coba salah satu contoh di bawah, atau tulis pertanyaan Anda sendiri.
+      Tanyakan apa saja seputar tumbuh kembang dan pengasuhan anak. Saya menjawab dari 12 materi yang ada di website ini — coba salah satu contoh di bawah, atau tulis pertanyaan Anda sendiri.
     </div>
     <div class="ask-typing" id="askTyping" aria-hidden="true"><i></i><i></i><i></i></div>
   </div>

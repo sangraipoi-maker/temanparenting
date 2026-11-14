@@ -507,11 +507,11 @@ export function initHeroTabs() {
   const slides = [
     { kicker: "Website Edukasi Pengasuhan",
       title: "Menemukan arah pengasuhan, satu tahap tumbuh kembang dalam satu waktu",
-      sub: "TemanParenting merangkum ilmu perkembangan anak usia 0–18 tahun menjadi materi singkat yang bisa dibaca di sela kesibukan — dengan prioritas pada masa balita 0–5 tahun.",
+      sub: "TemanParenting merangkum ilmu perkembangan anak menjadi materi singkat yang bisa dibaca di sela kesibukan — dengan prioritas pada masa balita.",
       img: "assets/img/hero-reading.jpg",
       alt: "Seorang ibu membacakan buku cerita kepada balitanya di sofa rumah",
       badge: "12 materi siap dibaca", badgeSub: "Disusun dari Santrock (2018) & hasil survei kebutuhan",
-      tab: "Materi per tahap usia 0–18 tahun", cta: "Jelajahi Materi", href: "materi.html" },
+      tab: "Materi", cta: "Jelajahi Materi", href: "materi.html" },
     { kicker: "Kuis Refleksi",
       title: "Lima pertanyaan untuk bercermin sebagai orang tua",
       sub: "Refleksi singkat tentang kebiasaan pengasuhan Anda — tanpa skor yang menghakimi, dilengkapi saran materi lanjutan yang paling relevan.",
@@ -519,13 +519,6 @@ export function initHeroTabs() {
       alt: "Ibu berbincang hangat dengan putri remajanya",
       badge: "5 soal refleksi", badgeSub: "Selesai dalam waktu kurang dari dua menit",
       tab: "Refleksi pola asuh Anda", cta: "Mulai Kuis Refleksi", href: "kuis.html" },
-    { kicker: "Artikel Pendamping",
-      title: "Cerita dan sudut pandang baru, dibaca dalam lima menit",
-      sub: "Enam artikel pendek menemani materi utama: dari memasak bersama anak sampai mendampingi remaja yang mulai mencari ruang sendiri.",
-      img: "assets/img/family-cooking.jpg",
-      alt: "Keluarga menyiapkan makanan bersama di dapur",
-      badge: "6 artikel pendek", badgeSub: "Pendamping materi utama TemanParenting",
-      tab: "Artikel pendek", cta: "Baca Artikel", href: "artikel.html" },
     { kicker: "Satu Wadah Terpusat",
       title: "Tidak perlu lagi berburu informasi pengasuhan ke mana-mana",
       sub: "Kebutuhan tertinggi responden survei kami (3,9 dari 4,0) adalah satu wadah terpusat yang kredibel. TemanParenting dirancang untuk menjawab kebutuhan itu.",
@@ -564,13 +557,13 @@ export function initHeroTabs() {
   });
 }
 
-/* ---------------- Ask AI — menjawab dari materi di Firestore ---------------- */
+/* ---------------- Bertanya Parenting — menjawab dari materi di Firestore ---------------- */
 const ASK_STOP = ["yang", "dan", "di", "ke", "dari", "untuk", "apa", "bagaimana", "cara",
   "anak", "saya", "itu", "ini", "dengan", "pada", "adalah", "agar", "bisa", "harus",
   "kenapa", "mengapa", "kapan", "apakah", "tolong", "tentang", "atau", "tidak",
   "secara", "dalam", "usia", "tahun", "nya", "sejak", "mulai"];
 // Kata/frasa kunci per materi — diambil dari judul + ringkasan tiap materi di
-// Firestore. Dipakai sebagai dorongan skor agar jawaban Ask AI jatuh ke materi
+// Firestore. Dipakai sebagai dorongan skor agar jawaban Bertanya Parenting jatuh ke materi
 // yang topiknya paling dekat (bukan sekadar yang paling banyak mengandung kata).
 const ASK_HINTS = {
   m1: ["tantrum", "emosi", "mengamuk", "marah", "menangis", "balita", "sosioemosional", "emosi pertama", "kelekatan", "ikatan", "rasa aman", "aman"],
@@ -599,7 +592,7 @@ function stripTags(s) {
   return d.textContent || "";
 }
 
-// Basis pengetahuan Ask AI: seluruh materi Firestore (judul + ringkasan + isi + praktik).
+// Basis pengetahuan Bertanya Parenting: seluruh materi Firestore (judul + ringkasan + isi + praktik).
 async function ensureAskKB() {
   if (askKB) return askKB;
   if (!askKBPromise) {
@@ -679,7 +672,7 @@ function fillAnswerBox(box, m) {
   }
   const label = document.createElement("span");
   label.className = "aa-label";
-  label.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg> Jawaban Ask AI';
+  label.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg> Jawaban Bertanya Parenting';
   const h3 = document.createElement("h3");
   const link = document.createElement("a");
   link.href = "materi-detail.html?id=" + m.id;
@@ -758,7 +751,7 @@ export function initAskAI() {
       const ai = document.createElement("div");
       ai.className = "ask-msg ai";
       if (m === "error") {
-        ai.innerHTML = "<h4>Ask AI belum bisa memuat materi</h4>Periksa koneksi internet Anda, lalu coba lagi. Anda tetap bisa menjelajah <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
+        ai.innerHTML = "<h4>Bertanya Parenting belum bisa memuat materi</h4>Periksa koneksi internet Anda, lalu coba lagi. Anda tetap bisa menjelajah <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
       } else if (!m) {
         ai.innerHTML = "<h4>Belum ketemu materi yang pas</h4>Coba sebutkan usia anak dan hal spesifiknya — misalnya \u201ctantrum usia 2 tahun\u201d, \u201cstimulasi bahasa bayi\u201d, atau \u201cdisiplin tanpa teriakan\u201d. Anda juga bisa melihat <a class=\"aa-link\" href=\"materi.html\">semua materi</a>.";
       } else {
@@ -794,7 +787,7 @@ export function initAskAI() {
     if (e.target.closest('a[href^="materi"]')) closeAsk();
   });
 
-  // Bagian Ask AI di beranda.
+  // Bagian Bertanya Parenting di beranda.
   const askSectionAnswer = document.getElementById("askSectionAnswer");
   const askSectionForm = document.getElementById("askSectionForm");
   if (askSectionForm && askSectionAnswer) {
