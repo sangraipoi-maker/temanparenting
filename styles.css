@@ -597,7 +597,7 @@ ol.steps li strong{color:var(--ink)}
 .video-bar{position:absolute;left:16px;right:16px;bottom:38px;height:5px;border-radius:99px;background:rgba(255,255,255,.35);overflow:hidden}
 .video-progress{display:block;width:18%;height:100%;background:#ff8a00;border-radius:99px}
 .video-time{position:absolute;left:16px;bottom:14px;color:#fff;font-size:.8rem;font-weight:700}
-.infografik-dummy{margin:18px 0}
+.infografik-dummy{margin:18px 0;max-width:68ch}
 .infografik-dummy img{display:block;width:100%;border-radius:16px}
 .infografik-dummy figcaption{margin-top:8px;font-size:.85rem;color:var(--muted)}
 .diskusi-q{margin:0;font-weight:600}
