@@ -972,3 +972,52 @@ export function initKonsultasi() {
     kotaStep.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
+
+/* ---------------- garis waktu tahap tumbuh kembang (beranda) ---------------- */
+// Fase mengikuti pengelompokan laporan: pertanyaan F1 (usia krusial:
+// Kehamilan, 1–2, 3–5, 6–7, 13–18 — rentang 8–12 tidak tersedia di
+// formulir) dan butir 4A (Masih dalam kandungan, 0–1, 3–5, 6–12, 13–18).
+// Rentang 6–12 mencakup 6–7 (F1) sekaligus 8–12 yang hilang di F1.
+// Tautan tiap fase memakai filter usia materi yang sudah ada (?usia=).
+const TAHAP_LIST = [
+  { slug: "hamil", nama: "Hamil", rentang: "Kehamilan & persiapan", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    desk: "1000 hari pertama kehidupan dimulai sejak dalam kandungan — gizi ibu, kesehatan kehamilan, dan persiapan menyambut bayi.",
+    tombol: "Lihat materi 1000 hari pertama" },
+  { slug: "bayi", nama: "Bayi", rentang: "0–1 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    desk: "Bayi belajar lewat indra dan gerakan; kelekatan yang aman dengan pengasuh menjadi fondasi perkembangan selanjutnya.",
+    tombol: "Lihat materi 0–5 tahun" },
+  { slug: "batita", nama: "Batita", rentang: "1–2 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    desk: "Anak mulai berjalan dan mengucapkan kata pertama; rasa ingin tahu dan kemandirian awal mulai tumbuh.",
+    tombol: "Lihat materi 0–5 tahun" },
+  { slug: "balita", nama: "Balita", rentang: "3–5 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    desk: "Bahasa meledak, imajinasi berkembang, dan anak belajar aturan lewat bermain — masa emas stimulasi.",
+    tombol: "Lihat materi 0–5 tahun" },
+  { slug: "anak", nama: "Anak", rentang: "6–12 tahun", usia: "6-12", jumlah: 4, kelompok: "Kelompok Anak (6–12 tahun)",
+    desk: "Anak sekolah: berpikir konkret, belajar membaca-menulis-berhitung, serta harga diri dan dunia teman sebaya mulai terbentuk.",
+    tombol: "Lihat materi 6–12 tahun" },
+  { slug: "remaja", nama: "Remaja", rentang: "13–18 tahun", usia: "13-18", jumlah: 4, kelompok: "Kelompok Remaja (13–18 tahun)",
+    desk: "Pubertas, pencarian identitas, dan hubungan dengan teman sebaya; orang tua beralih dari mengatur menjadi mendampingi.",
+    tombol: "Lihat materi 13–18 tahun" },
+];
+
+export function initTimeline() {
+  const track = document.getElementById("timeline");
+  const panel = document.getElementById("tahapPanel");
+  if (!track || !panel) return;
+  const nodes = Array.from(track.querySelectorAll("[data-tahap]"));
+  function pilih(slug) {
+    const t = TAHAP_LIST.find(function (x) { return x.slug === slug; });
+    if (!t) return;
+    nodes.forEach(function (n) {
+      n.setAttribute("aria-selected", n.dataset.tahap === slug ? "true" : "false");
+    });
+    panel.innerHTML = '<span class="tahap-rentang">' + t.rentang + '</span>'
+      + '<h3>' + t.nama + '</h3>'
+      + '<p>' + t.desk + '</p>'
+      + '<p class="tahap-meta">' + t.jumlah + ' materi · ' + t.kelompok + '</p>'
+      + '<a class="btn btn-amber" href="materi.html?usia=' + t.usia + '">' + t.tombol + '</a>';
+  }
+  nodes.forEach(function (n) {
+    n.addEventListener("click", function () { pilih(n.dataset.tahap); });
+  });
+}

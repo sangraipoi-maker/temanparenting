@@ -80,35 +80,41 @@
   <section class="insights" aria-labelledby="insightTitle">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="insightTitle">Aspek tumbuh kembang apa yang sedang Anda pantau?</h2>
-        <p>Lima aspek utama perkembangan anak — dari dalam kandungan sampai remaja — menjadi peta jalan seluruh materi di TemanParenting.</p>
+        <h2 id="insightTitle">Tahap tumbuh kembang apa yang sedang Anda dampingi?</h2>
+        <p>Dari kehamilan sampai remaja — pilih satu titik di garis waktu untuk melihat materi yang sesuai dengan tahap anak Anda.</p>
       </div>
-      <div class="insight-grid">
-        <article class="insight-card">
-          <img src="assets/img/pregnant-reading.jpg" alt="Ibu hamil membaca buku sambil duduk santai di sofa" />
-          <h3>Awal Kehidupan</h3>
-          <p>Perawatan selama kehamilan dan kesiapan menyambut bayi baru lahir.</p>
-        </article>
-        <article class="insight-card">
-          <img src="assets/img/father-baby.jpg" alt="Seorang ayah bermain di lantai bersama bayinya yang sedang belajar duduk" />
-          <h3>Fisik &amp; Motorik</h3>
-          <p>Dari tengkurap, merangkak, sampai langkah pertama dan keterampilan tangan.</p>
-        </article>
-        <article class="insight-card">
-          <img src="assets/img/hero-reading.jpg" alt="Ibu dan balita membaca buku bergambar bersama" />
-          <h3>Bahasa &amp; Berpikir</h3>
-          <p>Kata pertama, bercerita, bertanya &ldquo;kenapa&rdquo;, dan kesiapan belajar anak.</p>
-        </article>
-        <article class="insight-card">
-          <img src="assets/img/family-cooking.jpg" alt="Keluarga menyiapkan makanan bersama di dapur" />
-          <h3>Sosial &amp; Kemandirian</h3>
-          <p>Bermain bersama teman, berbagi, dan belajar melakukan banyak hal sendiri.</p>
-        </article>
-        <article class="insight-card">
-          <img src="assets/img/mother-teen.jpg" alt="Ibu berbincang hangat dengan putri remajanya" />
-          <h3>Emosi &amp; Remaja</h3>
-          <p>Mengelola tantrum, membangun kelekatan, sampai mendampingi gejolak remaja.</p>
-        </article>
+      <div class="timeline" id="timeline" role="tablist" aria-label="Tahap tumbuh kembang anak">
+        <button type="button" class="tahap-node" role="tab" data-tahap="hamil" aria-selected="true">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Hamil</b><span>Kehamilan</span></span>
+        </button>
+        <button type="button" class="tahap-node" role="tab" data-tahap="bayi" aria-selected="false">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Bayi</b><span>0–1 tahun</span></span>
+        </button>
+        <button type="button" class="tahap-node" role="tab" data-tahap="batita" aria-selected="false">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Batita</b><span>1–2 tahun</span></span>
+        </button>
+        <button type="button" class="tahap-node" role="tab" data-tahap="balita" aria-selected="false">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Balita</b><span>3–5 tahun</span></span>
+        </button>
+        <button type="button" class="tahap-node" role="tab" data-tahap="anak" aria-selected="false">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Anak</b><span>6–12 tahun</span></span>
+        </button>
+        <button type="button" class="tahap-node" role="tab" data-tahap="remaja" aria-selected="false">
+          <span class="tahap-dot" aria-hidden="true"></span>
+          <span class="tahap-label"><b>Remaja</b><span>13–18 tahun</span></span>
+        </button>
+      </div>
+      <div class="tahap-panel" id="tahapPanel" aria-live="polite">
+        <span class="tahap-rentang">Kehamilan &amp; persiapan</span>
+        <h3>Hamil</h3>
+        <p>1000 hari pertama kehidupan dimulai sejak dalam kandungan — gizi ibu, kesehatan kehamilan, dan persiapan menyambut bayi.</p>
+        <p class="tahap-meta">4 materi · Kelompok Balita (0–5 tahun)</p>
+        <a class="btn btn-amber" href="materi.html?usia=0-5">Lihat materi 1000 hari pertama</a>
       </div>
     </div>
   </section>
@@ -355,11 +361,12 @@
 </aside>
 
 <script type="module">
-import { initBeranda, initChrome, initScrollFX, initAskAI, initHeroTabs } from "./app.js";
+import { initBeranda, initChrome, initScrollFX, initAskAI, initHeroTabs, initTimeline } from "./app.js";
 initChrome();
 initScrollFX();
 initAskAI();
 initHeroTabs();
+initTimeline();
 initBeranda();
 </script>
 </body>
