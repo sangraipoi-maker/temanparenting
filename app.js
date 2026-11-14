@@ -1074,7 +1074,7 @@ export function initTimeline() {
       + '<div class="tahap-isu" role="list" aria-label="Isu populer pada tahap ini">'
       + t.isu.map(function (s) { return '<span role="listitem">' + s + '</span>'; }).join("")
       + '</div>'
-      + '<a class="btn btn-red" href="materi.html?usia=' + t.usia + '">Pelajari Parenting Usia ini</a>';
+      + '<a class="btn btn-amber" href="materi.html?usia=' + t.usia + '">Pelajari Parenting Usia ini</a>';
     // Di layar kecil (gulir horizontal), geser node terpilih ke tengah.
     const node = nodes.find(function (n) { return n.dataset.tahap === slug; });
     if (node && node.scrollIntoView) node.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
