@@ -1075,6 +1075,9 @@ export function initTimeline() {
       + t.isu.map(function (s) { return '<span role="listitem">' + s + '</span>'; }).join("")
       + '</div>'
       + '<a class="btn btn-red" href="materi.html?usia=' + t.usia + '">Pelajari Parenting Usia ini</a>';
+    // Di layar kecil (gulir horizontal), geser node terpilih ke tengah.
+    const node = nodes.find(function (n) { return n.dataset.tahap === slug; });
+    if (node && node.scrollIntoView) node.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
   }
   nodes.forEach(function (n) {
     n.addEventListener("click", function () { pilih(n.dataset.tahap); });

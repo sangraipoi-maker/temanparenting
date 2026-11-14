@@ -549,13 +549,19 @@ ol.steps li strong{color:var(--ink)}
 .konsul-box .btn{flex:none}
 
 /* ---------- garis waktu tahap tumbuh kembang (beranda, seksi gelap) ---------- */
-.timeline{position:relative;display:flex;justify-content:space-between;padding:26px 0 0;margin-top:8px}
-.timeline::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:57px;height:3px;background:linear-gradient(90deg,#7ea0c9,#e63946);border-radius:3px}
-.tahap-node{position:relative;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:16px;flex:1;cursor:pointer;min-height:44px;color:#fff}
-.tahap-ilustrasi{width:64px;height:64px;border-radius:50%;background:#fff;border:3px solid #e63946;color:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .45s cubic-bezier(.34,1.56,.64,1),background .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease}
-.tahap-ilustrasi svg{width:46px;height:46px}
-.tahap-node:hover .tahap-ilustrasi{transform:scale(1.12)}
-.tahap-node[aria-selected="true"] .tahap-ilustrasi{background:#e63946;border-color:#e63946;color:#fff;box-shadow:0 0 0 6px rgba(230,57,70,.28);transform:scale(1.4)}
+.timeline-scroll{overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory}
+.timeline-scroll::-webkit-scrollbar{display:none}
+.timeline{position:relative;display:flex;justify-content:space-between;width:max-content;min-width:100%;padding:0;margin-top:8px}
+.timeline::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:190px;height:3px;background:linear-gradient(90deg,#7ea0c9,#e63946);border-radius:3px}
+.tahap-node{position:relative;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;flex:1 1 0;cursor:pointer;min-height:44px;color:#fff;transition:flex-grow .45s cubic-bezier(.34,1.56,.64,1),flex-basis .45s cubic-bezier(.34,1.56,.64,1)}
+.tahap-node[aria-selected="true"]{flex-grow:1.7}
+.tahap-fig{height:150px;display:flex;align-items:flex-end;justify-content:center;color:#fff}
+.tahap-fig svg{height:var(--fig-h);width:auto;transition:height .45s cubic-bezier(.34,1.56,.64,1)}
+.tahap-node[aria-selected="true"] .tahap-fig svg{height:calc(var(--fig-h)*1.45)}
+.tahap-dot-wrap{height:84px;display:flex;align-items:center;justify-content:center}
+.tahap-dot{width:56px;height:56px;border-radius:50%;background:#fff;border:3px solid #e63946;flex:none;transition:width .45s cubic-bezier(.34,1.56,.64,1),height .45s cubic-bezier(.34,1.56,.64,1),background .3s ease,box-shadow .3s ease}
+.tahap-node:hover .tahap-dot{width:64px;height:64px}
+.tahap-node[aria-selected="true"] .tahap-dot{width:84px;height:84px;background:#e63946;box-shadow:0 0 0 6px rgba(230,57,70,.28)}
 .tahap-label{text-align:center}
 .tahap-label b{display:block;font-size:1rem;color:#fff}
 .tahap-label span{font-size:.85rem;color:#b9cee4;font-weight:600}
@@ -720,11 +726,12 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .hero-grid{grid-template-columns:minmax(0,1fr)}
   .hero h1{font-size:1.75rem}
   .hero p.lead{font-size:.95rem}
-  .timeline{flex-direction:column;align-items:stretch;padding:4px 0 0 26px}
-  .timeline::before{left:57px;right:auto;top:52px;bottom:52px;width:3px;height:auto;background:linear-gradient(180deg,#7ea0c9,#e63946)}
-  .tahap-node{flex-direction:row;gap:14px;align-items:center;padding:16px 0;flex:none}
-  .tahap-node[aria-selected="true"] .tahap-ilustrasi{transform:scale(1.3)}
-  .tahap-label{text-align:left}
+  .timeline-scroll{scroll-snap-type:x mandatory}
+  .timeline{width:max-content;min-width:100%}
+  .timeline::before{top:190px}
+  .tahap-node{flex:0 0 120px;scroll-snap-align:center}
+  .tahap-node[aria-selected="true"]{flex-basis:180px}
+  .tahap-label{text-align:center}
   .kota-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .acara-grid,.ahli-grid{grid-template-columns:minmax(0,1fr)}
   .quiz-band{grid-template-columns:1fr}
