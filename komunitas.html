@@ -64,7 +64,13 @@
         <h2>Pilih kota Anda</h2>
         <p>Acara komunitas tersedia di 5 kota. Setiap kartu menampilkan landmark ikonik kotanya.</p>
       </div>
-      <div class="kota-grid" id="kotaGrid"></div>
+      <div class="kota-grid" id="kotaGrid">
+        <article class="kota-card"><img src="assets/img/kota/yogyakarta.jpg" alt="Landmark Keraton Yogyakarta di Yogyakarta" loading="lazy" /><span class="body"><span class="kota-landmark">Keraton Yogyakarta</span><h3>Yogyakarta</h3><span class="kota-stats"><span><b>248</b>Anggota</span><span><b>12</b>Kegiatan aktif</span><span><b>8</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih" data-kota="yogyakarta">Pilih Kota ini</button></span></article>
+        <article class="kota-card"><img src="assets/img/kota/bandung.jpg" alt="Landmark Jembatan Layang Pasupati di Bandung" loading="lazy" /><span class="body"><span class="kota-landmark">Jembatan Layang Pasupati</span><h3>Bandung</h3><span class="kota-stats"><span><b>187</b>Anggota</span><span><b>9</b>Kegiatan aktif</span><span><b>6</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih dim" data-kota="bandung">Pilih Kota ini</button></span></article>
+        <article class="kota-card"><img src="assets/img/kota/jakarta.jpg" alt="Landmark Bundaran HI di Jakarta" loading="lazy" /><span class="body"><span class="kota-landmark">Bundaran HI</span><h3>Jakarta</h3><span class="kota-stats"><span><b>312</b>Anggota</span><span><b>15</b>Kegiatan aktif</span><span><b>10</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih dim" data-kota="jakarta">Pilih Kota ini</button></span></article>
+        <article class="kota-card"><img src="assets/img/kota/surabaya.jpg" alt="Landmark Jembatan Suroboyo di Surabaya" loading="lazy" /><span class="body"><span class="kota-landmark">Jembatan Suroboyo</span><h3>Surabaya</h3><span class="kota-stats"><span><b>164</b>Anggota</span><span><b>8</b>Kegiatan aktif</span><span><b>5</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih dim" data-kota="surabaya">Pilih Kota ini</button></span></article>
+        <article class="kota-card"><img src="assets/img/kota/semarang.jpg" alt="Landmark Lawang Sewu di Semarang" loading="lazy" /><span class="body"><span class="kota-landmark">Lawang Sewu</span><h3>Semarang</h3><span class="kota-stats"><span><b>121</b>Anggota</span><span><b>6</b>Kegiatan aktif</span><span><b>4</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih dim" data-kota="semarang">Pilih Kota ini</button></span></article>
+      </div>
       <p class="foto-credit">Foto kota: Wikimedia Commons.</p>
     </div>
     <div class="acara-step" id="acaraStep" hidden>
@@ -191,8 +197,8 @@
 import { initChrome, initScrollFX, initAskAI, initKomunitas } from "./app.js";
 initChrome();
 initScrollFX();
-initAskAI();
 initKomunitas();
+initAskAI();
 </script>
 </body>
 </html>

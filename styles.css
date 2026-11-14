@@ -145,6 +145,7 @@ section{padding:52px 0}
 }
 .btn:active{transform:scale(.98)}
 .btn-amber{background:linear-gradient(90deg,var(--amber-2),var(--amber));color:#261500;box-shadow:0 10px 24px rgba(255,138,0,.35)}
+.btn-red{background:linear-gradient(90deg,#f0556a,#e63946);color:#fff;box-shadow:0 10px 24px rgba(230,57,70,.35)}
 .btn-primary{background:var(--navy);color:#fff}
 .btn-primary:hover{background:var(--navy-3)}
 @media (prefers-color-scheme: dark){.btn-primary{background:var(--amber);color:#231300}.btn-primary:hover{background:var(--amber-2)}}
@@ -549,21 +550,37 @@ ol.steps li strong{color:var(--ink)}
 
 /* ---------- garis waktu tahap tumbuh kembang (beranda, seksi gelap) ---------- */
 .timeline{position:relative;display:flex;justify-content:space-between;padding:26px 0 0;margin-top:8px}
-.timeline::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:34px;height:3px;background:linear-gradient(90deg,#3d5875,var(--amber));border-radius:3px}
-.tahap-node{position:relative;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;cursor:pointer;min-height:44px;color:#fff}
-.tahap-dot{width:18px;height:18px;border-radius:50%;background:var(--navy-2);border:3px solid #fff;flex:none;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}
-.tahap-node:hover .tahap-dot{transform:scale(1.25)}
-.tahap-node[aria-selected="true"] .tahap-dot{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 5px rgba(255,138,0,.3);transform:scale(1.2)}
+.timeline::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:57px;height:3px;background:linear-gradient(90deg,#7ea0c9,#e63946);border-radius:3px}
+.tahap-node{position:relative;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:16px;flex:1;cursor:pointer;min-height:44px;color:#fff}
+.tahap-ilustrasi{width:64px;height:64px;border-radius:50%;background:#fff;border:3px solid #e63946;color:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .45s cubic-bezier(.34,1.56,.64,1),background .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease}
+.tahap-ilustrasi svg{width:46px;height:46px}
+.tahap-node:hover .tahap-ilustrasi{transform:scale(1.12)}
+.tahap-node[aria-selected="true"] .tahap-ilustrasi{background:#e63946;border-color:#e63946;color:#fff;box-shadow:0 0 0 6px rgba(230,57,70,.28);transform:scale(1.4)}
 .tahap-label{text-align:center}
 .tahap-label b{display:block;font-size:1rem;color:#fff}
 .tahap-label span{font-size:.85rem;color:#b9cee4;font-weight:600}
-.tahap-node[aria-selected="true"] .tahap-label b{color:var(--amber-2)}
+.tahap-node[aria-selected="true"] .tahap-label b{color:#ff8f9a}
 .tahap-panel{margin-top:28px;background:var(--surface);color:var(--ink);border-radius:20px;padding:26px 28px}
-.tahap-panel .tahap-rentang{font-size:.85rem;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:.05em}
+.tahap-panel>*{animation:panelIn .35s ease both}
+.tahap-panel .tahap-isu{animation-delay:.06s}
+.tahap-panel .btn{animation-delay:.12s}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tahap-panel .tahap-rentang{font-size:.85rem;font-weight:800;color:#e63946;text-transform:uppercase;letter-spacing:.05em}
 .tahap-panel h3{font-size:1.3rem;margin:6px 0 0}
 .tahap-panel p{color:var(--ink-soft);max-width:62ch;margin:10px 0 0}
-.tahap-panel .tahap-meta{font-size:.9rem;font-weight:700;color:var(--ink)}
+.tahap-isu{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tahap-isu span{background:#e9edf2;color:#33475e;font-size:.85rem;font-weight:700;padding:7px 12px;border-radius:999px}
 .tahap-panel .btn{margin-top:16px}
+
+/* ---------- format materi & diskusi (detail materi) ---------- */
+.format-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.format-chip{background:#e9edf2;color:#33475e;font-size:.85rem;font-weight:700;padding:7px 12px;border-radius:999px}
+.format-chip.ada{background:#e2f2e7;color:#1e7b34}
+.diskusi-intro{color:var(--ink-soft)}
+.diskusi-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:12px}
+.diskusi-q{margin:0;font-weight:600}
+.diskusi-a{margin:10px 0 0;color:var(--ink-soft)}
+.diskusi-ahli{display:block;font-size:.85rem;font-weight:800;color:var(--amber);margin-bottom:4px}
 
 /* ---------- komunitas & konsultasi dengan ahli ---------- */
 .kota-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
@@ -704,8 +721,9 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .hero h1{font-size:1.75rem}
   .hero p.lead{font-size:.95rem}
   .timeline{flex-direction:column;align-items:stretch;padding:4px 0 0 26px}
-  .timeline::before{left:34px;right:auto;top:26px;bottom:26px;width:3px;height:auto;background:linear-gradient(180deg,#3d5875,var(--amber))}
-  .tahap-node{flex-direction:row;gap:14px;align-items:center;padding:12px 0;flex:none}
+  .timeline::before{left:57px;right:auto;top:52px;bottom:52px;width:3px;height:auto;background:linear-gradient(180deg,#7ea0c9,#e63946)}
+  .tahap-node{flex-direction:row;gap:14px;align-items:center;padding:16px 0;flex:none}
+  .tahap-node[aria-selected="true"] .tahap-ilustrasi{transform:scale(1.3)}
   .tahap-label{text-align:left}
   .kota-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .acara-grid,.ahli-grid{grid-template-columns:minmax(0,1fr)}

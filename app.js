@@ -196,6 +196,24 @@ export function renderMateri() {
 }
 
 /* ---------------- detail materi ---------------- */
+
+/* ---------------- diskusi & tanya jawab di akhir materi (3.1.2) ---------------- */
+// Contoh diskusi (dummy) per materi — hanya ahli yang dapat merespon.
+const DISKUSI = {
+  m1: { q: "Anak saya tantrum di tempat umum, apa yang sebaiknya saya lakukan pertama kali?", a: "Tetap tenang, dekati anak, dan akui emosinya terlebih dahulu sebelum membahas perilakunya. Setelah anak tenang, barulah bicarakan batasannya dengan nada yang lembut dan jelas.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
+  m2: { q: "Apakah wajar jika anak usia 2 tahun belum bisa melompat dengan dua kaki?", a: "Setiap anak berkembang dengan kecepatannya sendiri, tetapi bila sampai usia 2 tahun belum ada kemajuan motorik kasar sama sekali, sebaiknya konsultasikan ke ahli tumbuh kembang untuk skrining lebih lanjut.", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog" },
+  m3: { q: "Anak saya usia 3 tahun masih sulit merangkai dua kata, apakah perlu khawatir?", a: "Ajak anak berbicara setiap hari, bacakan buku bergambar, dan beri waktu ia merespons. Bila dalam beberapa bulan tidak ada tambahan kosakata, bawa ke ahli untuk penilaian bahasa.", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog" },
+  m4: { q: "Bagaimana membedakan sikap tegas dengan sikap keras saat menerapkan aturan?", a: "Tegas berarti aturan jelas dan konsisten, disampaikan dengan nada tenang dan alasan yang masuk akal. Keras berarti memakai bentakan atau hukuman yang membuat anak takut, bukan paham.", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog" },
+  m5: { q: "Berapa lama waktu layar yang wajar untuk anak usia sekolah?", a: "Batasi waktu layar rekreasional sekitar satu jam per hari, seimbangkan dengan gerak, tidur cukup, dan makan bergizi. Yang lebih penting dari durasi adalah isi dan pendampingan orang tua.", ahli: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog" },
+  m6: { q: "Anak saya sulit fokus saat belajar, bagaimana cara melatihnya?", a: "Bagi tugas belajar menjadi potongan singkat sekitar 15 sampai 20 menit, selingi dengan gerak, dan kurangi gangguan di sekitarnya. Konsistensi rutinitas lebih membantu daripada sesi belajar yang panjang.", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog" },
+  m7: { q: "Anak saya sering berkata \"aku tidak bisa\", bagaimana membangun rasa mampunya?", a: "Berikan tugas yang sesuai kemampuan, rayakan usaha bukan hanya hasil, dan hindari membandingkan dengan anak lain. Rasa mampu tumbuh dari pengalaman berhasil, sekecil apa pun.", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog" },
+  m8: { q: "Kapan anak boleh mulai dilibatkan membuat aturan di rumah?", a: "Sejak usia sekolah, anak sudah bisa diajak berdiskusi tentang aturan sederhana dan konsekuensinya. Libatkan mereka menyusun aturan agar mereka merasa memiliki dan lebih mudah mematuhinya.", ahli: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog" },
+  m9: { q: "Remaja saya jadi mudah tersinggung sejak pubertas, apakah ini normal?", a: "Ya, perubahan hormon dan perkembangan otak remaja membuat emosi lebih reaktif. Yang dibutuhkan adalah orang tua yang tetap tenang, mendengarkan dulu, dan menasihati setelah emosi mereda.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
+  m10: { q: "Remaja saya merasa semua orang memperhatikan penampilannya, bagaimana menanggapinya?", a: "Itu bagian dari cara berpikir remaja yang merasa menjadi pusat perhatian. Akui perasaannya tanpa mengejek, lalu bantu ia melihat bukti nyata bahwa orang lain tidak sefokus itu padanya.", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog" },
+  m11: { q: "Remaja saya sering berganti minat dan gaya, apakah ini bagian dari pencarian identitas?", a: "Ya, mencoba berbagai peran adalah cara remaja menemukan jati dirinya. Dukung eksplorasinya selama aman, dan jadilah tempat pulang yang tidak menghakimi.", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog" },
+  m12: { q: "Bagaimana memberi kebebasan pada remaja tanpa kehilangan koneksi dengannya?", a: "Beri kebebasan bertahap sesuai tanggung jawab yang ia tunjukkan, dan jaga koneksi lewat obrolan rutin tanpa agenda. Otonomi dan kedekatan bisa berjalan bersama.", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog" },
+};
+
 export async function initMateriDetail() {
   const wrap = document.getElementById("materi-detail-content");
   if (!configReady()) { wrap.innerHTML = configNoticeHTML(); return; }
@@ -216,6 +234,21 @@ export async function initMateriDetail() {
     ).join("");
     const refl = m.refleksi.map((r) => "<li>" + esc(r) + "</li>").join("");
     const related = all.filter((x) => x.usia === m.usia && x.id !== m.id).slice(0, 2);
+    const formatHTML = '<h2>Format materi ini</h2>'
+      + '<p>Satu materi, beberapa format — sesuai hasil survei, format yang paling disetujui adalah video pendek, tanya jawab ahli, audio/podcast, infografik, dan teks.</p>'
+      + '<div class="format-row">'
+      + '<span class="format-chip ada">Teks · Tersedia</span>'
+      + '<span class="format-chip">Video pendek · Segera</span>'
+      + '<span class="format-chip">Audio / Podcast · Segera</span>'
+      + '<span class="format-chip">Infografik · Segera</span>'
+      + '<span class="format-chip ada">Tanya jawab ahli · Bertanya Parenting</span>'
+      + '</div>';
+    const d = DISKUSI[m.id];
+    const diskusiHTML = '<h2>Diskusi &amp; Tanya Jawab</h2>'
+      + '<p class="diskusi-intro">Punya pertanyaan tentang materi ini? Hanya ahli yang dapat merespon, dan diskusi dapat dilihat oleh orang lain.</p>'
+      + (d ? '<div class="diskusi-item"><p class="diskusi-q">' + esc(d.q) + '</p><p class="diskusi-a"><span class="diskusi-ahli">' + esc(d.ahli) + ' · Ahli</span>' + esc(d.a) + '</p></div>' : '')
+      + '<p class="dummy-note">Diskusi di atas adalah contoh (dummy) untuk prototipe.</p>'
+      + '<button type="button" class="btn btn-amber" data-ask-open>Ajukan Pertanyaan</button>';
     const relHTML = related.length
       ? '<h2>Materi lain untuk usia ini</h2><div class="card-grid" style="grid-template-columns:1fr 1fr">' + related.map(materiCard).join("") + "</div>"
       : "";
@@ -233,11 +266,13 @@ export async function initMateriDetail() {
       + "<h2>Isi materi</h2>" + isi
       + '<h2>Coba praktikkan</h2><ol class="steps">' + steps + '</ol>'
       + '<h2>Contoh kalimat</h2><div class="say-box">' + say + '</div>'
+      + formatHTML + diskusiHTML
       + relHTML
       + "</div>"
       + '<aside><div class="side-card"><h3>Refleksi untuk orang tua</h3><ul>' + refl + "</ul>"
       + '<div class="fact"><strong>Catatan Santrock</strong>' + esc(m.fakta) + "</div>"
       + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + " — " + esc(m.bab) + ".</div>"
+      + '<div class="fact" style="margin-top:10px"><strong>Kurasi ahli</strong>Materi ini disusun berdasarkan Santrock (2018) dan dikurasi oleh ahli sebelum diterbitkan.</div>'
       + "</div></aside></div>";
     refreshReveals();
   } catch (e) {
@@ -721,8 +756,11 @@ export function initAskAI() {
     document.body.style.overflow = "";
     if (askLastFocus && askLastFocus.focus) askLastFocus.focus();
   }
-  document.querySelectorAll("[data-ask-open]").forEach(function (b) {
-    b.addEventListener("click", openAsk);
+  // Delegasi: tombol data-ask-open yang dirender belakangan (mis. di akhir
+  // materi) ikut terbuka tanpa perlu diikat ulang.
+  document.addEventListener("click", function (e) {
+    const b = e.target.closest("[data-ask-open]");
+    if (b) { e.preventDefault(); openAsk(); }
   });
   document.getElementById("askClose").addEventListener("click", closeAsk);
   askOverlay.addEventListener("click", closeAsk);
@@ -893,7 +931,11 @@ function showToast(msg) {
 function initKotaPicker(gridId, onPick) {
   const grid = document.getElementById(gridId);
   if (!grid) return;
-  grid.innerHTML = KOTA_LIST.map(kotaCard).join("");
+  // Kartu sudah ditulis statis di HTML agar selalu tampil; JS hanya
+  // mengikat klik. Bila grid kosong (mis. halaman lama), render dari data.
+  if (!grid.querySelector("[data-kota]")) {
+    grid.innerHTML = KOTA_LIST.map(kotaCard).join("");
+  }
   grid.querySelectorAll("[data-kota]").forEach(function (b) {
     b.addEventListener("click", function () {
       const kota = KOTA_LIST.find(function (k) { return k.slug === b.dataset.kota; });
@@ -995,24 +1037,24 @@ export function initKonsultasi() {
 // Rentang 6–12 mencakup 6–7 (F1) sekaligus 8–12 yang hilang di F1.
 // Tautan tiap fase memakai filter usia materi yang sudah ada (?usia=).
 const TAHAP_LIST = [
-  { slug: "hamil", nama: "Hamil", rentang: "Kehamilan & persiapan", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+  { slug: "hamil", nama: "Hamil", rentang: "Kehamilan & persiapan", usia: "0-5",
     desk: "1000 hari pertama kehidupan dimulai sejak dalam kandungan — gizi ibu, kesehatan kehamilan, dan persiapan menyambut bayi.",
-    tombol: "Lihat materi 1000 hari pertama" },
-  { slug: "bayi", nama: "Bayi", rentang: "0–1 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    isu: ["Gizi ibu hamil", "Persiapan menyambut bayi", "1000 hari pertama"] },
+  { slug: "bayi", nama: "Bayi", rentang: "0–1 tahun", usia: "0-5",
     desk: "Bayi belajar lewat indra dan gerakan; kelekatan yang aman dengan pengasuh menjadi fondasi perkembangan selanjutnya.",
-    tombol: "Lihat materi 0–5 tahun" },
-  { slug: "batita", nama: "Batita", rentang: "1–2 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    isu: ["Kelekatan & rasa aman", "Tumbuh kembang fisik", "Stimulasi indra"] },
+  { slug: "batita", nama: "Batita", rentang: "1–2 tahun", usia: "0-5",
     desk: "Anak mulai berjalan dan mengucapkan kata pertama; rasa ingin tahu dan kemandirian awal mulai tumbuh.",
-    tombol: "Lihat materi 0–5 tahun" },
-  { slug: "balita", nama: "Balita", rentang: "3–5 tahun", usia: "0-5", jumlah: 4, kelompok: "Kelompok Balita (0–5 tahun)",
+    isu: ["Kata pertama", "Tantrum pertama", "Kemandirian awal"] },
+  { slug: "balita", nama: "Balita", rentang: "3–5 tahun", usia: "0-5",
     desk: "Bahasa meledak, imajinasi berkembang, dan anak belajar aturan lewat bermain — masa emas stimulasi.",
-    tombol: "Lihat materi 0–5 tahun" },
-  { slug: "anak", nama: "Anak", rentang: "6–12 tahun", usia: "6-12", jumlah: 4, kelompok: "Kelompok Anak (6–12 tahun)",
+    isu: ["Tantrum & emosi", "Ledakan bahasa", "Disiplin positif"] },
+  { slug: "anak", nama: "Anak", rentang: "6–12 tahun", usia: "6-12",
     desk: "Anak sekolah: berpikir konkret, belajar membaca-menulis-berhitung, serta harga diri dan dunia teman sebaya mulai terbentuk.",
-    tombol: "Lihat materi 6–12 tahun" },
-  { slug: "remaja", nama: "Remaja", rentang: "13–18 tahun", usia: "13-18", jumlah: 4, kelompok: "Kelompok Remaja (13–18 tahun)",
+    isu: ["Harga diri", "Teman sebaya", "Belajar di sekolah"] },
+  { slug: "remaja", nama: "Remaja", rentang: "13–18 tahun", usia: "13-18",
     desk: "Pubertas, pencarian identitas, dan hubungan dengan teman sebaya; orang tua beralih dari mengatur menjadi mendampingi.",
-    tombol: "Lihat materi 13–18 tahun" },
+    isu: ["Pubertas", "Pencarian identitas", "Otonomi & komunikasi"] },
 ];
 
 export function initTimeline() {
@@ -1029,8 +1071,10 @@ export function initTimeline() {
     panel.innerHTML = '<span class="tahap-rentang">' + t.rentang + '</span>'
       + '<h3>' + t.nama + '</h3>'
       + '<p>' + t.desk + '</p>'
-      + '<p class="tahap-meta">' + t.jumlah + ' materi · ' + t.kelompok + '</p>'
-      + '<a class="btn btn-amber" href="materi.html?usia=' + t.usia + '">' + t.tombol + '</a>';
+      + '<div class="tahap-isu" role="list" aria-label="Isu populer pada tahap ini">'
+      + t.isu.map(function (s) { return '<span role="listitem">' + s + '</span>'; }).join("")
+      + '</div>'
+      + '<a class="btn btn-red" href="materi.html?usia=' + t.usia + '">Pelajari Parenting Usia ini</a>';
   }
   nodes.forEach(function (n) {
     n.addEventListener("click", function () { pilih(n.dataset.tahap); });
