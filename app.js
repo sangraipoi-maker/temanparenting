@@ -983,14 +983,35 @@ export function initKomunitas() {
 }
 
 export function initKonsultasi() {
+  const caraStep = document.getElementById("caraStep");
   const kotaStep = document.getElementById("kotaStepKonsul");
+  const onlineStep = document.getElementById("onlineStep");
+  const jadwalStep = document.getElementById("jadwalStep");
   const ahliStep = document.getElementById("ahliStep");
   const grid = document.getElementById("ahliGrid");
   const title = document.getElementById("ahliTitle");
   const sub = document.getElementById("ahliSub");
   const bar = document.getElementById("pilihBar");
   const barText = document.getElementById("pilihText");
-  if (!kotaStep || !ahliStep || !grid) return;
+  if (!caraStep || !kotaStep || !ahliStep || !grid) return;
+  // Tampilkan satu langkah, sembunyikan langkah lainnya.
+  function tampil(step) {
+    [caraStep, kotaStep, onlineStep, jadwalStep, ahliStep].forEach(function (el) {
+      if (el) el.hidden = el !== step;
+    });
+    if (step) step.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  // Langkah 1: pilih cara konsultasi — online (gratis) atau offline (berbayar).
+  document.querySelectorAll("[data-cara]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      tampil(b.dataset.cara === "offline" ? kotaStep : onlineStep);
+    });
+  });
+  ["gantiCaraBtnKota", "gantiCaraBtnOnline"].forEach(function (id) {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", function () { tampil(caraStep); });
+  });
+  // Cabang offline: pilih kota, lalu pilih ahli.
   initKotaPicker("kotaGridKonsul", function (kota) {
     const idx = KOTA_LIST.indexOf(kota);
     const ahli = [0, 2, 4, 6].map(function (o) { return AHLI_LIST[(idx + o) % AHLI_LIST.length]; });
@@ -1019,15 +1040,45 @@ export function initKonsultasi() {
         bar.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
     });
-    kotaStep.hidden = true;
-    ahliStep.hidden = false;
-    ahliStep.scrollIntoView({ behavior: "smooth", block: "start" });
+    tampil(ahliStep);
   });
   document.getElementById("gantiKotaBtnKonsul").addEventListener("click", function () {
-    ahliStep.hidden = true;
-    kotaStep.hidden = false;
-    kotaStep.scrollIntoView({ behavior: "smooth", block: "start" });
+    tampil(kotaStep);
   });
+  // Cabang online: "Konsultasi sekarang" membuka chat (tombol data-ask-open);
+  // "Jadwalkan konsultasi" membuka formulir jadwal.
+  const jadwalForm = document.getElementById("jadwalForm");
+  const jadwalAhli = document.getElementById("jadwalAhli");
+  const jadwalTanggal = document.getElementById("jadwalTanggal");
+  if (jadwalAhli) {
+    jadwalAhli.innerHTML = '<option value="">Pilih ahli…</option>' + AHLI_LIST.map(function (a) {
+      return '<option value="' + a.singkat + '">' + a.nama + ' — ' + a.bidang + '</option>';
+    }).join("");
+  }
+  if (jadwalTanggal) jadwalTanggal.min = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll("[data-online]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (b.dataset.online === "jadwal") tampil(jadwalStep);
+    });
+  });
+  document.getElementById("gantiWaktuBtn").addEventListener("click", function () {
+    tampil(onlineStep);
+  });
+  if (jadwalForm) {
+    jadwalForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const a = AHLI_LIST.find(function (x) { return x.singkat === jadwalAhli.value; });
+      const jam = document.getElementById("jadwalJam").value;
+      const nama = document.getElementById("jadwalNama").value.trim();
+      if (!a || !jadwalTanggal.value || !jam || !nama) return;
+      const tglTampil = new Date(jadwalTanggal.value + "T00:00:00").toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      document.getElementById("jadwalHasilText").textContent =
+        nama + ", konsultasi onlinemu dengan " + a.nama + " (" + a.bidang + ") dijadwalkan pada " + tglTampil + ", pukul " + jam + " WIB.";
+      const hasil = document.getElementById("jadwalHasil");
+      hasil.hidden = false;
+      hasil.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  }
 }
 
 /* ---------------- garis waktu tahap tumbuh kembang (beranda) ---------------- */

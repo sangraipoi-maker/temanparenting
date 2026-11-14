@@ -603,7 +603,23 @@ ol.steps li strong{color:var(--ink)}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 .foto-credit,.dummy-note{margin-top:16px;font-size:.85rem;color:var(--ink-soft)}
 .laporan{padding:32px 0 64px}
-.kota-step[hidden],.acara-step[hidden],.ahli-step[hidden],.pilih-bar[hidden]{display:none}
+.kota-step[hidden],.acara-step[hidden],.ahli-step[hidden],.pilih-bar[hidden],.cara-step[hidden],.online-step[hidden],.jadwal-step[hidden],.jadwal-hasil[hidden]{display:none}
+.cara-step,.kota-step,.online-step,.jadwal-step,.ahli-step{scroll-margin-top:96px}
+.cara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.cara-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.cara-card h3{font-size:1.25rem}
+.cara-card p{font-size:.95rem;color:var(--ink-soft);line-height:1.6;flex:1}
+.cara-card .btn{margin-top:10px;align-self:flex-start}
+.cara-badge{font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:999px;align-self:flex-start;background:var(--amber);color:#261500}
+.cara-badge.bayar{background:var(--surface-2);color:var(--ink-soft);border:1px solid var(--line)}
+.jadwal-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;max-width:720px}
+.jadwal-form label{display:flex;flex-direction:column;gap:6px;font-size:.9rem;font-weight:700;color:var(--ink)}
+.jadwal-form input,.jadwal-form select{padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-weight:500}
+.jadwal-form input:focus,.jadwal-form select:focus{outline:2px solid var(--amber);outline-offset:1px}
+.jadwal-form .btn{grid-column:1/-1;justify-self:flex-start;margin-top:4px}
+.jadwal-hasil{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;max-width:720px;margin-top:18px}
+.jadwal-hasil h3{font-size:1.15rem;margin-bottom:8px}
+.jadwal-hasil p{font-size:.95rem;color:var(--ink-soft);line-height:1.6}
 .acara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .acara-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
 .acara-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
@@ -732,7 +748,7 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .tahap-node[aria-selected="true"]{flex-basis:180px}
   .tahap-label{text-align:center}
   .kota-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .acara-grid,.ahli-grid{grid-template-columns:minmax(0,1fr)}
+  .acara-grid,.ahli-grid,.cara-grid,.jadwal-form{grid-template-columns:minmax(0,1fr)}
   .quiz-band{grid-template-columns:1fr}
   .detail-grid,.about-grid{grid-template-columns:1fr}
   .side-card{position:static}

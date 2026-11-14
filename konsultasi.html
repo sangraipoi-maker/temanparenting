@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="TemanParenting: konsultasi dengan psikolog dan konselor pengasuhan di 5 kota." />
+<meta name="description" content="TemanParenting: konsultasi online gratis lewat chat, atau offline berbayar dengan psikolog dan konselor pengasuhan." />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <title>Konsultasi dengan Ahli — TemanParenting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,11 +56,32 @@
   <div class="wrap">
     <div class="page-head">
       <h1>Konsultasi dengan Ahli</h1>
-      <p>Pilih kota Anda, lalu pilih ahli yang praktik di kota tersebut. Konsultasi dilakukan langsung dengan psikolog dan konselor yang berpengalaman di bidang pengasuhan.</p>
+      <p>Pilih konsultasi online (gratis) lewat chat, atau offline (berbayar) dengan bertemu langsung ahli di kotamu. Konsultasi dilakukan dengan psikolog dan konselor yang berpengalaman di bidang pengasuhan.</p>
     </div>
-    <div class="kota-step" id="kotaStepKonsul">
+    <div class="cara-step" id="caraStep">
       <div class="sec-head">
         <span class="kicker">Langkah 1</span>
+        <h2>Pilih cara konsultasi</h2>
+        <p>Konsultasi online gratis lewat chat, atau bertemu langsung dengan ahli di kotamu (berbayar).</p>
+      </div>
+      <div class="cara-grid">
+        <article class="cara-card">
+          <span class="cara-badge gratis">Gratis</span>
+          <h3>Online</h3>
+          <p>Konsultasi lewat chat dari mana saja, tanpa biaya. Cocok untuk pertanyaan yang butuh jawaban cepat.</p>
+          <button type="button" class="btn btn-amber" data-cara="online">Pilih Online</button>
+        </article>
+        <article class="cara-card">
+          <span class="cara-badge bayar">Berbayar</span>
+          <h3>Offline</h3>
+          <p>Bertemu langsung dengan ahli di kotamu. Cocok untuk pembahasan yang lebih mendalam.</p>
+          <button type="button" class="btn btn-amber" data-cara="offline">Pilih Offline</button>
+        </article>
+      </div>
+    </div>
+    <div class="kota-step" id="kotaStepKonsul" hidden>
+      <div class="sec-head">
+        <span class="kicker">Langkah 2</span>
         <h2>Pilih kota Anda</h2>
         <p>Ahli tersedia di 5 kota. Setiap kartu menampilkan landmark ikonik kotanya.</p>
       </div>
@@ -72,10 +93,67 @@
         <article class="kota-card"><img src="assets/img/kota/semarang.jpg" alt="Landmark Lawang Sewu di Semarang" loading="lazy" /><span class="body"><span class="kota-landmark">Lawang Sewu</span><h3>Semarang</h3><span class="kota-stats"><span><b>121</b>Anggota</span><span><b>6</b>Kegiatan aktif</span><span><b>4</b>Ahli</span></span><button type="button" class="btn btn-amber kota-pilih dim" data-kota="semarang">Pilih Kota ini</button></span></article>
       </div>
       <p class="foto-credit">Foto kota: Wikimedia Commons.</p>
+      <p><button type="button" class="btn btn-ghost" id="gantiCaraBtnKota">← Ganti cara konsultasi</button></p>
+    </div>
+    <div class="online-step" id="onlineStep" hidden>
+      <div class="sec-head">
+        <span class="kicker">Langkah 2</span>
+        <h2>Kapan konsultasinya?</h2>
+        <p>Konsultasi online gratis — langsung sekarang atau dijadwalkan dulu.</p>
+      </div>
+      <div class="cara-grid">
+        <article class="cara-card">
+          <h3>Konsultasi sekarang</h3>
+          <p>Langsung terhubung ke chat konsultasi dan tanyakan masalah pengasuhanmu sekarang.</p>
+          <button type="button" class="btn btn-amber" data-ask-open>Mulai Konsultasi</button>
+        </article>
+        <article class="cara-card">
+          <h3>Jadwalkan konsultasi</h3>
+          <p>Pilih ahli dan waktu yang cocok untukmu, lalu kami siapkan sesi konsultasinya.</p>
+          <button type="button" class="btn btn-amber" data-online="jadwal">Jadwalkan</button>
+        </article>
+      </div>
+      <p><button type="button" class="btn btn-ghost" id="gantiCaraBtnOnline">← Ganti cara konsultasi</button></p>
+    </div>
+    <div class="jadwal-step" id="jadwalStep" hidden>
+      <div class="sec-head">
+        <span class="kicker">Langkah 3</span>
+        <h2>Jadwalkan konsultasi online</h2>
+        <p>Pilih ahli, tanggal, dan jam. Konsultasi online gratis.</p>
+      </div>
+      <p style="margin-bottom:18px"><button type="button" class="btn btn-ghost" id="gantiWaktuBtn">← Kembali</button></p>
+      <form class="jadwal-form" id="jadwalForm">
+        <label>Ahli
+          <select id="jadwalAhli" required></select>
+        </label>
+        <label>Tanggal
+          <input type="date" id="jadwalTanggal" required />
+        </label>
+        <label>Jam
+          <select id="jadwalJam" required>
+            <option value="">Pilih jam…</option>
+            <option>09.00–10.00</option>
+            <option>10.00–11.00</option>
+            <option>13.00–14.00</option>
+            <option>14.00–15.00</option>
+            <option>15.00–16.00</option>
+            <option>19.00–20.00</option>
+          </select>
+        </label>
+        <label>Nama Anda
+          <input type="text" id="jadwalNama" placeholder="Nama Anda" required />
+        </label>
+        <button type="submit" class="btn btn-amber">Simpan Jadwal</button>
+      </form>
+      <div class="jadwal-hasil" id="jadwalHasil" hidden>
+        <h3>Jadwal konsultasi tersimpan</h3>
+        <p id="jadwalHasilText"></p>
+        <p class="dummy-note">Ini masih prototipe — jadwal di atas hanya contoh dan belum terkirim ke ahli.</p>
+      </div>
     </div>
     <div class="ahli-step" id="ahliStep" hidden>
       <div class="sec-head">
-        <span class="kicker">Langkah 2</span>
+        <span class="kicker">Langkah 3</span>
         <h2 id="ahliTitle">Ahli di Yogyakarta</h2>
         <p id="ahliSub"></p>
       </div>
