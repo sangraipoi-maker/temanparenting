@@ -296,7 +296,7 @@ export async function initMateriDetail() {
       + '</div>';
     const d = DISKUSI[m.id];
     const diskusiItems = (d && d.items ? d.items : []).map(function (it) {
-      return '<div class="diskusi-item"><p class="diskusi-penanya">' + esc(it.penanya) + ' (Nama buatan)</p><p class="diskusi-q">' + esc(it.q) + '</p><p class="diskusi-a"><span class="diskusi-ahli">' + esc(d.ahli) + ' · Ahli</span>' + esc(it.a) + '</p></div>';
+      return '<div class="diskusi-item"><p class="diskusi-penanya">' + esc(it.penanya) + ' (Nama buatan)</p><p class="diskusi-q">' + esc(it.q) + '</p><p class="diskusi-a"><span class="diskusi-ahli">' + esc(d.ahli) + ' (Nama Buatan) · Ahli</span>' + esc(it.a) + '</p></div>';
     }).join("");
     const diskusiHTML = '<h2>Diskusi &amp; Tanya Jawab</h2>'
       + '<p class="diskusi-intro">Punya pertanyaan tentang materi ini? Hanya ahli yang dapat merespon, dan diskusi dapat dilihat oleh orang lain.</p>'
@@ -309,7 +309,7 @@ export async function initMateriDetail() {
       : "";
     const ahliEntry = d ? AHLI_LIST.find(function (a) { return a.nama === d.ahli; }) : null;
     const ahliHTML = ahliEntry
-      ? '<div class="detail-ahli"><span class="ahli-avatar">' + esc(ahliEntry.inisial) + '</span><span class="ahli-teks"><span class="ahli-nama">Ditinjau oleh <strong>' + esc(ahliEntry.nama) + '</strong></span><span class="detail-ahli-bidang">' + esc(ahliEntry.bidang) + '</span></span></div>'
+      ? '<div class="detail-ahli"><span class="ahli-avatar">' + esc(ahliEntry.inisial) + '</span><span class="ahli-teks"><span class="ahli-nama">Ditinjau oleh <strong>' + esc(ahliEntry.nama) + '</strong> (Nama Buatan)</span><span class="detail-ahli-bidang">' + esc(ahliEntry.bidang) + '</span></span></div>'
       : "";
     wrap.innerHTML =
       '<div class="detail-head">'
@@ -318,7 +318,7 @@ export async function initMateriDetail() {
       + '<h1 class="detail-title">' + esc(m.judul) + "</h1>"
       + ahliHTML
       + '<p class="detail-lead">' + esc(m.ringkas) + "</p>"
-      + '<div class="meta-row" style="margin-top:10px"><span class="badge-tema">' + esc(m.durasi) + " baca · Sumber: " + esc(m.bab) + "</span></div>"
+      + '<div class="meta-row" style="margin-top:10px"><span class="badge-tema">' + esc(m.durasi) + " baca</span></div>"
       + '<div class="detail-hero"><img src="' + esc(m.img) + '" alt="' + esc(m.alt) + '" /></div>'
       + "</div>"
       + '<div class="detail-grid"><div class="detail-body">'
@@ -331,7 +331,7 @@ export async function initMateriDetail() {
       + "</div>"
       + '<aside><div class="side-card">'
       + '<div class="fact"><strong>Catatan penting</strong>' + esc(m.fakta) + "</div>"
-      + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + ", " + esc(m.bab) + ".</div>"
+      + '<div class="fact" style="margin-top:10px"><strong>Sumber materi</strong>' + esc(SUMBER_SITASI) + ".</div>"
       + "</div></aside></div>";
     refreshReveals();
   } catch (e) {
@@ -380,9 +380,9 @@ export async function initArtikelDetail() {
       + "</div>"
       + '<aside><div class="side-card"><h3>Artikel lainnya</h3>'
       + others.map((o) =>
-        '<p style="margin-bottom:12px"><a href="artikel-detail.html?id=' + o.id + '" style="font-weight:700;text-decoration:none">' + esc(o.judul) + '</a><br /><small style="color:var(--muted)">' + esc(o.menit) + " baca · " + esc(o.bab) + "</small></p>"
+        '<p style="margin-bottom:12px"><a href="artikel-detail.html?id=' + o.id + '" style="font-weight:700;text-decoration:none">' + esc(o.judul) + '</a><br /><small style="color:var(--muted)">' + esc(o.menit) + " baca</small></p>"
       ).join("")
-      + '<div class="fact"><strong>Sumber artikel</strong>' + esc(SUMBER_SITASI) + ", " + esc(a.bab) + ".</div>"
+      + '<div class="fact"><strong>Sumber artikel</strong>' + esc(SUMBER_SITASI) + ".</div>"
       + "</div></aside></div>";
     refreshReveals();
   } catch (e) {
@@ -944,11 +944,11 @@ const KOTA_LIST = [
 ];
 
 const ACARA_LIST = [
-  { jenis: "Seminar", segmen: "Balita", judul: "Menangani Anak Tantrum: Tenang di Tengah Badai Emosi", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Mengapa tantrum terjadi, apa yang sebenarnya dibutuhkan anak saat tantrum, dan langkah tenang yang bisa dilakukan orang tua." },
-  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
-  { jenis: "Seminar", segmen: "Balita", judul: "Disiplin Positif Tanpa Teriakan", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal, tanpa bentakan." },
-  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", tgl: "Minggu, 29 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
-  { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Menangani Anak Tantrum: Tenang di Tengah Badai Emosi", img: "assets/img/acara/acara-1.svg", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Mengapa tantrum terjadi, apa yang sebenarnya dibutuhkan anak saat tantrum, dan langkah tenang yang bisa dilakukan orang tua." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", img: "assets/img/acara/acara-2.svg", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Disiplin Positif Tanpa Teriakan", img: "assets/img/acara/acara-3.svg", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal, tanpa bentakan." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", img: "assets/img/acara/acara-4.svg", tgl: "Minggu, 29 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", img: "assets/img/acara/acara-5.svg", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
 ];
 
 const AHLI_LIST = [
@@ -1020,13 +1020,14 @@ export function initKomunitas() {
     grid.innerHTML = ACARA_LIST.map(function (a) {
       const tempat = a.jenis === "Seminar" ? kota.seminar : kota.temu;
       return '<article class="acara-card">'
+        + '<img class="acara-img" src="' + a.img + '" alt="Gambar acara ' + a.judul + ' (prototipe)" loading="lazy" />'
         + '<div class="acara-top"><span class="acara-jenis ' + (a.jenis === "Seminar" ? "seminar" : "temu") + '">' + a.jenis + '</span>'
         + '<span class="acara-segmen">Segmen ' + a.segmen + '</span></div>'
         + '<h3>' + a.judul + '</h3>'
         + '<p class="acara-meta">' + a.tgl + ' · ' + a.jam + '</p>'
         + '<p class="acara-meta">' + tempat + '</p>'
         + (a.maks ? '<p class="acara-meta">Maksimal ' + a.maks + ' orang</p>' : '')
-        + '<p class="acara-ahli">' + a.peran + ': ' + a.ahli + '</p>'
+        + '<p class="acara-ahli">' + a.peran + ': ' + a.ahli + ' (Nama Buatan)</p>'
         + '<p class="acara-desk">' + a.desk + '</p>'
         + '</article>';
     }).join("");

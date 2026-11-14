@@ -632,6 +632,7 @@ ol.steps li strong{color:var(--ink)}
 .jadwal-hasil p{font-size:.95rem;color:var(--ink-soft);line-height:1.6}
 .acara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .acara-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.acara-img{display:block;width:calc(100% + 44px);height:180px;object-fit:cover;margin:-22px -22px 16px;border-radius:20px 20px 0 0}
 .acara-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
 .acara-jenis{font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:999px;background:var(--navy);color:#fff}
 .acara-jenis.temu{background:var(--amber);color:#261500}
