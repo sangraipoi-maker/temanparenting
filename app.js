@@ -595,7 +595,10 @@ export function refreshReveals() {
     el.style.setProperty("--d", ((idx % 5) * 0.07) + "s");
     revealObserver.observe(el);
   });
-  document.querySelectorAll(".detail-head, .detail-grid, .side-card").forEach(function (el) {
+  // .detail-grid TIDAK di-reveal: isinya setinggi ribuan px; di HP fraksi
+  // terlihatnya tidak pernah mencapai ambang observer (0.14) sehingga
+  // seluruh isi artikel stuck opacity:0. Isi artikel harus selalu terlihat.
+  document.querySelectorAll(".detail-head, .side-card").forEach(function (el) {
     if (el.dataset.observed) return;
     el.dataset.observed = "1";
     el.classList.add("reveal");
