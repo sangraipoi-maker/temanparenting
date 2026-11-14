@@ -511,21 +511,21 @@ export function initHeroTabs() {
       img: "assets/img/hero-reading.jpg",
       alt: "Seorang ibu membacakan buku cerita kepada balitanya di sofa rumah",
       badge: "12 materi siap dibaca", badgeSub: "Disusun dari Santrock (2018) & hasil survei kebutuhan",
-      tab: "Materi", cta: "Jelajahi Materi", href: "materi.html" },
-    { kicker: "Kuis Refleksi",
-      title: "Lima pertanyaan untuk bercermin sebagai orang tua",
-      sub: "Refleksi singkat tentang kebiasaan pengasuhan Anda — tanpa skor yang menghakimi, dilengkapi saran materi lanjutan yang paling relevan.",
-      img: "assets/img/mother-teen.jpg",
-      alt: "Ibu berbincang hangat dengan putri remajanya",
-      badge: "5 soal refleksi", badgeSub: "Selesai dalam waktu kurang dari dua menit",
-      tab: "Refleksi pola asuh Anda", cta: "Mulai Kuis Refleksi", href: "kuis.html" },
-    { kicker: "Satu Wadah Terpusat",
-      title: "Tidak perlu lagi berburu informasi pengasuhan ke mana-mana",
-      sub: "Kebutuhan tertinggi responden survei kami (3,9 dari 4,0) adalah satu wadah terpusat yang kredibel. TemanParenting dirancang untuk menjawab kebutuhan itu.",
+      tab: "Materi Parenting", cta: "Jelajahi Materi", href: "materi.html" },
+    { kicker: "Berita Parenting",
+      title: "Aktivitas seru bersama si kecil, dibagikan antar orang tua",
+      sub: "Kumpulan aktivitas bersama anak — memasak, membaca, dan bermain — yang dibagikan sesama orang tua sebagai inspirasi untuk dicoba di rumah.",
+      img: "assets/img/family-cooking.jpg",
+      alt: "Keluarga menyiapkan makanan bersama di dapur",
+      badge: "Cerita & aktivitas", badgeSub: "Dibagikan oleh sesama orang tua",
+      tab: "Berita Parenting", cta: "Lihat Berita", href: "artikel.html" },
+    { kicker: "Kegiatan Komunitas",
+      title: "Komunitas yang belajar dan tumbuh bersama",
+      sub: "Laporan dan dokumentasi kegiatan komunitas TemanParenting di berbagai wilayah — seminar, temu komunitas, dan cerita dari lapangan.",
       img: "assets/img/family-park.jpg",
       alt: "Ayah dan ibu menggandeng tangan anak mereka berjalan di taman",
-      badge: "Skor kebutuhan 3,9 / 4,0", badgeSub: "Satu wadah terpusat yang kredibel",
-      tab: "Wadah terpusat yang kredibel", cta: "Tentang TemanParenting", href: "tentang.html" },
+      badge: "10 kota di Indonesia", badgeSub: "Seminar & temu komunitas",
+      tab: "Kegiatan Komunitas", cta: "Lihat Kegiatan", href: "komunitas.html" },
   ];
   const heroImg = document.getElementById("heroImg");
   slides.forEach(function (s, i) {
@@ -833,3 +833,142 @@ window.pickQuiz = pickQuiz;
 window.quizBack = quizBack;
 window.quizNext = quizNext;
 window.restartQuiz = restartQuiz;
+
+/* ---------------- Komunitas & Konsultasi dengan Ahli (prototipe: data dummy) ---------------- */
+const KOTA_LIST = [
+  { slug: "yogyakarta", nama: "Yogyakarta", img: "assets/img/kota/yogyakarta.jpg", landmark: "Keraton Yogyakarta", seminar: "Gedung Taman Budaya Yogyakarta", temu: "Taman Pintar Yogyakarta" },
+  { slug: "jakarta", nama: "Jakarta", img: "assets/img/kota/jakarta.jpg", landmark: "Bundaran HI", seminar: "Balai Sarbini, Jakarta Selatan", temu: "Taman Menteng, Jakarta Pusat" },
+  { slug: "bandung", nama: "Bandung", img: "assets/img/kota/bandung.jpg", landmark: "Jembatan Layang Pasupati", seminar: "Yayasan Pusat Kebudayaan, Bandung", temu: "Taman Lansia, Bandung" },
+  { slug: "surabaya", nama: "Surabaya", img: "assets/img/kota/surabaya.jpg", landmark: "Jembatan Suroboyo", seminar: "Balai Pemuda Surabaya", temu: "Taman Bungkul Surabaya" },
+  { slug: "semarang", nama: "Semarang", img: "assets/img/kota/semarang.jpg", landmark: "Lawang Sewu", seminar: "Gedung Wanita Semarang", temu: "Taman Indonesia Kaya, Semarang" },
+  { slug: "medan", nama: "Medan", img: "assets/img/kota/medan.jpg", landmark: "Masjid Raya Al-Mashun", seminar: "Gedung Serbaguna Pemko Medan", temu: "Taman Cadika, Medan" },
+  { slug: "makassar", nama: "Makassar", img: "assets/img/kota/makassar.jpg", landmark: "Pantai Losari", seminar: "Gedung Mulo Makassar", temu: "Anjungan Pantai Losari, Makassar" },
+  { slug: "denpasar", nama: "Denpasar", img: "assets/img/kota/denpasar.jpg", landmark: "Monumen Bajra Sandhi", seminar: "Gedung Dharma Negara Alaya, Denpasar", temu: "Lapangan Puputan, Denpasar" },
+  { slug: "malang", nama: "Malang", img: "assets/img/kota/malang.jpg", landmark: "Kampung Warna-Warni", seminar: "Balai Kota Malang", temu: "Taman Merjosari, Malang" },
+  { slug: "solo", nama: "Solo", img: "assets/img/kota/solo.jpg", landmark: "Benteng Vastenburg", seminar: "Gedung Wayang Orang Sriwedari, Solo", temu: "Taman Balekambang, Solo" },
+];
+
+const ACARA_LIST = [
+  { jenis: "Seminar", segmen: "Balita", judul: "Mengasuh Balita Tanpa Teriakan: Disiplin Positif di Rumah", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal — tanpa bentakan." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
+  { jenis: "Temu Komunitas", segmen: "Anak", judul: "Kelas Masak Bareng Anak: Kemandirian di Dapur", tgl: "Minggu, 29 November 2026", jam: "10.00–12.00 WIB", peran: "Pemandu", ahli: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog", desk: "Orang tua dan anak memasak bersama; anak belajar mengikuti langkah, menunggu giliran, dan membereskan sendiri." },
+  { jenis: "Seminar", segmen: "Remaja", judul: "Mendampingi Remaja: Mendengar Sebelum Menasihati", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.30 WIB", peran: "Pembicara", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", desk: "Mengapa nasihat sering mental pada remaja, dan bagaimana membuka percakapan lewat mendengar terlebih dahulu." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", tgl: "Minggu, 6 Desember 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Membangun Rasa Aman: Kelekatan Sejak Bayi", tgl: "Sabtu, 12 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Apa itu kelekatan yang aman, bagaimana ia terbentuk dari respons sehari-hari, dan mengapa ia menjadi fondasi perkembangan anak." },
+  { jenis: "Temu Komunitas", segmen: "Anak", judul: "Bermain & Belajar: Stimulasi Motorik Anak", tgl: "Minggu, 13 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pemandu", ahli: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog", desk: "Praktik permainan sederhana untuk melatih motorik kasar dan halus anak usia sekolah, memakai alat yang ada di rumah." },
+  { jenis: "Seminar", segmen: "Kehamilan", judul: "Persiapan Kehamilan & 1000 Hari Pertama Kehidupan", tgl: "Sabtu, 19 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Yang perlu disiapkan calon orang tua sejak kehamilan sampai dua tahun pertama anak — dari gizi sampai stimulasi." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Refleksi Akhir Tahun: Perjalanan Mengasuh 2026", tgl: "Minggu, 20 Desember 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", desk: "Menutup tahun dengan refleksi: apa yang sudah berjalan baik dalam pengasuhan tahun ini, dan apa yang ingin diperbaiki tahun depan." },
+];
+
+const AHLI_LIST = [
+  { nama: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", singkat: "Ratna Wijaya", inisial: "RW", bidang: "Psikolog Anak & Remaja", praktik: "Klinik Tumbuh Kembang Ceria", jadwal: "Senin–Jumat, 09.00–17.00" },
+  { nama: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", singkat: "Budi Santoso", inisial: "BS", bidang: "Psikolog Keluarga", praktik: "Praktik Psikologi Keluarga Harmoni", jadwal: "Senin–Sabtu, 10.00–18.00" },
+  { nama: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", singkat: "Sari Dewi", inisial: "SD", bidang: "Psikolog Anak Usia Dini", praktik: "Klinik Anak Ceria", jadwal: "Senin–Jumat, 08.00–16.00" },
+  { nama: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog", singkat: "Andi Pratama", inisial: "AP", bidang: "Konselor Pernikahan & Keluarga", praktik: "Praktik Psikologi Andi Pratama", jadwal: "Selasa–Sabtu, 09.00–17.00" },
+  { nama: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", singkat: "Maya Kusuma", inisial: "MK", bidang: "Psikolog Remaja", praktik: "Klinik Remaja Sehat", jadwal: "Senin–Jumat, 10.00–18.00" },
+  { nama: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", singkat: "Rudi Hartono", inisial: "RH", bidang: "Psikolog Pendidikan", praktik: "Praktik Psikologi Rudi Hartono", jadwal: "Senin–Sabtu, 09.00–17.00" },
+  { nama: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", singkat: "Lina Marlina", inisial: "LM", bidang: "Psikolog Anak & Kehamilan", praktik: "Klinik Ibu & Anak Ceria", jadwal: "Senin–Jumat, 08.00–15.00" },
+  { nama: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog", singkat: "Dedi Kurniawan", inisial: "DK", bidang: "Psikolog Perkembangan", praktik: "Praktik Psikologi Dedi Kurniawan", jadwal: "Rabu–Minggu, 09.00–17.00" },
+];
+
+function kotaCard(k) {
+  return '<article class="kota-card">'
+    + '<img src="' + k.img + '" alt="Landmark ' + k.landmark + ' di ' + k.nama + '" loading="lazy" />'
+    + '<span class="body"><span class="kota-landmark">' + k.landmark + '</span>'
+    + '<h3>' + k.nama + '</h3>'
+    + '<button type="button" class="btn btn-amber kota-pilih" data-kota="' + k.slug + '">Pilih Lokasi</button>'
+    + '</span></article>';
+}
+
+function initKotaPicker(gridId, onPick) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  grid.innerHTML = KOTA_LIST.map(kotaCard).join("");
+  grid.querySelectorAll("[data-kota]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      onPick(KOTA_LIST.find(function (k) { return k.slug === b.dataset.kota; }));
+    });
+  });
+}
+
+export function initKomunitas() {
+  const kotaStep = document.getElementById("kotaStep");
+  const acaraStep = document.getElementById("acaraStep");
+  const grid = document.getElementById("acaraGrid");
+  const title = document.getElementById("acaraTitle");
+  const sub = document.getElementById("acaraSub");
+  if (!kotaStep || !acaraStep || !grid) return;
+  initKotaPicker("kotaGrid", function (kota) {
+    title.textContent = "Acara di " + kota.nama;
+    sub.textContent = "Seminar dan temu komunitas di " + kota.nama + " — setiap acara dipandu oleh ahli di bidangnya.";
+    grid.innerHTML = ACARA_LIST.map(function (a) {
+      const tempat = a.jenis === "Seminar" ? kota.seminar : kota.temu;
+      return '<article class="acara-card">'
+        + '<div class="acara-top"><span class="acara-jenis ' + (a.jenis === "Seminar" ? "seminar" : "temu") + '">' + a.jenis + '</span>'
+        + '<span class="acara-segmen">Segmen ' + a.segmen + '</span></div>'
+        + '<h3>' + a.judul + '</h3>'
+        + '<p class="acara-meta">' + a.tgl + ' · ' + a.jam + '</p>'
+        + '<p class="acara-meta">' + tempat + '</p>'
+        + '<p class="acara-ahli">' + a.peran + ': ' + a.ahli + '</p>'
+        + '<p class="acara-desk">' + a.desk + '</p>'
+        + '</article>';
+    }).join("");
+    kotaStep.hidden = true;
+    acaraStep.hidden = false;
+    acaraStep.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  document.getElementById("gantiKotaBtn").addEventListener("click", function () {
+    acaraStep.hidden = true;
+    kotaStep.hidden = false;
+    kotaStep.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+export function initKonsultasi() {
+  const kotaStep = document.getElementById("kotaStepKonsul");
+  const ahliStep = document.getElementById("ahliStep");
+  const grid = document.getElementById("ahliGrid");
+  const title = document.getElementById("ahliTitle");
+  const sub = document.getElementById("ahliSub");
+  const bar = document.getElementById("pilihBar");
+  const barText = document.getElementById("pilihText");
+  if (!kotaStep || !ahliStep || !grid) return;
+  initKotaPicker("kotaGridKonsul", function (kota) {
+    const idx = KOTA_LIST.indexOf(kota);
+    const ahli = [0, 2, 4, 6].map(function (o) { return AHLI_LIST[(idx + o) % AHLI_LIST.length]; });
+    title.textContent = "Ahli di " + kota.nama;
+    sub.textContent = "Psikolog dan konselor yang praktik di " + kota.nama + " — pilih salah satu untuk melihat detailnya.";
+    bar.hidden = true;
+    grid.innerHTML = ahli.map(function (a) {
+      return '<article class="ahli-card">'
+        + '<span class="ahli-avatar">' + a.inisial + '</span>'
+        + '<h3>' + a.nama + '</h3>'
+        + '<p class="ahli-bidang">' + a.bidang + '</p>'
+        + '<p class="ahli-praktik">Tempat praktik: ' + a.praktik + ', ' + kota.nama + '</p>'
+        + '<p class="ahli-jadwal">Jadwal: ' + a.jadwal + '</p>'
+        + '<button type="button" class="btn btn-amber ahli-pilih" data-ahli="' + a.singkat + '">Pilih Ahli</button>'
+        + '</article>';
+    }).join("");
+    grid.querySelectorAll("[data-ahli]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        const a = ahli.find(function (x) { return x.singkat === b.dataset.ahli; });
+        grid.querySelectorAll(".ahli-card").forEach(function (c) { c.classList.remove("selected"); });
+        b.closest(".ahli-card").classList.add("selected");
+        b.textContent = "Ahli Dipilih ✓";
+        grid.querySelectorAll(".ahli-pilih").forEach(function (x) { if (x !== b) x.textContent = "Pilih Ahli"; });
+        barText.textContent = "Anda memilih " + a.nama + " (" + a.bidang + ") — " + a.praktik + ", " + kota.nama + ".";
+        bar.hidden = false;
+        bar.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
+    kotaStep.hidden = true;
+    ahliStep.hidden = false;
+    ahliStep.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  document.getElementById("gantiKotaBtnKonsul").addEventListener("click", function () {
+    ahliStep.hidden = true;
+    kotaStep.hidden = false;
+    kotaStep.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}

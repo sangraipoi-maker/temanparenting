@@ -547,6 +547,39 @@ ol.steps li strong{color:var(--ink)}
 .konsul-box p{flex:1 1 320px;font-size:.98rem;line-height:1.6;color:#dce8f5}
 .konsul-box .btn{flex:none}
 
+/* ---------- komunitas & konsultasi dengan ahli ---------- */
+.kota-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.kota-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.kota-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.kota-card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.kota-landmark{font-size:.78rem;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:.05em}
+.kota-card h3{font-size:1.25rem}
+.kota-card .btn{margin-top:10px;align-self:flex-start}
+.foto-credit,.dummy-note{margin-top:16px;font-size:.85rem;color:var(--ink-soft)}
+.laporan{padding:32px 0 64px}
+.kota-step[hidden],.acara-step[hidden],.ahli-step[hidden],.pilih-bar[hidden]{display:none}
+.acara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.acara-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.acara-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.acara-jenis{font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:999px;background:var(--navy);color:#fff}
+.acara-jenis.temu{background:var(--amber);color:#261500}
+.acara-segmen{font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft)}
+.acara-card h3{font-size:1.12rem;margin-bottom:8px}
+.acara-meta{font-size:.9rem;color:var(--ink-soft);font-weight:600}
+.acara-ahli{margin-top:10px;font-size:.92rem;font-weight:700;color:var(--ink)}
+.acara-desk{margin-top:6px;font-size:.95rem;color:var(--ink-soft)}
+.ahli-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.ahli-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.ahli-card.selected{border-color:var(--amber);box-shadow:0 0 0 2px var(--amber)}
+.ahli-avatar{width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;margin-bottom:12px}
+.ahli-card h3{font-size:1.08rem;margin-bottom:6px}
+.ahli-bidang{font-size:.92rem;font-weight:700;color:var(--amber)}
+.ahli-praktik,.ahli-jadwal{font-size:.92rem;color:var(--ink-soft);margin-top:4px}
+.ahli-card .btn{margin-top:14px}
+.pilih-bar{margin-top:20px;background:var(--navy);color:#fff;border-radius:20px;padding:20px 24px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pilih-bar p{flex:1 1 300px;font-size:.98rem;line-height:1.6;color:#dce8f5}
+.pilih-bar .btn{flex:none}
+
 /* ---------- newsletter ---------- */
 .newsletter{background:var(--surface-2);border-top:1px solid var(--line)}
 .news-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:34px;align-items:center}
@@ -645,6 +678,8 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .hero-grid{grid-template-columns:minmax(0,1fr)}
   .hero h1{font-size:1.75rem}
   .hero p.lead{font-size:.95rem}
+  .kota-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .acara-grid,.ahli-grid{grid-template-columns:minmax(0,1fr)}
   .quiz-band{grid-template-columns:1fr}
   .detail-grid,.about-grid{grid-template-columns:1fr}
   .side-card{position:static}
@@ -658,6 +693,7 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
 @media (max-width:560px){
   section{padding:42px 0}
   .age-grid,.card-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .kota-grid{grid-template-columns:minmax(0,1fr)}
   .insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .insight-card:last-child{grid-column:span 2}
   .aud-grid{grid-template-columns:minmax(0,1fr)}

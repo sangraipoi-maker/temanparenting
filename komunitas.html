@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="TemanParenting: komunitas orang tua di 10 kota — seminar parenting dan temu komunitas yang dipandu ahli." />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<title>Komunitas TemanParenting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="TemanParenting — Beranda">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="#ff8a00" stroke-width="5" stroke-linecap="round" stroke-dasharray="86 22" transform="rotate(50 20 20)"/><circle cx="29" cy="12" r="4.5" fill="#0c2c55"/></svg>
+      <span>Teman<em>Parenting</em><span class="brand-sub">Edukasi Positive Parenting</span></span>
+    </a>
+    <nav class="main" aria-label="Navigasi utama">
+      <button data-nav="beranda" onclick="location.href='index.html'">Beranda</button>
+      <button data-nav="materi" onclick="location.href='materi.html'">Materi</button>
+      <button data-nav="tentang" onclick="location.href='tentang.html'">Tentang</button>
+      <button data-nav="komunitas" class="active" onclick="location.href='komunitas.html'">Komunitas</button>
+      <button data-nav="konsultasi" onclick="location.href='konsultasi.html'">Konsultasi dengan Ahli</button>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="ask-ai-btn" data-ask-open aria-label="Buka Bertanya Parenting — tanya tentang pengasuhan">
+        <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <span class="ask-label">Bertanya Parenting</span>
+      </button>
+    </div>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu seluler">
+    <a href="index.html">Beranda</a>
+    <a href="materi.html">Materi</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="komunitas.html">Komunitas</a>
+    <a href="konsultasi.html">Konsultasi dengan Ahli</a>
+    <button type="button" class="mm-link" data-ask-open>Bertanya Parenting — Tanya Pengasuhan</button>
+  </nav>
+</header>
+<main>
+<!-- ================= KOMUNITAS ================= -->
+<div class="view active" id="view-komunitas">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Komunitas TemanParenting</h1>
+      <p>Belajar pengasuhan tidak harus sendirian. Pilih kota Anda, lalu ikuti seminar materi parenting dan temu komunitas yang dipandu oleh ahli di bidangnya.</p>
+    </div>
+    <div class="kota-step" id="kotaStep">
+      <div class="sec-head">
+        <span class="kicker">Langkah 1</span>
+        <h2>Pilih kota Anda</h2>
+        <p>Acara komunitas tersedia di 10 kota. Setiap kartu menampilkan landmark ikonik kotanya.</p>
+      </div>
+      <div class="kota-grid" id="kotaGrid"></div>
+      <p class="foto-credit">Foto kota: Wikimedia Commons.</p>
+    </div>
+    <div class="acara-step" id="acaraStep" hidden>
+      <div class="sec-head">
+        <span class="kicker">Langkah 2</span>
+        <h2 id="acaraTitle">Acara di Yogyakarta</h2>
+        <p id="acaraSub"></p>
+      </div>
+      <p style="margin-bottom:18px"><button type="button" class="btn btn-ghost" id="gantiKotaBtn">← Ganti kota</button></p>
+      <div class="acara-grid" id="acaraGrid"></div>
+      <p class="dummy-note">Acara di atas adalah contoh (dummy) untuk prototipe — jadwal, tempat, dan pemandu belum final.</p>
+    </div>
+    <section class="laporan" aria-labelledby="laporanTitle">
+      <div class="sec-head">
+        <span class="kicker">Laporan &amp; Dokumentasi</span>
+        <h2 id="laporanTitle">Yang sudah dilakukan komunitas</h2>
+        <p>Laporan dan dokumentasi kegiatan komunitas TemanParenting di berbagai wilayah.</p>
+      </div>
+      <div class="acara-grid">
+        <article class="acara-card">
+          <div class="acara-top"><span class="acara-jenis seminar">Seminar</span><span class="acara-segmen">Yogyakarta</span></div>
+          <h3>Seminar Disiplin Positif Tanpa Teriakan</h3>
+          <p class="acara-meta">Sabtu, 8 November 2026 · 42 orang tua hadir</p>
+          <p class="acara-ahli">Pembicara: dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog</p>
+          <p class="acara-desk">Peserta berlatih merumuskan aturan rumah bersama dan mencoba kalimat pengganti bentakan. Dokumentasi: 24 foto.</p>
+        </article>
+        <article class="acara-card">
+          <div class="acara-top"><span class="acara-jenis temu">Temu Komunitas</span><span class="acara-segmen">Bandung</span></div>
+          <h3>Ngobrol Santai Mengasuh Balita</h3>
+          <p class="acara-meta">Minggu, 1 November 2026 · 28 orang tua hadir</p>
+          <p class="acara-ahli">Pemandu: dr. Budi Santoso, S.Psi., M.Psi., Psikolog</p>
+          <p class="acara-desk">Diskusi kelompok kecil tentang tantrum dan rutinitas tidur balita. Dokumentasi: 18 foto.</p>
+        </article>
+        <article class="acara-card">
+          <div class="acara-top"><span class="acara-jenis temu">Temu Komunitas</span><span class="acara-segmen">Surabaya</span></div>
+          <h3>Kelas Masak Bareng Anak</h3>
+          <p class="acara-meta">Minggu, 25 Oktober 2026 · 35 keluarga hadir</p>
+          <p class="acara-ahli">Pemandu: dr. Andi Pratama, S.Psi., M.Psi., Psikolog</p>
+          <p class="acara-desk">Anak-anak memasak bekal sendiri didampingi orang tua. Dokumentasi: 31 foto.</p>
+        </article>
+      </div>
+      <p class="dummy-note">Laporan di atas adalah contoh (dummy) untuk prototipe.</p>
+    </section>
+  </div>
+</div>
+</main>
+
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">Teman<em>Parenting</em></p>
+        <p class="foot-note">Website edukasi positive parenting untuk orang tua dan calon orang tua — menemukan arah pengasuhan dari sumber yang bisa dipertanggungjawabkan.</p>
+      </div>
+      <nav aria-label="Tautan materi">
+        <h4>Materi</h4>
+        <ul>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="kuis.html">Kuis Refleksi</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Tautan tentang">
+        <h4>Tentang</h4>
+        <ul>
+          <li><a href="tentang.html">Tim Penyusun</a></li>
+          <li><a href="https://temanparenting.my.id" target="_blank" rel="noopener">temanparenting.my.id</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Tautan komunitas">
+        <h4>Komunitas</h4>
+        <ul>
+          <li><a href="komunitas.html">Komunitas</a></li>
+          <li><a href="konsultasi.html">Konsultasi dengan Ahli</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 TemanParenting</span>
+      <span>Isi materi dirujuk dari Santrock (2018), <i>Life-Span Development</i>.</span>
+      <span>Rancangan konseptual untuk karya tulis ilmiah Psychompetition.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bertanya Parenting: tombol melayang + panel -->
+<button type="button" class="ask-fab" data-ask-open aria-haspopup="dialog" aria-controls="askPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.6-.3-3.7-.8L3 20l.9-4.1A8.5 8.5 0 1 1 21 11.5z"/></svg>
+  Bertanya Parenting
+</button>
+<div class="ask-overlay" id="askOverlay"></div>
+<aside class="ask-panel" id="askPanel" role="dialog" aria-modal="true" aria-labelledby="askPanelTitle" aria-hidden="true">
+  <div class="ask-panel-head">
+    <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 14 9l6.5 3L14 15l-2 6.5L10 15 3.5 12 10 9z"/></svg></span>
+    <div>
+      <b id="askPanelTitle">Bertanya Parenting</b>
+      <span>Jawaban dari materi TemanParenting · Santrock (2018)</span>
+    </div>
+    <button type="button" class="ask-close" id="askClose" aria-label="Tutup Bertanya Parenting">✕</button>
+  </div>
+  <div class="ask-body" id="askBody">
+    <div class="ask-msg ai">
+      <h4>Halo, saya asisten TemanParenting.</h4>
+      Tanyakan apa saja seputar tumbuh kembang dan pengasuhan anak. Saya menjawab dari 12 materi yang ada di website ini — coba salah satu contoh di bawah, atau tulis pertanyaan Anda sendiri.
+    </div>
+    <div class="ask-typing" id="askTyping" aria-hidden="true"><i></i><i></i><i></i></div>
+  </div>
+  <div class="ask-panel-suggest" role="group" aria-label="Contoh pertanyaan">
+    <button type="button" class="ask-chip" data-ask-q="Anak saya sering tantrum, bagaimana menghadapinya?">Anak sering tantrum</button>
+    <button type="button" class="ask-chip" data-ask-q="Bagaimana menstimulasi bahasa anak sejak bayi?">Stimulasi bahasa sejak bayi</button>
+    <button type="button" class="ask-chip" data-ask-q="Bagaimana cara menerapkan disiplin tanpa teriakan?">Disiplin tanpa teriakan</button>
+    <button type="button" class="ask-chip" data-ask-q="Bagaimana mendampingi anak remaja yang butuh ruang pribadi?">Mendampingi remaja</button>
+  </div>
+  <form class="ask-panel-form" id="askPanelForm">
+    <label class="sr-only" for="askPanelInput" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Tulis pertanyaan Anda</label>
+    <input type="text" id="askPanelInput" placeholder="Tanya tentang pengasuhan…" autocomplete="off" />
+    <button type="submit" aria-label="Kirim pertanyaan">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10.2 13.8"/><path d="M21 3 14 21l-3.8-7.2L3 10z"/></svg>
+    </button>
+  </form>
+</aside>
+
+<script type="module">
+import { initChrome, initScrollFX, initAskAI, initKomunitas } from "./app.js";
+initChrome();
+initScrollFX();
+initAskAI();
+initKomunitas();
+</script>
+</body>
+</html>
