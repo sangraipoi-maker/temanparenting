@@ -524,7 +524,7 @@ export function initHeroTabs() {
       sub: "Laporan dan dokumentasi kegiatan komunitas TemanParenting di berbagai wilayah — seminar, temu komunitas, dan cerita dari lapangan.",
       img: "assets/img/family-park.jpg",
       alt: "Ayah dan ibu menggandeng tangan anak mereka berjalan di taman",
-      badge: "10 kota di Indonesia", badgeSub: "Seminar & temu komunitas",
+      badge: "5 kota di Indonesia", badgeSub: "Seminar & temu komunitas",
       tab: "Kegiatan Komunitas", cta: "Lihat Kegiatan", href: "komunitas.html" },
   ];
   const heroImg = document.getElementById("heroImg");
@@ -835,30 +835,23 @@ window.quizNext = quizNext;
 window.restartQuiz = restartQuiz;
 
 /* ---------------- Komunitas & Konsultasi dengan Ahli (prototipe: data dummy) ---------------- */
+// Prototipe: hanya Yogyakarta yang aktif; kota lain tombolnya digelapkan
+// dan menampilkan pemberitahuan prototipe saat diklik.
+const KOTA_AKTIF = "yogyakarta";
 const KOTA_LIST = [
-  { slug: "yogyakarta", nama: "Yogyakarta", img: "assets/img/kota/yogyakarta.jpg", landmark: "Keraton Yogyakarta", seminar: "Gedung Taman Budaya Yogyakarta", temu: "Taman Pintar Yogyakarta" },
-  { slug: "jakarta", nama: "Jakarta", img: "assets/img/kota/jakarta.jpg", landmark: "Bundaran HI", seminar: "Balai Sarbini, Jakarta Selatan", temu: "Taman Menteng, Jakarta Pusat" },
-  { slug: "bandung", nama: "Bandung", img: "assets/img/kota/bandung.jpg", landmark: "Jembatan Layang Pasupati", seminar: "Yayasan Pusat Kebudayaan, Bandung", temu: "Taman Lansia, Bandung" },
-  { slug: "surabaya", nama: "Surabaya", img: "assets/img/kota/surabaya.jpg", landmark: "Jembatan Suroboyo", seminar: "Balai Pemuda Surabaya", temu: "Taman Bungkul Surabaya" },
-  { slug: "semarang", nama: "Semarang", img: "assets/img/kota/semarang.jpg", landmark: "Lawang Sewu", seminar: "Gedung Wanita Semarang", temu: "Taman Indonesia Kaya, Semarang" },
-  { slug: "medan", nama: "Medan", img: "assets/img/kota/medan.jpg", landmark: "Masjid Raya Al-Mashun", seminar: "Gedung Serbaguna Pemko Medan", temu: "Taman Cadika, Medan" },
-  { slug: "makassar", nama: "Makassar", img: "assets/img/kota/makassar.jpg", landmark: "Pantai Losari", seminar: "Gedung Mulo Makassar", temu: "Anjungan Pantai Losari, Makassar" },
-  { slug: "denpasar", nama: "Denpasar", img: "assets/img/kota/denpasar.jpg", landmark: "Monumen Bajra Sandhi", seminar: "Gedung Dharma Negara Alaya, Denpasar", temu: "Lapangan Puputan, Denpasar" },
-  { slug: "malang", nama: "Malang", img: "assets/img/kota/malang.jpg", landmark: "Kampung Warna-Warni", seminar: "Balai Kota Malang", temu: "Taman Merjosari, Malang" },
-  { slug: "solo", nama: "Solo", img: "assets/img/kota/solo.jpg", landmark: "Benteng Vastenburg", seminar: "Gedung Wayang Orang Sriwedari, Solo", temu: "Taman Balekambang, Solo" },
+  { slug: "yogyakarta", nama: "Yogyakarta", img: "assets/img/kota/yogyakarta.jpg", landmark: "Keraton Yogyakarta", anggota: 248, kegiatan: 12, ahli: 8, seminar: "Gedung Taman Budaya Yogyakarta", temu: "Taman Pintar Yogyakarta" },
+  { slug: "bandung", nama: "Bandung", img: "assets/img/kota/bandung.jpg", landmark: "Jembatan Layang Pasupati", anggota: 187, kegiatan: 9, ahli: 6, seminar: "Yayasan Pusat Kebudayaan, Bandung", temu: "Taman Lansia, Bandung" },
+  { slug: "jakarta", nama: "Jakarta", img: "assets/img/kota/jakarta.jpg", landmark: "Bundaran HI", anggota: 312, kegiatan: 15, ahli: 10, seminar: "Balai Sarbini, Jakarta Selatan", temu: "Taman Menteng, Jakarta Pusat" },
+  { slug: "surabaya", nama: "Surabaya", img: "assets/img/kota/surabaya.jpg", landmark: "Jembatan Suroboyo", anggota: 164, kegiatan: 8, ahli: 5, seminar: "Balai Pemuda Surabaya", temu: "Taman Bungkul Surabaya" },
+  { slug: "semarang", nama: "Semarang", img: "assets/img/kota/semarang.jpg", landmark: "Lawang Sewu", anggota: 121, kegiatan: 6, ahli: 4, seminar: "Gedung Wanita Semarang", temu: "Taman Indonesia Kaya, Semarang" },
 ];
 
 const ACARA_LIST = [
-  { jenis: "Seminar", segmen: "Balita", judul: "Mengasuh Balita Tanpa Teriakan: Disiplin Positif di Rumah", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal — tanpa bentakan." },
-  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
-  { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
-  { jenis: "Temu Komunitas", segmen: "Anak", judul: "Kelas Masak Bareng Anak: Kemandirian di Dapur", tgl: "Minggu, 29 November 2026", jam: "10.00–12.00 WIB", peran: "Pemandu", ahli: "dr. Andi Pratama, S.Psi., M.Psi., Psikolog", desk: "Orang tua dan anak memasak bersama; anak belajar mengikuti langkah, menunggu giliran, dan membereskan sendiri." },
-  { jenis: "Seminar", segmen: "Remaja", judul: "Mendampingi Remaja: Mendengar Sebelum Menasihati", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.30 WIB", peran: "Pembicara", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", desk: "Mengapa nasihat sering mental pada remaja, dan bagaimana membuka percakapan lewat mendengar terlebih dahulu." },
-  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", tgl: "Minggu, 6 Desember 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
-  { jenis: "Seminar", segmen: "Balita", judul: "Membangun Rasa Aman: Kelekatan Sejak Bayi", tgl: "Sabtu, 12 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Apa itu kelekatan yang aman, bagaimana ia terbentuk dari respons sehari-hari, dan mengapa ia menjadi fondasi perkembangan anak." },
-  { jenis: "Temu Komunitas", segmen: "Anak", judul: "Bermain & Belajar: Stimulasi Motorik Anak", tgl: "Minggu, 13 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pemandu", ahli: "dr. Dedi Kurniawan, S.Psi., M.Psi., Psikolog", desk: "Praktik permainan sederhana untuk melatih motorik kasar dan halus anak usia sekolah, memakai alat yang ada di rumah." },
-  { jenis: "Seminar", segmen: "Kehamilan", judul: "Persiapan Kehamilan & 1000 Hari Pertama Kehidupan", tgl: "Sabtu, 19 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Yang perlu disiapkan calon orang tua sejak kehamilan sampai dua tahun pertama anak — dari gizi sampai stimulasi." },
-  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Refleksi Akhir Tahun: Perjalanan Mengasuh 2026", tgl: "Minggu, 20 Desember 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Maya Kusuma, S.Psi., M.Psi., Psikolog", desk: "Menutup tahun dengan refleksi: apa yang sudah berjalan baik dalam pengasuhan tahun ini, dan apa yang ingin diperbaiki tahun depan." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Menangani Anak Tantrum: Tenang di Tengah Badai Emosi", tgl: "Sabtu, 21 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Ratna Wijaya, S.Psi., M.Psi., Psikolog", desk: "Mengapa tantrum terjadi, apa yang sebenarnya dibutuhkan anak saat tantrum, dan langkah tenang yang bisa dilakukan orang tua." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ngobrol Santai: Berbagi Cerita Mengasuh Balita", tgl: "Minggu, 22 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Budi Santoso, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Sesi berbagi antar orang tua balita: cerita, keluhan, dan strategi yang sudah dicoba di rumah masing-masing." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Disiplin Positif Tanpa Teriakan", tgl: "Sabtu, 28 November 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Sari Dewi, S.Psi., M.Psi., Psikolog", desk: "Cara menerapkan disiplin positif pada balita: batas yang jelas, nada yang tenang, dan konsekuensi yang masuk akal — tanpa bentakan." },
+  { jenis: "Temu Komunitas", segmen: "Balita", judul: "Ayah Ikut Mengasuh: Berbagi Peran di Rumah", tgl: "Minggu, 29 November 2026", jam: "15.00–17.00 WIB", peran: "Pemandu", ahli: "dr. Rudi Hartono, S.Psi., M.Psi., Psikolog", maks: 20, desk: "Diskusi khusus para ayah tentang pembagian peran pengasuhan dan cara hadir secara nyata di keseharian anak." },
+  { jenis: "Seminar", segmen: "Balita", judul: "Stimulasi Bahasa Anak Usia Dini lewat Bermain", tgl: "Sabtu, 5 Desember 2026", jam: "09.00–11.00 WIB", peran: "Pembicara", ahli: "dr. Lina Marlina, S.Psi., M.Psi., Psikolog", desk: "Teknik sederhana menstimulasi bahasa balita lewat bermain, bercerita, dan percakapan sehari-hari." },
 ];
 
 const AHLI_LIST = [
@@ -873,12 +866,28 @@ const AHLI_LIST = [
 ];
 
 function kotaCard(k) {
+  const aktif = k.slug === KOTA_AKTIF;
   return '<article class="kota-card">'
     + '<img src="' + k.img + '" alt="Landmark ' + k.landmark + ' di ' + k.nama + '" loading="lazy" />'
     + '<span class="body"><span class="kota-landmark">' + k.landmark + '</span>'
     + '<h3>' + k.nama + '</h3>'
-    + '<button type="button" class="btn btn-amber kota-pilih" data-kota="' + k.slug + '">Pilih Lokasi</button>'
+    + '<span class="kota-stats"><span><b>' + k.anggota + '</b>Anggota</span><span><b>' + k.kegiatan + '</b>Kegiatan aktif</span><span><b>' + k.ahli + '</b>Ahli</span></span>'
+    + '<button type="button" class="btn btn-amber kota-pilih' + (aktif ? '' : ' dim') + '" data-kota="' + k.slug + '">Pilih Kota ini</button>'
     + '</span></article>';
+}
+
+function showToast(msg) {
+  let t = document.getElementById("toast");
+  if (!t) {
+    t = document.createElement("div");
+    t.id = "toast";
+    t.setAttribute("role", "status");
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(t._timer);
+  t._timer = setTimeout(function () { t.classList.remove("show"); }, 3200);
 }
 
 function initKotaPicker(gridId, onPick) {
@@ -887,7 +896,12 @@ function initKotaPicker(gridId, onPick) {
   grid.innerHTML = KOTA_LIST.map(kotaCard).join("");
   grid.querySelectorAll("[data-kota]").forEach(function (b) {
     b.addEventListener("click", function () {
-      onPick(KOTA_LIST.find(function (k) { return k.slug === b.dataset.kota; }));
+      const kota = KOTA_LIST.find(function (k) { return k.slug === b.dataset.kota; });
+      if (kota.slug !== KOTA_AKTIF) {
+        showToast("Belum dibangun karena masih bersifat prototipe");
+        return;
+      }
+      onPick(kota);
     });
   });
 }
@@ -910,6 +924,7 @@ export function initKomunitas() {
         + '<h3>' + a.judul + '</h3>'
         + '<p class="acara-meta">' + a.tgl + ' · ' + a.jam + '</p>'
         + '<p class="acara-meta">' + tempat + '</p>'
+        + (a.maks ? '<p class="acara-meta">Maksimal ' + a.maks + ' orang</p>' : '')
         + '<p class="acara-ahli">' + a.peran + ': ' + a.ahli + '</p>'
         + '<p class="acara-desk">' + a.desk + '</p>'
         + '</article>';

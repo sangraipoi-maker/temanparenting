@@ -566,13 +566,19 @@ ol.steps li strong{color:var(--ink)}
 .tahap-panel .btn{margin-top:16px}
 
 /* ---------- komunitas & konsultasi dengan ahli ---------- */
-.kota-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.kota-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
 .kota-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
 .kota-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
 .kota-card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
 .kota-landmark{font-size:.78rem;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:.05em}
 .kota-card h3{font-size:1.25rem}
-.kota-card .btn{margin-top:10px;align-self:flex-start}
+.kota-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.kota-stats span{display:flex;flex-direction:column;font-size:.78rem;color:var(--ink-soft);font-weight:600;line-height:1.35}
+.kota-stats b{font-size:1.05rem;color:var(--ink)}
+.kota-card .btn{margin-top:12px;align-self:flex-start}
+.kota-pilih.dim{filter:brightness(.6)}
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,16px);background:#0c2c55;color:#fff;border:1px solid rgba(255,255,255,.25);padding:13px 20px;border-radius:999px;font-size:.92rem;font-weight:600;box-shadow:0 12px 30px rgba(8,31,61,.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:120;max-width:calc(100vw - 48px);text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
 .foto-credit,.dummy-note{margin-top:16px;font-size:.85rem;color:var(--ink-soft)}
 .laporan{padding:32px 0 64px}
 .kota-step[hidden],.acara-step[hidden],.ahli-step[hidden],.pilih-bar[hidden]{display:none}
@@ -653,6 +659,7 @@ footer.site h4{margin:0 0 12px;font-size:.95rem}
   .insight-card h3{font-size:1rem}
   .insight-card p{font-size:.84rem}
   .age-grid,.card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kota-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .hero-tabs ul{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 @media (max-width:900px){
