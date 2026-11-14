@@ -590,7 +590,7 @@ ol.steps li strong{color:var(--ink)}
 .diskusi-intro{color:var(--ink-soft)}
 .diskusi-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:12px}
 .diskusi-penanya{margin:0 0 6px;font-size:.85rem;font-weight:700;color:var(--ink-soft)}
-.video-dummy{position:relative;aspect-ratio:16/9;border-radius:16px;background:linear-gradient(135deg,#1f3a5f,#0f766e);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:8px}
+.video-dummy{position:relative;aspect-ratio:16/9;max-width:68ch;border-radius:16px;background:linear-gradient(135deg,#1f3a5f,#0f766e);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:8px}
 .video-badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.45);color:#fff;font-size:.78rem;font-weight:800;padding:5px 12px;border-radius:999px}
 .video-play{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:rgba(255,138,0,.92);box-shadow:0 4px 16px rgba(0,0,0,.3)}
 .video-play svg{margin-left:3px}
