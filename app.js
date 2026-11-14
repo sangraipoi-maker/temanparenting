@@ -1052,13 +1052,7 @@ export function initKonsultasi() {
   // Cabang online: "Konsultasi sekarang" membuka chat (tombol data-ask-open);
   // "Jadwalkan konsultasi" membuka formulir jadwal.
   const jadwalForm = document.getElementById("jadwalForm");
-  const jadwalAhli = document.getElementById("jadwalAhli");
   const jadwalTanggal = document.getElementById("jadwalTanggal");
-  if (jadwalAhli) {
-    jadwalAhli.innerHTML = '<option value="">Pilih ahli…</option>' + AHLI_LIST.map(function (a) {
-      return '<option value="' + a.singkat + '">' + a.nama + ', ' + a.bidang + '</option>';
-    }).join("");
-  }
   if (jadwalTanggal) jadwalTanggal.min = new Date().toISOString().slice(0, 10);
   document.querySelectorAll("[data-online]").forEach(function (b) {
     b.addEventListener("click", function () {
@@ -1071,13 +1065,14 @@ export function initKonsultasi() {
   if (jadwalForm) {
     jadwalForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      const a = AHLI_LIST.find(function (x) { return x.singkat === jadwalAhli.value; });
       const jam = document.getElementById("jadwalJam").value;
       const nama = document.getElementById("jadwalNama").value.trim();
-      if (!a || !jadwalTanggal.value || !jam || !nama) return;
+      if (!jadwalTanggal.value || !jam || !nama) return;
+      // Konsultasi online gratis: ahli ditugaskan acak sesuai ketersediaan.
+      const a = AHLI_LIST[Math.floor(Math.random() * AHLI_LIST.length)];
       const tglTampil = new Date(jadwalTanggal.value + "T00:00:00").toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
       document.getElementById("jadwalHasilText").textContent =
-        nama + ", konsultasi onlinemu dengan " + a.nama + " (" + a.bidang + ") dijadwalkan pada " + tglTampil + ", pukul " + jam + " WIB.";
+        nama + ", konsultasi onlinemu dijadwalkan pada " + tglTampil + ", pukul " + jam + " WIB. Ahli yang melayani: " + a.nama + " (" + a.bidang + "), ditugaskan sesuai ketersediaan.";
       const hasil = document.getElementById("jadwalHasil");
       hasil.hidden = false;
       hasil.scrollIntoView({ behavior: "smooth", block: "nearest" });

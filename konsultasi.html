@@ -109,7 +109,7 @@
         </article>
         <article class="cara-card">
           <h3>Jadwalkan konsultasi</h3>
-          <p>Pilih ahli dan waktu yang cocok untukmu, lalu kami siapkan sesi konsultasinya.</p>
+          <p>Pilih tanggal dan jam yang cocok untukmu, lalu kami siapkan sesi konsultasinya.</p>
           <button type="button" class="btn btn-amber" data-online="jadwal">Jadwalkan</button>
         </article>
       </div>
@@ -119,25 +119,23 @@
       <div class="sec-head">
         <span class="kicker">Langkah 3</span>
         <h2>Jadwalkan konsultasi online</h2>
-        <p>Pilih ahli, tanggal, dan jam. Konsultasi online gratis.</p>
+        <p>Pilih tanggal dan jam (layanan online 08.00–16.00 WIB). Konsultasi online gratis, ahli ditugaskan sesuai ketersediaan.</p>
       </div>
       <p style="margin-bottom:18px"><button type="button" class="btn btn-ghost" id="gantiWaktuBtn">← Kembali</button></p>
       <form class="jadwal-form" id="jadwalForm">
-        <label>Ahli
-          <select id="jadwalAhli" required></select>
-        </label>
         <label>Tanggal
           <input type="date" id="jadwalTanggal" required />
         </label>
         <label>Jam
           <select id="jadwalJam" required>
             <option value="">Pilih jam…</option>
+            <option>08.00–09.00</option>
             <option>09.00–10.00</option>
             <option>10.00–11.00</option>
+            <option>11.00–12.00</option>
             <option>13.00–14.00</option>
             <option>14.00–15.00</option>
             <option>15.00–16.00</option>
-            <option>19.00–20.00</option>
           </select>
         </label>
         <label>Nama Anda
